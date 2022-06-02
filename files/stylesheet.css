@@ -54,8 +54,9 @@ header .container {
     background-color: #000000
 }
 
+/* For Mobile */
 .content {
-    padding: 0 10vw;
+    padding: 0;
 }
 
 .row:after {
@@ -66,13 +67,28 @@ header .container {
 
 main {
     float: left;
-    width: 67%;
+    width: 100%;
 }
 
 aside {
     float: left;
-    width: 33%;
-    padding-left: 1.5em;
+    width: 100%;
+}
+
+/* For Desktop */
+@media only screen and (min-width: 1000px) {
+    .content {
+        padding: 0 10vw;
+    }
+
+    main {
+        width: 67%;
+    }
+
+    aside {
+        width: 33%;
+        padding-left: 1.5em;
+    }
 }
 
 .card {
