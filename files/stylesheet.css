@@ -78,11 +78,30 @@ aside {
     width: 100%;
 }
 
+aside .card h1 {
+    margin: 0;
+}
+
 .card {
     margin-top: 2em;
-    padding: 1em 2em;
+    padding: 2em;
     background-color: #ffffff;
-    /*border-radius: 0.5em;*/
+    box-shadow: 0 0 1em 0px #dddddd;
+    overflow: auto; /* Clearfix */
+}
+
+.card img {
+    width: 100%;
+}
+
+.card h1 {
+    font-family: "Times New Roman";
+}
+
+#about img {
+    width: 33%;
+    float: left;
+    margin: 0 2em 2em 0 ;
 }
 
 /* For Desktop */
