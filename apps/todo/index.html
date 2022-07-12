@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <title>Lennart A. Hesse</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="./files/stylesheet.css">
+
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <!-- Fade in on scroll -->
+        <script>
+            $(window).on("load", function() {
+                $(window).scroll(function() {
+                    var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+                    $(".fade").each(function() {
+                        var objectMid = $(this).offset().top + $(this).outerHeight() / 2;
+
+                        if (objectMid < windowBottom) {
+                            if ($(this).css("opacity")==0) {
+                                $(this).fadeTo(500, 1);
+                            }
+                        }
+                    });
+                }).scroll();
+            });
+        </script>
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <div class="container">
+                <h1>Überschrift</h1>
+                <h2>Untertitel</h2>
+            </div>
+        </header>
+
+        <!-- Navbar --
+        <ul class="navbar">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Projekte</a></li>
+        </ul> -->
+
+        <div class="content">
+            <div class="row">
+
+                <main>
+                    <!-- Erster Artikel (text-adventure) -->
+                    <div class="card fade">
+                        <img src="./media/textadventure_title.png">
+                        <h2>Terminal based text-adventure game in Java</h2>
+                        <p>wo layout??</p>
+                    </div>
+
+                    <!-- Zweiter Artikel -->
+                    <div class="card fade">
+                        <h2>Projekt #1</h2>
+                        <p>Das erste Projekt. Das allererste. Es kam aus dem Nichts.</p>
+                    </div>
+                </main>
+
+                <aside>
+                    <!-- About Me Card -->
+                    <div class="card fade" id="about">
+                        <img src="./media/avatar.png">
+
+                        <h2>Lorem Ipsum:</h2>
+                        <p>dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><p> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+
+                    <!-- Sitemap or smth -->
+                    <div class="card fade">
+                        <h2>Sitemap</h2>
+                        <p>Bitte ignorieren</p>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>Das ist ein Footer.</p>
+        </footer>
+    </body>
+</html>
