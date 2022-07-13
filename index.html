@@ -34,17 +34,14 @@
         <script>
             function readMore(btn) {
                 var parent = btn.parentElement;
-                var dots = $(parent).find("#dots")[0];
-                var moreText = $(parent).find("#more")[0];
+                var panel = $(parent).find(".panel")[0];
 
-                if (dots.style.display == "none") {
-                    dots.style.display = "inline";
-                    btn.innerHTML = "Read more";
-                    moreText.style.display = "none";
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                    btn.innerHTML = "Read more"
                 } else {
-                    dots.style.display = "none";
+                    panel.style.maxHeight = panel.scrollHeight + "px";
                     btn.innerHTML = "Read less";
-                    moreText.style.display = "inline";
                 }
             }
         </script>
@@ -71,10 +68,15 @@
                 <main>
                     <!-- Erster Artikel (text-adventure) -->
                     <div class="card fade">
-                        <img src="./media/textadventure_title.png">
+                        <img class="thumbnail" src="./media/textadventure_title.png">
                         <h2>Terminal based text-adventure game in Java</h2>
                         <small>September 21, 1978</small>
-                        <p>In this article I want to show the process of how I built my own little text-adventure game. My motivation was to gain more experience in coding besides the tasks that I work on for university that are also why I have been using Java alot for the last year. Because of that, I decided to build the game using Java. I wanted a simple approach where I don't have to worry about<span id="dots">...</span><span id="more"> getting to know the entire environment beforehand like with Unity3D. So instead of building a complete UI, I simply print the output to the console. That way you can just execute the .jar and let it run in the terminal, which is already the exact feel I wanted to achieve for this game.</span></p>
+                        <p>In this article I want to show the process of how I built my own little text-adventure game. My motivation was to gain more experience in coding besides the tasks that I work on for university that are also why I have been using Java alot for the last year. Because of that, I decided to build the game using Java.</p>
+                        
+                        <div class="panel">
+                            <p>I wanted a simple approach where I don't have to worry about getting to know the entire environment beforehand like with Unity3D. So instead of building a complete UI, I simply print the output to the console. That way you can just execute the .jar and let it run in the terminal, which is already the exact feel I wanted to achieve for this game.</p>
+                            <img src="./media/favicon.ico">
+                        </div>
 
                         <button onclick="readMore(this)">Read more</button>
                     </div>
@@ -83,7 +85,12 @@
                     <div class="card fade">
                         <h2>Projekt #1</h2>
                         <small>September 21, 1978</small>
-                        <p>In this article I want to show the process of how I built my own little text-adventure game. My motivation was to gain more experience in coding besides the tasks that I work on for university that are also why I have been using Java alot for the last year. Because of that, I decided to build the game using Java. I wanted a simple approach where I don't have to worry about<span id="dots">...</span><span id="more"> getting to know the entire environment beforehand like with Unity3D. So instead of building a complete UI, I simply print the output to the console. That way you can just execute the .jar and let it run in the terminal, which is already the exact feel I wanted to achieve for this game.</span></p>
+                        <p>In this article I want to show the process of how I built my own little text-adventure game. My motivation was to gain more experience in coding besides the tasks that I work on for university that are also why I have been using Java alot for the last year. Because of that, I decided to build the game using Java. I wanted a simple approach where I don't have to worry about getting to know the entire environment beforehand like with Unity3D.</p>
+
+                        <div class="panel">
+                            <p>So instead of building a complete UI, I simply print the output to the console. That way you can just execute the .jar and let it run in the terminal, which is already the exact feel I wanted to achieve for this game.</p>
+                            <p>Another paragraph.</p>
+                        </div>
 
                         <button onclick="readMore(this)">Read more</button>
                     </div>
@@ -91,7 +98,7 @@
 
                 <aside>
                     <!-- About Me Card -->
-                    <div class="card fade" id="about">
+                    <div class="card fade about">
                         <img src="./media/avatar.png">
 
                         <h2>Lorem Ipsum:</h2>
