@@ -10,6 +10,11 @@ body {
     /* Text Styling */
     color: #000000;
     font-family: sans-serif;
+    line-height: 1.5;
+}
+
+small {
+    color: #333;
 }
 
 .content h2 {
@@ -83,8 +88,6 @@ aside {
     width: 100%;
 }
 
-
-
 .card {
     margin-top: 2em;
     padding: 2em;
@@ -95,6 +98,10 @@ aside {
     opacity: 0;
 }
 
+#more {
+    display: none;
+}
+
 .card img {
     width: 100%;
     margin-bottom: 1.5em;
@@ -102,6 +109,7 @@ aside {
 
 #about img {
     width: 33%;
+    border-radius: 50%;
     float: left;
     margin: 0 2em 2em 0 ;
 }

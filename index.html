@@ -6,9 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <link rel="stylesheet" href="./files/stylesheet.css">
+        <link rel="icon" type="image/x-icon" href="./media/favicon.ico">
 
+        <!-- Scripts -->
         <!-- jQuery -->
-        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script src="./scripts/jquery.js"></script>
+
         <!-- Fade in on scroll -->
         <script>
             $(window).on("load", function() {
@@ -26,7 +29,27 @@
                 }).scroll();
             });
         </script>
+
+        <!-- Read more function -->
+        <script>
+            function readMore(btn) {
+                var parent = btn.parentElement;
+                var dots = $(parent).find("#dots")[0];
+                var moreText = $(parent).find("#more")[0];
+
+                if (dots.style.display == "none") {
+                    dots.style.display = "inline";
+                    btn.innerHTML = "Read more";
+                    moreText.style.display = "none";
+                } else {
+                    dots.style.display = "none";
+                    btn.innerHTML = "Read less";
+                    moreText.style.display = "inline";
+                }
+            }
+        </script>
     </head>
+
     <body>
         <!-- Header -->
         <header>
@@ -50,13 +73,19 @@
                     <div class="card fade">
                         <img src="./media/textadventure_title.png">
                         <h2>Terminal based text-adventure game in Java</h2>
-                        <p>wo layout??</p>
+                        <small>September 21, 1978</small>
+                        <p>In this article I want to show the process of how I built my own little text-adventure game. My motivation was to gain more experience in coding besides the tasks that I work on for university that are also why I have been using Java alot for the last year. Because of that, I decided to build the game using Java. I wanted a simple approach where I don't have to worry about<span id="dots">...</span><span id="more"> getting to know the entire environment beforehand like with Unity3D. So instead of building a complete UI, I simply print the output to the console. That way you can just execute the .jar and let it run in the terminal, which is already the exact feel I wanted to achieve for this game.</span></p>
+
+                        <button onclick="readMore(this)">Read more</button>
                     </div>
 
                     <!-- Zweiter Artikel -->
                     <div class="card fade">
                         <h2>Projekt #1</h2>
-                        <p>Das erste Projekt. Das allererste. Es kam aus dem Nichts.</p>
+                        <small>September 21, 1978</small>
+                        <p>In this article I want to show the process of how I built my own little text-adventure game. My motivation was to gain more experience in coding besides the tasks that I work on for university that are also why I have been using Java alot for the last year. Because of that, I decided to build the game using Java. I wanted a simple approach where I don't have to worry about<span id="dots">...</span><span id="more"> getting to know the entire environment beforehand like with Unity3D. So instead of building a complete UI, I simply print the output to the console. That way you can just execute the .jar and let it run in the terminal, which is already the exact feel I wanted to achieve for this game.</span></p>
+
+                        <button onclick="readMore(this)">Read more</button>
                     </div>
                 </main>
 
