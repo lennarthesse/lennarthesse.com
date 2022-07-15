@@ -41,7 +41,7 @@ header .container {
     text-align: center;
 }
 
-.scroll-down-icon {
+#scroll-down-icon {
     display: block;
     width: 2em;
     opacity: 50%;
@@ -88,6 +88,7 @@ header .container {
     cursor: pointer;
     border: none;
     background-color: #ffffff00;
+    z-index: 99;
 }
 
 .scroll-top-icon {
