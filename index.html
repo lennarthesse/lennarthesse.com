@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
     <head>
         <title>Lennart A. Hesse</title>
         <meta charset="UTF-8">
@@ -52,7 +52,7 @@
                 <h1>Überschrift</h1>
                 <h2>Untertitel</h2>
             </div>
-            <img src="./media/arrow-icon.png" class="scroll-down-icon">
+            <img src="./media/arrow-icon.png" id="scroll-down-icon">
         </header>
 
         <!-- Navbar --
@@ -68,7 +68,7 @@
         <script>
             // Show scroll to top button when scrolling down and hide scroll down hint
             var topButton = document.getElementById("topBtn");
-            var downIcon = document.getElementsByClassName("scroll-down-icon")[0];
+            var downIcon = document.getElementById("scroll-down-icon");
 
             var thresholdTop = $(window).innerHeight();
             var thresholdDown = 150;
@@ -89,6 +89,25 @@
                 } else {
                     element.style.display = "block";
                 }
+            }
+
+            // Animate scroll down hint
+            var id = setInterval(frame, 75);
+            var xPos = downIcon.style.bottom;
+            var up;
+
+            function frame() {
+                if (xPos == 10) {
+                    up = false;
+                } else if (xPos == 0) {
+                    up = true;
+                }
+                if (up) {
+                    xPos++;
+                } else if (!up) {
+                    xPos--;
+                }
+                downIcon.style.bottom = xPos + "px";
             }
 
             // Scroll to Top
