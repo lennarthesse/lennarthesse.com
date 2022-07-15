@@ -41,6 +41,18 @@ header .container {
     text-align: center;
 }
 
+.scroll-down-icon {
+    display: block;
+    width: 2em;
+    opacity: 50%;
+    filter: invert();
+    -webkit-filter: invert();
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: rotate(180deg) translate(50%, 50%);
+}
+
 /* Navbar */
 .navbar {
     /* General Styling */
@@ -71,23 +83,19 @@ header .container {
 #topBtn {
     display: none;
     position: fixed;
-    bottom: 1.5em;
-    right: 2em;
-    z-index: 99;
+    bottom: 2em;
+    right: 3em;
     cursor: pointer;
-    /* Anpassen wenn icon da: */
-    border: 1px solid black;
-    background-color: #0099cc;
-    padding: 1em;
-    border-radius: 1em;
+    border: none;
+    background-color: #ffffff00;
+}
+
+.scroll-top-icon {
+    width: 2.5em;
 }
 
 /* Main Content */
 /* For Mobile */
-.content {
-    padding: 0 2em;
-}
-
 .content h2 {
     font-family: "Times New Roman";
     margin: 0;
@@ -135,14 +143,21 @@ aside {
 }
 
 .about img {
-    width: 33%;
+    width: 100%;
     border-radius: 50%;
     float: left;
     margin: 0 2em 2em 0 ;
 }
 
+/* For Tablets */
+@media only screen and (min-width: 600px) {
+    .about img {
+        width: 50%;
+    }
+}
+
 /* For Desktop */
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 992px) {
     .content {
         padding: 0 10vw;
     }
@@ -154,6 +169,17 @@ aside {
     aside {
         width: 33%;
         padding-left: 2em;
+    }
+
+    .about img {
+        width: 100%;
+    }
+}
+
+/* For Extra Large Devices */
+@media only screen and (min-width: 1600px) {
+    .about img {
+        width: 40%;
     }
 }
 
