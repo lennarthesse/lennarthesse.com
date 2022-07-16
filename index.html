@@ -55,17 +55,39 @@
             <img src="./media/arrow-icon.png" id="scroll-down-icon">
         </header>
 
-        <!-- Navbar --
-        <ul class="navbar">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Projekte</a></li>
-        </ul> -->
+        <!-- Sidenav -->
+        <button id="navBurger" onclick="showNav()">
+            <img src="./media/burger.png">
+        </button>
+
+        <div class="sidenav" id="js-sidenav">
+            <button id="closeBtn" onclick="hideNav()">
+                <img src="./media/cross.png">
+            </button>
+            <a href="#">Articles</a>
+            <a href="#">About</a>
+            <a href="#">Search</a>
+        </div>
 
         <button onclick="scrollToTop()" id="topBtn">
-            <img src="./media/arrow-icon.png" class="scroll-top-icon">
+            <img src="./media/arrow-icon.png">
         </button>
 
         <script>
+            // Show side nav on burger click
+            function showNav() {
+                document.getElementById("js-sidenav").style.width = "250px";
+                document.getElementById("closeBtn").style.display = "block";
+                document.getElementById("navBurger").style.display = "none";
+            }
+
+            // Hide side nav on cross click
+            function hideNav() {
+                document.getElementById("js-sidenav").style.width = "0";
+                document.getElementById("closeBtn").style.display = "none";
+                document.getElementById("navBurger").style.display = "block";
+            }
+
             // Show scroll to top button when scrolling down and hide scroll down hint
             var topButton = document.getElementById("topBtn");
             var downIcon = document.getElementById("scroll-down-icon");
