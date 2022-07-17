@@ -24,7 +24,7 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; /* Fit to container */
-    background-attachment: fixed; /* Parallex */
+    /*background-attachment: fixed; /* Parallex */
     
     height: 100vh;
 }
@@ -127,6 +127,30 @@ header .container {
 }
 
 /* Main Content */
+/* Search Bar */
+.search-container {
+    border: 1px solid gray;
+}
+
+.search-container input {
+    padding: 0.5em;
+    width: 85%;
+    border: none;
+}
+
+.search-container button {
+    cursor: pointer;
+    border: none;
+    padding: 0.5em;
+    background-color: #0099cc   ;
+    border-left: 1px solid gray;
+    width: 15%;
+}
+
+.search-container button img {
+    height: 1em;
+}
+
 /* For Mobile */
 .content h2 {
     font-family: "Times New Roman";
