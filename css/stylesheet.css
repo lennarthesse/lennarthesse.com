@@ -24,7 +24,6 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; /* Fit to container */
-    /*background-attachment: fixed; /* Parallex */
     
     height: 100vh;
 }
@@ -168,15 +167,13 @@ main {
     width: 100%;
 }
 
-main ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
 aside {
     float: left;
     width: 100%;
+}
+
+article {
+    display: none;
 }
 
 .card {
@@ -186,7 +183,7 @@ aside {
     box-shadow: 0 0 1em 0px #dddddd;
     overflow: auto; /* Clearfix */
 
-    opacity: 0; /* Fade animation */
+    /*opacity: 0; /* Fade animation */
 }
 
 .card small {

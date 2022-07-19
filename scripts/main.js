@@ -1,5 +1,5 @@
 // Fade in on scroll
-$(window).on("load", function() {
+/*$(window).on("load", function() {
     $(window).scroll(function() {
         var windowBottom = $(this).scrollTop() + $(this).innerHeight();
         $(".fade").each(function() {
@@ -12,7 +12,7 @@ $(window).on("load", function() {
             }
         });
     }).scroll();
-});
+});*/
 
 // Read more function
 function readMore(btn) {
@@ -91,3 +91,26 @@ function frame() {
     }
     downIcon.style.bottom = xPos + "px";
 }
+
+// Load more articles
+var loadMoreButton = document.getElementById("js-load-more");
+var additionalArticles = 2;
+
+    // Show first articles on first load
+loadMore();
+
+function loadMore() {
+    var hiddenArticles = $(document).find("article:hidden");
+    var i = 0;
+
+    if (i + additionalArticles >= hiddenArticles.length) {
+        loadMoreButton.style.display = "none";
+    }
+
+    while (i < hiddenArticles.length && i < additionalArticles) {
+        hiddenArticles[i].style.display = "block";
+        i++;
+    }
+}
+
+// Search Articles
