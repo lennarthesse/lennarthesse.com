@@ -172,18 +172,12 @@ aside {
     width: 100%;
 }
 
-article {
-    display: none;
-}
-
 .card {
     margin-top: 2em;
     padding: 2em;
     background-color: #ffffff;
     box-shadow: 0 0 1em 0px #dddddd;
     overflow: auto; /* Clearfix */
-
-    /*opacity: 0; /* Fade animation */
 }
 
 .card small {
