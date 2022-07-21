@@ -16,16 +16,18 @@
                 <h1>Überschrift</h1>
                 <h2>Untertitel</h2>
             </div>
-            <img src="./media/arrow-icon.png" id="scroll-down-icon">
+            <button id="js-scroll-down-icon" class="scroll-down-hint icon-button" onclick="scrollContent()">
+                <img src="./media/arrow-icon.png">
+            </button>
         </header>
 
         <!-- Sidenav -->
-        <button id="navBurger" onclick="showNav()">
+        <button id="js-nav-burger" class="nav-burger icon-button" onclick="showNav()">
             <img src="./media/burger.png">
         </button>
 
         <div class="sidenav" id="js-sidenav">
-            <button id="closeBtn" onclick="hideNav()">
+            <button id="js-close-btn" class="close-nav icon-button" onclick="hideNav()">
                 <img src="./media/cross.png">
             </button>
             <a href="#" onclick="hideNav()">Articles</a>
@@ -33,7 +35,7 @@
             <a href="#" onclick="hideNav()">Search</a>
         </div>
 
-        <button onclick="scrollToTop()" id="topBtn">
+        <button onclick="scrollToTop()" id="js-top-btn" class="scroll-top icon-button">
             <img src="./media/arrow-icon.png">
         </button>
 
@@ -129,6 +131,17 @@
 
         <!-- Footer -->
         <footer>
+            <div class="row">
+                <!--<div class="col-4">
+
+                </div>
+                <div class="col-4">
+                    
+                </div>
+                <div class="col-4">
+                    
+                </div>
+            </div>-->
             <p>Das ist ein Footer.</p>
         </footer>
 

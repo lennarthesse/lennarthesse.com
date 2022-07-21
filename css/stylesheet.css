@@ -3,56 +3,45 @@
 }
 
 html {
-    scroll-behavior: smooth; /* Smooth scroll for links */
+    /* Smooth scroll for links */
+    scroll-behavior: smooth;
 }
 
 body {
-    /* General Styling */
     margin: 0;
     background-color: #eeeeee;
 
-    /* Universal Text Styling */
+    /* Define standard text style */
     color: #000000;
     font-family: sans-serif;
     line-height: 1.5;
 }
 
-/* Header */
+/* || HEADER || */
 header {
-    /* General Styling */
+    /* Set background image */
     background-image: linear-gradient(#0099ccbb, #0099ccbb), url("../media/header-bg.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; /* Fit to container */
-    
+
+    /* Make header fill screen */
     height: 100vh;
 }
 
 header .container {
-    /* Positioning */
+    /* Center header content */
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 
-    /* Text Styling */
+    /* Text styling */
     color: #ffffff;
     text-align: center;
 }
 
-#scroll-down-icon {
-    display: block;
-    width: 2em;
-    opacity: 50%;
-    filter: invert();
-    -webkit-filter: invert();
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: rotate(180deg) translate(50%, 50%);
-}
-
-/* Navbar */
+/* || NAVBAR || */
 .sidenav {
     background-color: #000000;
     position: fixed;
@@ -79,53 +68,63 @@ header .container {
     background-color: #0099cc;
 }
 
-#closeBtn {
-    display: none;
-    cursor: pointer;
-    border: none;
-    background-color: #ffffff00;
-    position: fixed;
-    right: 3em;
-    top: 2em;
-}
-
-#closeBtn img {
-    filter: invert();
-    width: 2.5em;
-}
-
-#navBurger {
-    display: block;
-    position: fixed;
-    top: 2em;
-    right: 3em;
+/* || BUTTONS || */
+/* General */
+.icon-button {
     cursor: pointer;
     border: none;
     background-color: #ffffff00;
     z-index: 1;
 }
 
-#navBurger img {
+.icon-button img {
     width: 2.5em;
+}
+/* Specific */
+/* Scroll down hint */
+.scroll-down-hint {
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: rotate(180deg) translate(50%, 50%);
+}
+
+.scroll-down-hint img {
+    width: 2.5em;
+    opacity: 50%;
+    filter: invert();
+    -webkit-filter: invert();
+}
+
+/* Nav burger and close button */
+.nav-burger {
+    display: block;
+    position: fixed;
+    right: 3em;
+    top: 2em;
+}
+
+.close-nav {
+    display: none;
+    position: fixed;
+    right: 3em;
+    top: 2em;
+}
+
+.close-nav img {
+    filter: invert();
 }
 
 /* Scroll to top button */
-#topBtn {
+.scroll-top {
     display: none;
     position: fixed;
-    bottom: 2em;
     right: 3em;
-    cursor: pointer;
-    border: none;
-    background-color: #ffffff00;
-    z-index: 1;
+    bottom: 2em;
 }
 
-#topBtn img {
-    width: 2.5em;
-}
-
-/* Main Content */
+/* || MAIN CONTENT || */
 /* Search Bar */
 .search-container {
     border: 1px solid gray;
@@ -150,7 +149,7 @@ header .container {
     height: 1em;
 }
 
-/* For Mobile */
+/* Mobile styling */
 .content h2 {
     font-family: "Times New Roman";
     margin: 0;
@@ -187,7 +186,7 @@ aside {
 .panel {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.2s ease-out;
+    transition: max-height 0.3s ease-out;
 }
 
 .thumbnail {
@@ -211,7 +210,7 @@ aside {
 
 /* For Desktop */
 @media only screen and (min-width: 992px) {
-    #navBurger {
+    .nav-burger {
         display: none;
     }
 

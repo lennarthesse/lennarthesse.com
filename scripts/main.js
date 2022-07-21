@@ -1,6 +1,6 @@
 // VARIABLES //
-var topButton = document.getElementById("topBtn");              // Reference to scroll to top button
-var downIcon = document.getElementById("scroll-down-icon");     // Reference to scroll down hint
+var topButton = document.getElementById("js-top-btn");          // Reference to scroll to top button
+var downIcon = document.getElementById("js-scroll-down-icon");  // Reference to scroll down hint
 var xPos = downIcon.style.bottom;                               // xPos of scroll down hint
 var up;                                                         // Hint moving up or not?
 
@@ -14,16 +14,15 @@ var articles = $(document).find("article");                     // Collection of
 var input = document.getElementById("js-search-bar");           // Reference to search input
 
 // INITIAL SETUP //
-hideArticles();                 // First hide all articles
-loadMore();                     // Then load first articles
+hideArticles();                                                 // First hide all articles
+loadMore();                                                     // Then load first articles
 
 // MAIN LOOP //
-setInterval(animateHint, 75);   // Animate scroll down hint
+setInterval(animateHint, 75);                                   // Animate scroll down hint
 window.onscroll = function() {showOnScrollDown(thresholdTop, topButton), hideOnScrollDown(thresholdDown, downIcon)}; // Check if buttons should be shown or hidden
 
 // INTERNAL FUNCTIONS //
 function hideArticles() {
-    var articles = $(document).find("article");
     for (var i = 0; i < articles.length; i++) {
         articles[i].style.display = "none";
     }
@@ -124,19 +123,24 @@ function searchArticles() {
 // Show side nav on burger click
 function showNav() {
     document.getElementById("js-sidenav").style.width = "250px";
-    document.getElementById("closeBtn").style.display = "block";
-    document.getElementById("navBurger").style.display = "none";
+    document.getElementById("js-close-btn").style.display = "block";
+    document.getElementById("js-nav-burger").style.display = "none";
 }
 
 // Hide side nav on cross click
 function hideNav() {
     document.getElementById("js-sidenav").style.width = "0";
-    document.getElementById("closeBtn").style.display = "none";
-    document.getElementById("navBurger").style.display = "block";
+    document.getElementById("js-close-btn").style.display = "none";
+    document.getElementById("js-nav-burger").style.display = "block";
 }
 
 // Scroll to Top
 function scrollToTop() {
-    document.body.scrollTop = 0;
+    //document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
+}
+
+// Scroll content into view
+function scrollContent() {
+    scrollTo(0, thresholdTop);
 }
