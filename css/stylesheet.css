@@ -1,3 +1,7 @@
+:root {
+    --primary: #0099cc;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -9,7 +13,7 @@ html {
 
 body {
     margin: 0;
-    background-color: #eeeeee;
+    background-color: #eee;
 
     /* Define standard text style */
     color: #000000;
@@ -20,7 +24,7 @@ body {
 /* || HEADER || */
 header {
     /* Set background image */
-    background-image: linear-gradient(#0099ccbb, #0099ccbb), url("../media/header-bg.png");
+    background-image: linear-gradient(var(--primary), var(--primary)), url("../media/header-bg.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; /* Fit to container */
@@ -37,13 +41,13 @@ header .container {
     transform: translate(-50%, -50%);
 
     /* Text styling */
-    color: #ffffff;
+    color: white;
     text-align: center;
 }
 
 /* || NAVBAR || */
 .sidenav {
-    background-color: #000000;
+    background-color: black;
     position: fixed;
     top: 0;
     right: 0;
@@ -57,7 +61,7 @@ header .container {
 .sidenav a {
     display: block;
     text-decoration: none;
-    color: #ffffff;
+    color: white;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
     padding-left: 2em;
@@ -65,7 +69,7 @@ header .container {
 }
 
 .sidenav a:hover {
-    background-color: #0099cc;
+    background-color: var(--primary);
 }
 
 /* || BUTTONS || */
@@ -80,6 +84,39 @@ header .container {
 .icon-button img {
     width: 2.5em;
 }
+
+.center-wrapper {
+    position: relative;
+    height: 2em;
+    margin-top: 2em;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.colored-button {
+    cursor: pointer;
+    border: 0.25em solid var(--primary);
+    background-color: #ffffff00;
+    color: var(--primary);
+    font-weight: bold;
+    padding: 0.5em 1em;
+}
+
+.colored-button:hover {
+    background-color: var(--primary);
+    color: white;
+    transition: 0.5s;
+}
+
+.full-width {
+    width: 100%;
+}
+
 /* Specific */
 /* Scroll down hint */
 .scroll-down-hint {
@@ -140,7 +177,7 @@ header .container {
     cursor: pointer;
     border: none;
     padding: 0.5em;
-    background-color: #0099cc   ;
+    background-color: var(--primary)   ;
     border-left: 1px solid gray;
     width: 15%;
 }
@@ -171,12 +208,18 @@ aside {
     width: 100%;
 }
 
+/* Article cards */
 .card {
     margin-top: 2em;
     padding: 2em;
-    background-color: #ffffff;
-    box-shadow: 0 0 1em 0px #dddddd;
+    background-color: white;
+    box-shadow: 0 0 1em 0px #ddd;
     overflow: auto; /* Clearfix */
+}
+
+.thumbnail {
+    width: 100%;
+    margin-bottom: 1.5em;
 }
 
 .card small {
@@ -188,9 +231,15 @@ aside {
     transition: max-height 0.3s ease-out;
 }
 
-.thumbnail {
-    width: 100%;
-    margin-bottom: 1.5em;
+article.card > p:first-of-type {
+    margin-bottom: 0;
+    /*border-left: 0.4em solid var(--primary);
+    padding-left: 1em;*/
+}
+
+.article-head {
+    border-left: 0.4em solid var(--primary);
+    padding-left: 0.5em;
 }
 
 .about img {
@@ -245,10 +294,10 @@ aside {
 /* Footer */
 footer {
     /* General Styling */
-    background-color: #0099cc;
-    margin-top: 1.5em;
+    background-color: var(--primary);
+    margin-top: 2em;
     padding: 2em;
 
     /* Text Styling */
-    color: #ffffff;
+    color: white;
 }

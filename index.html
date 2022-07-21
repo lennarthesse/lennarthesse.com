@@ -30,9 +30,9 @@
             <button id="js-close-btn" class="close-nav icon-button" onclick="hideNav()">
                 <img src="./media/cross.png">
             </button>
-            <a href="#" onclick="hideNav()">Articles</a>
-            <a href="#" onclick="hideNav()">About</a>
-            <a href="#" onclick="hideNav()">Search</a>
+            <a href="#articles" onclick="hideNav()">Articles</a>
+            <a href="#about" onclick="hideNav()">About</a>
+            <a href="#search" onclick="hideNav()">Search</a>
         </div>
 
         <button onclick="scrollToTop()" id="js-top-btn" class="scroll-top icon-button">
@@ -42,12 +42,54 @@
         <div class="content">
             <div class="row">
 
-                <main>
-                    <!-- Erster Artikel (text-adventure) -->
+                <main id="articles">
+                    <!-- Article Template
+                    <article class="card">
+                        <img class="thumbnail" src="source">
+                        <div class="article-head">
+                            <h2>Article Title</h2>
+                            <small>Month 00, Year</small>
+                        </div>
+                        <p>Introductory Paragraph</p>
+                        
+                        <div class="panel">
+                            <p>Content</p>
+                            <img src="source">
+                            <h3>Section Title</h3>
+                        </div>
+
+                        <div class="center-wrapper">
+                            <button class="centered colored-button" onclick="readMore(this)">Read more</button>
+                        </div>
+                    </article>
+                    -->
+
+                    <article class="card">
+                        <img class="thumbnail" src="source">
+                        <div class="article-head">
+                            <h2>Article Title</h2>
+                            <small>Month 00, Year</small>
+                        </div>
+                        <p>Introductory Paragraph</p>
+                        
+                        <div class="panel">
+                            <p>Content</p>
+                            <img src="source">
+                            <h3>Section Title</h3>
+                        </div>
+
+                        <div class="center-wrapper">
+                            <button class="centered colored-button" onclick="readMore(this)">Read more</button>
+                        </div>
+                    </article>
+
+                    <!-- First article (text-adventure) -->
                     <article class="card">
                         <img class="thumbnail" src="./media/textadventure_title.png">
-                        <h2>Terminal based text-adventure game in Java</h2>
-                        <small>September 21, 1978</small>
+                        <div class="article-head">
+                            <h2>Terminal based text-adventure game in Java</h2>
+                            <small>September 21, 1978</small>
+                        </div>
                         <p>In this article I want to show the process of how I built my own little text-adventure game. My motivation was to gain more experience in coding besides the tasks that I work on for university that are also why I have been using Java alot for the last year. Because of that, I decided to build the game using Java.</p>
                         
                         <div class="panel">
@@ -55,55 +97,19 @@
                             <img src="./media/favicon.ico">
                         </div>
 
-                        <button onclick="readMore(this)">Read more</button>
-                    </article>
-                
-                    <!-- Zweiter Artikel -->
-                    <article class="card">
-                        <h2>Projekt #1</h2>
-                        <small>September 21, 1978</small>
-                        <p>In this article I want to show the process of how I built my own little text-adventure game. My motivation was to gain more experience in coding besides the tasks that I work on for university that are also why I have been using Java alot for the last year. Because of that, I decided to build the game using Java. I wanted a simple approach where I don't have to worry about getting to know the entire environment beforehand like with Unity3D.</p>
-
-                        <div class="panel">
-                            <p>So instead of building a complete UI, I simply print the output to the console. That way you can just execute the .jar and let it run in the terminal, which is already the exact feel I wanted to achieve for this game.</p>
-                            <p>Another paragraph.</p>
+                        <div class="center-wrapper">
+                            <button class="centered colored-button" onclick="readMore(this)">Read more</button>
                         </div>
-
-                        <button onclick="readMore(this)">Read more</button>
                     </article>
-                
-                    <article class="card">
-                        <img class="thumbnail" src="./media/textadventure_title.png">
-                        <h2>Terminal based text-adventure game in Java</h2>
-                        <small>September 21, 1978</small>
-                        <p>In this article I want to show the process of how I built my own little text-adventure game. My motivation was to gain more experience in coding besides the tasks that I work on for university that are also why I have been using Java alot for the last year. Because of that, I decided to build the game using Java.</p>
-                        
-                        <div class="panel">
-                            <p>I wanted a simple approach where I don't have to worry about getting to know the entire environment beforehand like with Unity3D. So instead of building a complete UI, I simply print the output to the console. That way you can just execute the .jar and let it run in the terminal, which is already the exact feel I wanted to achieve for this game.</p>
-                            <img src="./media/favicon.ico">
-                        </div>
 
-                        <button onclick="readMore(this)">Read more</button>
-                    </article>
-                
-                    <article class="card">
-                        <h2>Projekt #1</h2>
-                        <small>September 21, 1978</small>
-                        <p>In this article I want to show the process of how I built my own little text-adventure game. My motivation was to gain more experience in coding besides the tasks that I work on for university that are also why I have been using Java alot for the last year. Because of that, I decided to build the game using Java. I wanted a simple approach where I don't have to worry about getting to know the entire environment beforehand like with Unity3D.</p>
-
-                        <div class="panel">
-                            <p>So instead of building a complete UI, I simply print the output to the console. That way you can just execute the .jar and let it run in the terminal, which is already the exact feel I wanted to achieve for this game.</p>
-                            <p>Another paragraph.</p>
-                        </div>
-
-                        <button onclick="readMore(this)">Read more</button>
-                    </article>
-                    <button id="js-load-more" onclick="loadMore()">Load more</button>
+                    <div class="center-wrapper">
+                        <button class="full-width centered colored-button" id="js-load-more" onclick="loadMore()">Load more</button>
+                    </div>
                 </main>
 
                 <aside>
                     <!-- About Me Card -->
-                    <div class="card about">
+                    <div class="card about" id="about">
                         <img src="./media/avatar.png">
 
                         <h2>Lorem Ipsum:</h2>
@@ -111,7 +117,7 @@
                     </div>
 
                     <!-- Search Card -->
-                    <div class="card">
+                    <div class="card" id="search">
                         <div class="search-container">
                             <input id="js-search-bar" type="text" placeholder="Search article..." ><button type="submit" onclick="searchArticles()"> 
                                 <img src="./media/search.png">

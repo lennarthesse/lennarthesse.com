@@ -8,7 +8,7 @@ var thresholdTop = $(window).innerHeight();                     // When to show 
 var thresholdDown = 150;                                        // When to hide scroll down hint
 
 var loadMoreButton = document.getElementById("js-load-more");   // Reference to load more button
-const additionalArticles = 2;                                   // Number of additional articles to be loaded
+const additionalArticles = 1;                                   // Number of additional articles to be loaded
 
 var articles = $(document).find("article");                     // Collection of all articles
 var panels = articles.find(".panel");                           // Collection of expandable panels
@@ -65,7 +65,7 @@ function hideOnScrollDown(threshold, element) {
 
 // EXTERNAL FUNCTIONS //
 function readMore(btn) {
-    var parent = btn.parentElement;
+    var parent = btn.parentElement.parentElement;
     var panel = $(parent).find(".panel")[0];
 
     if (panel.style.maxHeight == "0px") {
