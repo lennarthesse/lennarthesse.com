@@ -11,11 +11,15 @@ var loadMoreButton = document.getElementById("js-load-more");   // Reference to 
 const additionalArticles = 2;                                   // Number of additional articles to be loaded
 
 var articles = $(document).find("article");                     // Collection of all articles
+var panels = articles.find(".panel");                           // Collection of expandable panels
 var input = document.getElementById("js-search-bar");           // Reference to search input
 
 // INITIAL SETUP //
 hideArticles();                                                 // First hide all articles
 loadMore();                                                     // Then load first articles
+for (var i = 0; i < panels.length; i++) {                       // Collapse all panels
+    panels[i].style.maxHeight = "0px";
+}
 
 // MAIN LOOP //
 setInterval(animateHint, 75);                                   // Animate scroll down hint
@@ -64,12 +68,12 @@ function readMore(btn) {
     var parent = btn.parentElement;
     var panel = $(parent).find(".panel")[0];
 
-    if (panel.style.maxHeight) {
-        panel.style.maxHeight = null;
-        btn.innerHTML = "Read more"
-    } else {
+    if (panel.style.maxHeight == "0px") {
         panel.style.maxHeight = panel.scrollHeight + "px";
         btn.innerHTML = "Read less";
+    } else {
+        panel.style.maxHeight = "0px";
+        btn.innerHTML = "Read more"
     }
 }
 
