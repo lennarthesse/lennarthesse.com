@@ -100,21 +100,21 @@ header .container {
 
 .colored-button {
     cursor: pointer;
-    border: 0.25em solid var(--primary);
-    background-color: #ffffff00;
-    color: var(--primary);
+    border: 3px solid var(--primary);
+    background-color: var(--primary);
+    color: white;
     font-weight: bold;
     padding: 0.5em 1em;
 }
 
-.colored-button:hover {
+/*.colored-button:hover {
     background-color: var(--primary);
     color: white;
     transition: 0.5s;
-}
+}*/
 
-.full-width {
-    width: 100%;
+.load-more {
+    width: 70%;
 }
 
 /* Specific */

@@ -10,6 +10,10 @@
     </head>
 
     <body>
+        <noscript>
+            <h1 style="text-align: center;">This website uses JavaScript. Make sure to enable it for full functionality.</h1>
+        </noscript>
+
         <!-- Header -->
         <header>
             <div class="container">
@@ -17,18 +21,18 @@
                 <h2>Untertitel</h2>
             </div>
             <button id="js-scroll-down-icon" class="scroll-down-hint icon-button" onclick="scrollContent()">
-                <img src="./media/arrow-icon.png">
+                <img src="./media/icons/arrow-icon.png">
             </button>
         </header>
 
         <!-- Sidenav -->
         <button id="js-nav-burger" class="nav-burger icon-button" onclick="showNav()">
-            <img src="./media/burger.png">
+            <img src="./media/icons/burger.png">
         </button>
 
         <div class="sidenav" id="js-sidenav">
             <button id="js-close-btn" class="close-nav icon-button" onclick="hideNav()">
-                <img src="./media/cross.png">
+                <img src="./media/icons/cross.png">
             </button>
             <a href="#articles" onclick="hideNav()">Articles</a>
             <a href="#about" onclick="hideNav()">About</a>
@@ -36,7 +40,7 @@
         </div>
 
         <button onclick="scrollToTop()" id="js-top-btn" class="scroll-top icon-button">
-            <img src="./media/arrow-icon.png">
+            <img src="./media/icons/arrow-icon.png">
         </button>
 
         <div class="content">
@@ -64,28 +68,9 @@
                     </article>
                     -->
 
-                    <article class="card">
-                        <img class="thumbnail" src="source">
-                        <div class="article-head">
-                            <h2>Article Title</h2>
-                            <small>Month 00, Year</small>
-                        </div>
-                        <p>Introductory Paragraph</p>
-                        
-                        <div class="panel">
-                            <p>Content</p>
-                            <img src="source">
-                            <h3>Section Title</h3>
-                        </div>
-
-                        <div class="center-wrapper">
-                            <button class="centered colored-button" onclick="readMore(this)">Read more</button>
-                        </div>
-                    </article>
-
                     <!-- First article (text-adventure) -->
                     <article class="card">
-                        <img class="thumbnail" src="./media/textadventure_title.png">
+                        <img class="thumbnail" src="./media/thumbnails/textadventure_title.png">
                         <div class="article-head">
                             <h2>Terminal based text-adventure game in Java</h2>
                             <small>September 21, 1978</small>
@@ -102,34 +87,56 @@
                         </div>
                     </article>
 
+                    <article class="card">
+                        <img class="thumbnail" src="source">
+                        <div class="article-head">
+                            <h2>Creating a Resume with HTML and CSS</h2>
+                            <small>Month 00, 2022</small>
+                        </div>
+                        <p>Introductory Paragraph</p>
+                        
+                        <div class="panel">
+                            <p>Content</p>
+                            <img src="source">
+                            <h3>Section Title</h3>
+                        </div>
+
+                        <div class="center-wrapper">
+                            <button class="centered colored-button" onclick="readMore(this)">Read more</button>
+                        </div>
+                    </article>
+
                     <div class="center-wrapper">
-                        <button class="full-width centered colored-button" id="js-load-more" onclick="loadMore()">Load more</button>
+                        <button class="load-more centered colored-button" id="js-load-more" onclick="loadMore()">Load more</button>
                     </div>
                 </main>
 
                 <aside>
                     <!-- About Me Card -->
                     <div class="card about" id="about">
-                        <img src="./media/avatar.png">
+                        <img src="./media/profile.jpg">
 
-                        <h2>Lorem Ipsum:</h2>
-                        <p>dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><p> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <h2>Hello there!</h2>
+                        <p>I'm Lennart and this is my little tech-project blog! I created it because I wanted to have a platform to show what I'm up to in my freetime and outline my personal development.</p>
+                        <p> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                     </div>
 
                     <!-- Search Card -->
                     <div class="card" id="search">
                         <div class="search-container">
                             <input id="js-search-bar" type="text" placeholder="Search article..." ><button type="submit" onclick="searchArticles()"> 
-                                <img src="./media/search.png">
+                                <img src="./media/icons/search.png">
                             </button>
                         </div>
                     </div>
 
                     <!-- Sitemap or smth -->
+                    <!--
                     <div class="card">
                         <h2>Sitemap</h2>
                         <p>Bitte ignorieren</p>
                     </div>
+                    -->
                 </aside>
 
             </div>
