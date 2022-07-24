@@ -118,10 +118,11 @@ function searchArticles() {
     }
     if (matches[0]) {
         matches[0].scrollIntoView();
+    } else {
+        scrollTo(0, thresholdTop);
+        // Add notifier if no results?
     }
     loadMoreButton.style.visibility = "hidden";
-
-    // Add notifier if no results?
 }
 
 // Show side nav on burger click

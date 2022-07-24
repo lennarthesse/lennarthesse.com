@@ -21,10 +21,18 @@ body {
     line-height: 1.5;
 }
 
+a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
 /* || HEADER || */
 header {
     /* Set background image */
-    background-image: linear-gradient(var(--primary), var(--primary)), url("../media/header-bg.png");
+    /*background-image: url("../media/header-bg.png");*/
+    background-color: lightblue;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; /* Fit to container */
@@ -37,17 +45,34 @@ header .container {
     /* Center header content */
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(0%, -50%);
+
+    padding: 0 2em;
 
     /* Text styling */
     color: white;
-    text-align: center;
+    line-height: normal;
+}
+
+header small {
+    font-size: 2em;
+    font-weight: lighter;
+}
+
+header h1 {
+    font-size: 6em;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.5em;
+    margin: 0;
+    margin-bottom: 2em;
 }
 
 /* || NAVBAR || */
 .sidenav {
-    background-color: black;
+    background-color: #000000ee;
     position: fixed;
     top: 0;
     right: 0;
@@ -56,6 +81,7 @@ header .container {
     transition: 0.5s;
     padding-top: 4.5em;
     z-index: 2;
+    outline: 1px solid black;
 }
 
 .sidenav a {
@@ -184,18 +210,19 @@ header .container {
 
 .search-container button img {
     height: 1em;
+    filter: invert();
 }
 
 /* Mobile styling */
-.content h2 {
-    font-family: "Times New Roman";
-    margin: 0;
-}
-
-.row:after {
+.content {
     content: "";
     display: table;
     clear: both;
+}
+
+.content h2 {
+    font-family: "Times New Roman";
+    margin: 0;
 }
 
 main {
@@ -258,6 +285,10 @@ article.card > p:first-of-type {
 
 /* For Desktop */
 @media only screen and (min-width: 992px) {
+    header .container {
+        padding: 0 4em;
+    }
+
     .nav-burger {
         display: none;
     }
@@ -282,6 +313,10 @@ article.card > p:first-of-type {
 
 /* For Extra Large Devices */
 @media only screen and (min-width: 1500px) {
+    header .container {
+        padding: 0 calc(2em + 10vw);
+    }
+
     .content {
         padding: 0 10vw;
     }
@@ -299,5 +334,11 @@ footer {
     padding: 2em;
 
     /* Text Styling */
+    color: white;
+    text-align: center;
+}
+
+
+footer a {
     color: white;
 }

@@ -17,8 +17,11 @@
         <!-- Header -->
         <header>
             <div class="container">
-                <h1>Überschrift</h1>
-                <h2>Untertitel</h2>
+                <small>Tech Blog</small>
+                <h1>Lennart Hesse</h1>
+                <p>Projects | Gadgets | Experiments and More!</p>
+                <!--<p>My personal journey and all that I've learned</p>-->
+                <button class="colored-button" onclick="scrollContent()">Start reading</button>
             </div>
             <button id="js-scroll-down-icon" class="scroll-down-hint icon-button" onclick="scrollContent()">
                 <img src="./media/icons/arrow-icon.png">
@@ -37,6 +40,7 @@
             <a href="#articles" onclick="hideNav()">Articles</a>
             <a href="#about" onclick="hideNav()">About</a>
             <a href="#search" onclick="hideNav()">Search</a>
+            <a href="#contact" onclick="hideNav()">Contact</a>
         </div>
 
         <button onclick="scrollToTop()" id="js-top-btn" class="scroll-top icon-button">
@@ -44,118 +48,115 @@
         </button>
 
         <div class="content">
-            <div class="row">
-
-                <main id="articles">
-                    <!-- Article Template
-                    <article class="card">
-                        <img class="thumbnail" src="source">
-                        <div class="article-head">
-                            <h2>Article Title</h2>
-                            <small>Month 00, Year</small>
-                        </div>
-                        <p>Introductory Paragraph</p>
-                        
-                        <div class="panel">
-                            <p>Content</p>
-                            <img src="source">
-                            <h3>Section Title</h3>
-                        </div>
-
-                        <div class="center-wrapper">
-                            <button class="centered colored-button" onclick="readMore(this)">Read more</button>
-                        </div>
-                    </article>
-                    -->
-
-                    <!-- First article (text-adventure) -->
-                    <article class="card">
-                        <img class="thumbnail" src="./media/thumbnails/textadventure_title.png">
-                        <div class="article-head">
-                            <h2>Terminal based text-adventure game in Java</h2>
-                            <small>September 21, 1978</small>
-                        </div>
-                        <p>In this article I want to show the process of how I built my own little text-adventure game. My motivation was to gain more experience in coding besides the tasks that I work on for university that are also why I have been using Java alot for the last year. Because of that, I decided to build the game using Java.</p>
-                        
-                        <div class="panel">
-                            <p>I wanted a simple approach where I don't have to worry about getting to know the entire environment beforehand like with Unity3D. So instead of building a complete UI, I simply print the output to the console. That way you can just execute the .jar and let it run in the terminal, which is already the exact feel I wanted to achieve for this game.</p>
-                            <img src="./media/favicon.ico">
-                        </div>
-
-                        <div class="center-wrapper">
-                            <button class="centered colored-button" onclick="readMore(this)">Read more</button>
-                        </div>
-                    </article>
-
-                    <article class="card">
-                        <img class="thumbnail" src="source">
-                        <div class="article-head">
-                            <h2>Creating a Resume with HTML and CSS</h2>
-                            <small>Month 00, 2022</small>
-                        </div>
-                        <p>Introductory Paragraph</p>
-                        
-                        <div class="panel">
-                            <p>Content</p>
-                            <img src="source">
-                            <h3>Section Title</h3>
-                        </div>
-
-                        <div class="center-wrapper">
-                            <button class="centered colored-button" onclick="readMore(this)">Read more</button>
-                        </div>
-                    </article>
+            <main id="articles">
+                <!-- Article Template
+                <article class="card">
+                    <img class="thumbnail" src="source">
+                    <div class="article-head">
+                        <h2>Article Title</h2>
+                        <small>Month 00, Year</small>
+                    </div>
+                    <p>Introductory Paragraph</p>
+                    
+                    <div class="panel">
+                        <p>Content</p>
+                        <img src="source">
+                        <h3>Section Title</h3>
+                    </div>
 
                     <div class="center-wrapper">
-                        <button class="load-more centered colored-button" id="js-load-more" onclick="loadMore()">Load more</button>
+                        <button class="centered colored-button" onclick="readMore(this)">Read more</button>
                     </div>
-                </main>
+                </article>
+                -->
 
-                <aside>
-                    <!-- About Me Card -->
-                    <div class="card about" id="about">
-                        <img src="./media/profile.jpg">
-
-                        <h2>Hello there!</h2>
-                        <p>I'm Lennart and this is my little tech-project blog! I created it because I wanted to have a platform to show what I'm up to in my freetime and outline my personal development.</p>
-                        <p> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <!-- First article (text-adventure) -->
+                <article class="card">
+                    <img class="thumbnail" src="./media/thumbnails/textadventure_title.png">
+                    <div class="article-head">
+                        <h2>Terminal based text-adventure game in Java</h2>
+                        <small>September 21, 1978</small>
                     </div>
-
-                    <!-- Search Card -->
-                    <div class="card" id="search">
-                        <div class="search-container">
-                            <input id="js-search-bar" type="text" placeholder="Search article..." ><button type="submit" onclick="searchArticles()"> 
-                                <img src="./media/icons/search.png">
-                            </button>
-                        </div>
+                    <p>In this article I want to show the process of how I built my own little text-adventure game. My motivation was to gain more experience in coding besides the tasks that I work on for university that are also why I have been using Java alot for the last year. Because of that, I decided to build the game using Java.</p>
+                    
+                    <div class="panel">
+                        <p>I wanted a simple approach where I don't have to worry about getting to know the entire environment beforehand like with Unity3D. So instead of building a complete UI, I simply print the output to the console. That way you can just execute the .jar and let it run in the terminal, which is already the exact feel I wanted to achieve for this game.</p>
+                        <img src="./media/favicon.ico">
                     </div>
 
-                    <!-- Sitemap or smth -->
-                    <!--
-                    <div class="card">
-                        <h2>Sitemap</h2>
-                        <p>Bitte ignorieren</p>
+                    <div class="center-wrapper">
+                        <button class="centered colored-button" onclick="readMore(this)">Read more</button>
                     </div>
-                    -->
-                </aside>
+                </article>
 
-            </div>
+                <article class="card">
+                    <img class="thumbnail" src="source">
+                    <div class="article-head">
+                        <h2>Creating a Resume with HTML and CSS</h2>
+                        <small>Month 00, 2022</small>
+                    </div>
+                    <p>Introductory Paragraph</p>
+                    
+                    <div class="panel">
+                        <p>Content</p>
+                        <img src="source">
+                        <h3>Section Title</h3>
+                    </div>
+
+                    <div class="center-wrapper">
+                        <button class="centered colored-button" onclick="readMore(this)">Read more</button>
+                    </div>
+                </article>
+
+                <div class="center-wrapper">
+                    <button class="load-more centered colored-button" id="js-load-more" onclick="loadMore()">Load more</button>
+                </div>
+            </main>
+
+            <aside>
+                <!-- About Me Card -->
+                <div class="card about" id="about">
+                    <img src="./media/profile.jpg">
+
+                    <h2>Hello there!</h2>
+                    <p>I'm Lennart and this is my little tech-project blog! I created it because I wanted to have a platform to show what I'm up to in my freetime and outline my personal development.</p>
+                    <p> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                </div>
+
+                <!-- Search Card -->
+                <div class="card" id="search">
+                    <form class="search-container">
+                        <input id="js-search-bar" type="search" placeholder="Search article..." ><button onclick="searchArticles()"> 
+                            <img src="./media/icons/search.png">
+                        </button>
+                    </form>
+                </div>
+
+                <div class="card" id="contact">
+                    <h2>Contact Me</h2>
+                    <p>Email: <a href=mailto:lennart@lennarthesse.com>lennart@lennarthesse.com</a></p>
+                </div>
+            </aside>
         </div>
 
         <!-- Footer -->
         <footer>
-            <div class="row">
-                <!--<div class="col-4">
+                <!--
+                <form action="">
+                    <label>Name</label>
+                    <input type="text" required>
 
-                </div>
-                <div class="col-4">
-                    
-                </div>
-                <div class="col-4">
-                    
-                </div>
-            </div>-->
-            <p>Das ist ein Footer.</p>
+                    <label>Email</label>
+                    <input type="email" pattern="" placeholder="example@mail.com" required>
+
+                    <label>Message</label>
+                    <textarea placeholder="Write something..."></textarea>
+
+                    <input type="submit" value="Submit">
+                </form>
+                -->
+            <p>The source code for this site can be found on <a href="https://www.github.com/lennarthesse/portfolio">Github</a></p>
+            <small>&copy; Lennart Hesse</small>
         </footer>
 
         <script src="./scripts/jquery.js"></script>
