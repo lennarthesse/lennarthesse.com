@@ -55,17 +55,17 @@ header .container {
 }
 
 header small {
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: lighter;
 }
 
 header h1 {
-    font-size: 6em;
+    font-size: 4.5em;
     margin: 0;
 }
 
 header p {
-    font-size: 1.5em;
+    font-size: 1em;
     margin: 0;
     margin-bottom: 2em;
 }
@@ -157,7 +157,6 @@ header p {
     width: 2.5em;
     opacity: 50%;
     filter: invert();
-    -webkit-filter: invert();
 }
 
 /* Nav burger and close button */
@@ -221,7 +220,6 @@ header p {
 }
 
 .content h2 {
-    font-family: "Times New Roman";
     margin: 0;
 }
 
@@ -260,8 +258,6 @@ aside {
 
 article.card > p:first-of-type {
     margin-bottom: 0;
-    /*border-left: 0.4em solid var(--primary);
-    padding-left: 1em;*/
 }
 
 .article-head {
@@ -287,6 +283,18 @@ article.card > p:first-of-type {
 @media only screen and (min-width: 992px) {
     header .container {
         padding: 0 4em;
+    }
+
+    header small {
+        font-size: 2em;
+    }
+
+    header h1 {
+        font-size: 6em;
+    }
+
+    header p {
+        font-size: 1.5em;
     }
 
     .nav-burger {
