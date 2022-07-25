@@ -70,10 +70,10 @@ function readMore(btn) {
 
     if (panel.style.maxHeight == "0px") {
         panel.style.maxHeight = panel.scrollHeight + "px";
-        btn.innerHTML = "Read less";
+        btn.innerHTML = "Read Less";
     } else {
         panel.style.maxHeight = "0px";
-        btn.innerHTML = "Read more"
+        btn.innerHTML = "Read More"
     }
 }
 

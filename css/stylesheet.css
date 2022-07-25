@@ -308,6 +308,7 @@ article.card > p:first-of-type {
 
     .about img {
         width: 100%;
+        margin: 0 0 2em 0; /* For Edge being "special" */
     }
 }
 
