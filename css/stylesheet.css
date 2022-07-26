@@ -1,5 +1,5 @@
 :root {
-    --primary: #0099cc;
+    --primary: #0088cc;
 }
 
 * {
@@ -32,7 +32,7 @@ a {
 header {
     /* Set background image */
     /*background-image: url("../media/header-bg.png");*/
-    background-color: lightblue;
+    background-color: skyblue;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; /* Fit to container */
