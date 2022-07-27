@@ -104,7 +104,7 @@ function loadMore() {
 function searchArticles() {
     var searchTerm = input.value.toLowerCase();
     var keywords = searchTerm.split(" ");
-    var matches = [];
+    var matches = new Set();
     // If search term is empty, reset articles and show load more
     if (searchTerm == "") {
         hideArticles();
@@ -115,24 +115,26 @@ function searchArticles() {
     }
     // Loop through all articles
     for (var i = 0; i < articles.length; i++) {
-        // If the article contains part of one of the keywords, add it to results
+        // If the article contains part of ALL of the keywords, add it to results
+        matches.add(articles[i])
         for (var j = 0; j < keywords.length; j++) {
-            if (articles[i].innerText.toLowerCase().search(keywords[j]) > -1) {
-                matches.push(articles[i]);
+            if (articles[i].innerText.toLowerCase().search(keywords[j]) < 0) {
+                matches.delete(articles[i]);
             }
         }
     }
+    
     // Only display the matches and scroll to the first one, hide load more button
     hideArticles();
-    for (var i = 0; i < matches.length; i++) {
+    /*for (var i = 0; i < matches.length; i++) {
         matches[i].style.display = "block";
+    }*/
+    for (const match of matches.values()) {
+        match.style.display = "block";
     }
-    if (matches[0]) {
-        matches[0].scrollIntoView();
-    } else {
-        scrollTo(0, thresholdTop);
-        // Add notifier if no results?
-    }
+
+    scrollTo(0, thresholdTop);
+    // Add notifier if no results?
     loadMoreButton.style.visibility = "hidden";
 }
 
