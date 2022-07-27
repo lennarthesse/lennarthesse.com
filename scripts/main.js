@@ -11,8 +11,11 @@ var thresholdDown = 150;                                        // When to hide 
 var loadMoreButton = document.getElementById("js-load-more");   // Reference to load more button
 const additionalArticles = 1;                                   // Number of additional articles to be loaded
 
-var articles = $(document).find("article");                     // Collection of all articles
-var panels = articles.find(".panel");                           // Collection of expandable panels
+var articles = document.querySelectorAll("article");            // Collection of all articles
+var panels = []                                                 // Collection of expandable panels
+for (var i = 0; i < articles.length; i++) {
+    panels.push(articles[i].querySelector(".panel"));
+}
 var input = document.getElementById("js-search-bar");           // Reference to search input
 
 // INITIAL SETUP //
@@ -79,7 +82,12 @@ function readMore(btn) {
 }
 
 function loadMore() {
-    var hiddenArticles = $(document).find("article:hidden");
+    var hiddenArticles = [];
+    for (var i = 0; i < articles.length; i++) {
+        if (articles[i].style.display === "none") {
+            hiddenArticles.push(articles[i]);
+        }
+    }
     var i = 0;
 
     if (i + additionalArticles >= hiddenArticles.length) {
