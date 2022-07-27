@@ -4,7 +4,8 @@ var downIcon = document.getElementById("js-scroll-down-icon");  // Reference to 
 var xPos = downIcon.style.bottom;                               // xPos of scroll down hint
 var up;                                                         // Hint moving up or not?
 
-var thresholdTop = $(window).innerHeight();                     // When to show scroll to top button
+var thresholdTop = window.innerHeight;                          // When to show scroll to top button
+
 var thresholdDown = 150;                                        // When to hide scroll down hint
 
 var loadMoreButton = document.getElementById("js-load-more");   // Reference to load more button
@@ -66,7 +67,7 @@ function hideOnScrollDown(threshold, element) {
 // EXTERNAL FUNCTIONS //
 function readMore(btn) {
     var parent = btn.parentElement.parentElement;
-    var panel = $(parent).find(".panel")[0];
+    var panel = parent.querySelector(".panel");
 
     if (panel.style.maxHeight == "0px") {
         panel.style.maxHeight = panel.scrollHeight + "px";

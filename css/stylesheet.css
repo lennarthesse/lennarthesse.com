@@ -1,9 +1,11 @@
 :root {
-    --primary: #4488bb;
+    --primary: steelblue;
 }
 
 * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 html {
@@ -32,10 +34,13 @@ a {
 header {
     /* Set background image */
     /*background-image: url("../media/header-bg.png");*/
-    background-color: skyblue;
+    background-color: #99ccdd;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; /* Fit to container */
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover; /* Fit to container */
 
     /* Make header fill screen */
     height: 100vh;
@@ -45,7 +50,11 @@ header .container {
     /* Center header content */
     position: absolute;
     top: 50%;
-    transform: translate(0%, -50%);
+    -webkit-transform: translate(0%, -50%);
+       -moz-transform: translate(0%, -50%);
+        -ms-transform: translate(0%, -50%);
+         -o-transform: translate(0%, -50%);
+            transform: translate(0%, -50%);
 
     padding: 0 2em;
 
@@ -78,6 +87,9 @@ header p {
     right: 0;
     height: 100vh;
     width: 0;
+    -webkit-transition: 0.5s;
+       -moz-transition: 0.5s;
+         -o-transition: 0.5s;
     transition: 0.5s;
     padding-top: 4.5em;
     z-index: 2;
@@ -121,7 +133,11 @@ header p {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+       -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+         -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 }
 
 .colored-button {
@@ -150,13 +166,18 @@ header p {
     position: absolute;
     left: 50%;
     bottom: 0;
-    transform: rotate(180deg) translate(50%, 50%);
+    -webkit-transform: rotate(180deg) translate(50%, 50%);
+       -moz-transform: rotate(180deg) translate(50%, 50%);
+        -ms-transform: rotate(180deg) translate(50%, 50%);
+         -o-transform: rotate(180deg) translate(50%, 50%);
+            transform: rotate(180deg) translate(50%, 50%);
 }
 
 .scroll-down-hint img {
     width: 2.5em;
     opacity: 50%;
-    filter: invert();
+    -webkit-filter: invert();
+            filter: invert();
 }
 
 /* Nav burger and close button */
@@ -175,7 +196,8 @@ header p {
 }
 
 .close-nav img {
-    filter: invert();
+    -webkit-filter: invert();
+            filter: invert();
 }
 
 /* Scroll to top button */
@@ -209,7 +231,8 @@ header p {
 
 .search-container button img {
     height: 1em;
-    filter: invert();
+    -webkit-filter: invert();
+            filter: invert();
 }
 
 /* Mobile styling */
@@ -238,7 +261,9 @@ aside {
     margin-top: 2em;
     padding: 2em;
     background-color: white;
-    box-shadow: 0 0 1em 0px #ddd;
+    -webkit-box-shadow: 0 0 1em 0px #ddd;
+       -moz-box-shadow: 0 0 1em 0px #ddd;
+            box-shadow: 0 0 1em 0px #ddd;
     overflow: auto; /* Clearfix */
 }
 
@@ -253,7 +278,10 @@ aside {
 
 .panel {
     overflow: hidden;
-    transition: max-height 0.3s ease-out;
+    -webkit-transition: max-height 0.3s ease-out;
+       -moz-transition: max-height 0.3s ease-out;
+         -o-transition: max-height 0.3s ease-out;
+            transition: max-height 0.3s ease-out;
 }
 
 article.card > p:first-of-type {
@@ -267,7 +295,9 @@ article.card > p:first-of-type {
 
 .about img {
     width: 100%;
-    border-radius: 50%;
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
     float: left;
     margin: 0 2em 2em 0 ;
 }
@@ -323,6 +353,8 @@ article.card > p:first-of-type {
 /* For Extra Large Devices */
 @media only screen and (min-width: 1500px) {
     header .container {
+        padding: 0 -webkit-calc(2em + 10vw);
+        padding: 0 -moz-calc(2em + 10vw);
         padding: 0 calc(2em + 10vw);
     }
 
