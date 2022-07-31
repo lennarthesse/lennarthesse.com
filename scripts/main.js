@@ -6,10 +6,8 @@ var up;                                                         // Hint moving u
 
 var thresholdTop = window.innerHeight;                          // When to show scroll to top button
 
-var thresholdDown = 150;                                        // When to hide scroll down hint
-
 var loadMoreButton = document.getElementById("js-load-more");   // Reference to load more button
-const additionalArticles = 1;                                   // Number of additional articles to be loaded
+const additionalArticles = 5;                                   // Number of additional articles to be loaded
 
 var articles = document.querySelectorAll("article");            // Collection of all articles
 var panels = []                                                 // Collection of expandable panels
@@ -27,7 +25,7 @@ for (var i = 0; i < panels.length; i++) {                       // Collapse all 
 
 // MAIN LOOP //
 setInterval(animateHint, 75);                                   // Animate scroll down hint
-window.onscroll = function() {showOnScrollDown(thresholdTop, topButton), hideOnScrollDown(thresholdDown, downIcon)}; // Check if buttons should be shown or hidden
+window.onscroll = function() {showOnScrollDown(thresholdTop, topButton)}; // Check if button should be shown or hidden
 
 // INTERNAL FUNCTIONS //
 function hideArticles() {
@@ -58,15 +56,6 @@ function showOnScrollDown(threshold, element) {
     }
 }
 
-function hideOnScrollDown(threshold, element) {
-    if (document.body.scrollTop > threshold || document.documentElement.scrollTop > threshold) {
-        element.style.display = "none";
-    } else {
-        element.style.display = "block";
-    }
-}
-
-
 // EXTERNAL FUNCTIONS //
 function readMore(btn) {
     var parent = btn.parentElement.parentElement;
@@ -89,7 +78,6 @@ function loadMore() {
         }
     }
     var i = 0;
-
     if (i + additionalArticles >= hiddenArticles.length) {
         loadMoreButton.style.visibility = "hidden";
     }
@@ -123,18 +111,13 @@ function searchArticles() {
             }
         }
     }
-    
     // Only display the matches and scroll to the first one, hide load more button
     hideArticles();
-    /*for (var i = 0; i < matches.length; i++) {
-        matches[i].style.display = "block";
-    }*/
     for (const match of matches.values()) {
         match.style.display = "block";
     }
-
     scrollTo(0, thresholdTop);
-    // Add notifier if no results?
+    // [Add notifier if no results?]
     loadMoreButton.style.visibility = "hidden";
 }
 

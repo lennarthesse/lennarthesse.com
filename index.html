@@ -22,8 +22,7 @@
             <div class="container">
                 <small>Tech Blog</small>
                 <h1>Lennart Hesse</h1>
-                <p>Projects | Experiments | Tutorials and More!</p>
-                <!--<p>My personal journey and all that I've learned</p>-->
+                <p>Projects | Insights | Tutorials and More!</p>
                 <button class="colored-button" onclick="scrollContent()">Start Reading</button>
             </div>
             <button id="js-scroll-down-icon" class="scroll-down-hint icon-button" onclick="scrollContent()">
@@ -50,30 +49,11 @@
             <img src="./media/icons/arrow-icon.png" alt="Scroll to top">
         </button>
 
+        <!-- Main Content -->
         <div class="content">
             <main id="articles">
-                <!-- Article Template
-                <article class="card">
-                    <img class="thumbnail" src="source" alt="whats depicted?">
-                    <div class="article-head">
-                        <h2>Article Title</h2>
-                        <small>Month 00, Year</small>
-                    </div>
-                    <p>Introductory Paragraph</p>
-                    
-                    <div class="panel">
-                        <p>Content</p>
-                        <img src="source" alt="">
-                        <h3>Section Title</h3>
-                    </div>
 
-                    <div class="center-wrapper">
-                        <button class="centered colored-button" onclick="readMore(this)">Read More</button>
-                    </div>
-                </article>
-                -->
-
-                <!-- First article (text-adventure) -->
+                <!-- First article -->
                 <article class="card">
                     <img class="thumbnail" src="./media/thumbnails/textadventure_title.png" alt="Github repository of text-adventure">
                     <div class="article-head">
@@ -92,41 +72,23 @@
                     </div>
                 </article>
 
-                <article class="card">
-                    <img class="thumbnail" src="source" alt="whats depicted?">
-                    <div class="article-head">
-                        <h2>Creating a Resume with HTML and CSS</h2>
-                        <small>Month 00, 2022</small>
-                    </div>
-                    <p>Introductory Paragraph</p>
-                    
-                    <div class="panel">
-                        <p>Content</p>
-                        <img src="source" alt="">
-                        <h3>Section Title</h3>
-                    </div>
-
-                    <div class="center-wrapper">
-                        <button class="centered colored-button" onclick="readMore(this)">Read More</button>
-                    </div>
-                </article>
-
                 <div class="center-wrapper">
                     <button class="load-more centered colored-button" id="js-load-more" onclick="loadMore()">Load More</button>
                 </div>
             </main>
 
+            <!-- Sidebar -->
             <aside>
                 <!-- About Me Card -->
                 <div class="card about" id="about">
                     <img src="./media/profile.jpg" alt="Lennart Hesse">
 
-                    <h2>Hello there!</h2>
-                    <p>I'm Lennart and this is my little tech-project blog! I created it because I wanted to have a platform to show what I'm up to in my freetime and outline my personal development.</p>
+                    <h2>Hi, I'm Lennart!</h2>
+                    <p>And this is my little tech-project blog! I created it because I wanted to have a platform to show what I'm up to in my freetime and outline my personal development.</p>
                     <p> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                 </div>
 
-                <!-- Search Card (form throws error) -->
+                <!-- Search Card -->
                 <div class="card" id="search">
                     <div class="search-container">
                         <input id="js-search-bar" type="search" placeholder="Search article..." ><button onclick="searchArticles()"> 
