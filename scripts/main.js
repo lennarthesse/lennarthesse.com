@@ -80,6 +80,8 @@ function loadMore() {
     var i = 0;
     if (i + additionalArticles >= hiddenArticles.length) {
         loadMoreButton.style.visibility = "hidden";
+    } else {
+        loadMoreButton.style.visibility = "visible";
     }
 
     while (i < hiddenArticles.length && i < additionalArticles) {
@@ -98,7 +100,6 @@ function searchArticles() {
         hideArticles();
         loadMore();
         articles[0].scrollIntoView();
-        loadMoreButton.style.visibility = "visible";
         return;
     }
     // Loop through all articles
