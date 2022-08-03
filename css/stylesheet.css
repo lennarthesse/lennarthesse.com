@@ -29,7 +29,6 @@ a {
     font-weight: bold;
 }
 
-
 /* || HEADER || */
 header {
     /* Set background image */
@@ -238,12 +237,6 @@ header p {
 }
 
 /* Mobile styling */
-.content {
-    content: "";
-    display: table;
-    clear: both;
-}
-
 .content h2 {
     margin: 0;
 }
@@ -412,6 +405,9 @@ footer {
     /* Text Styling */
     color: white;
     text-align: center;
+
+    /* Clearfix */
+    clear: both;
 }
 
 
