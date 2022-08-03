@@ -237,6 +237,12 @@ header p {
 }
 
 /* Mobile styling */
+.content::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
 .content h2 {
     margin: 0;
 }
@@ -405,9 +411,6 @@ footer {
     /* Text Styling */
     color: white;
     text-align: center;
-
-    /* Clearfix */
-    clear: both;
 }
 
 
