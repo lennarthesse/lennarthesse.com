@@ -246,6 +246,10 @@ header p {
     margin: 0;
 }
 
+.content h3 {
+    margin-top: 2em;
+}
+
 main {
     float: left;
     width: 100%;
@@ -286,6 +290,29 @@ aside {
 
 article.card > p:first-of-type {
     margin-bottom: 0;
+}
+
+article .panel img {
+    display: block;
+    width: 80%;
+    margin: auto;
+    -webkit-box-shadow: 0 0 1em 0px #ddd;
+       -moz-box-shadow: 0 0 1em 0px #ddd;
+            box-shadow: 0 0 1em 0px #ddd;
+}
+
+.credit {
+    overflow: auto;
+}
+
+.credit small {
+    float: right;
+}
+
+.credit a {
+    color: #333;
+    font-weight: normal;
+    font-size: 0.75em;
 }
 
 .article-head {

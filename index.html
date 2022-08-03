@@ -9,10 +9,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <link rel="stylesheet" href="./css/stylesheet.css">
+        <link rel="stylesheet" href="./css/prism-okaidia.css">
         <link rel="icon" type="image/x-icon" href="./media/favicon.ico">
     </head>
 
-    <body>
+    <body class="line-numbers">
         <noscript>
             <h1 style="text-align: center;">This website uses JavaScript. Make sure to enable it for full functionality.</h1>
         </noscript>
@@ -22,7 +23,7 @@
             <div class="container">
                 <small>Tech Blog</small>
                 <h1>Lennart Hesse</h1>
-                <p>Projects | Insights | Tutorials and More!</p>
+                <p>Projects | Insights | Tutorials and More</p>
                 <button class="colored-button" onclick="scrollContent()">Start Reading</button>
             </div>
             <button id="js-scroll-down-icon" class="scroll-down-hint icon-button" onclick="scrollContent()">
@@ -52,21 +53,86 @@
         <!-- Main Content -->
         <div class="content">
             <main id="articles">
+                <!-- Article Template
+                <article class="card">
+                    <img class="thumbnail" src="source" alt="whats depicted?">
+                    <div class="article-head">
+                        <h2>Article Title</h2>
+                        <small>Month 00, Year</small>
+                    </div>
+                    <p>Introductory Paragraph</p>
+                    
+                    <div class="panel">
+                        <p>Content</p>
+                        <img src="source" alt="whats depicted?">
+                        <h3>Section Title</h3>
+                    </div>
+
+                    <div class="center-wrapper">
+                        <button class="centered colored-button" onclick="readMore(this)">Read More</button>
+                    </div>
+                </article>
+                -->
 
                 <!-- First article -->
                 <article class="card">
-                    <img class="thumbnail" src="./media/thumbnails/textadventure_title.png" alt="Github repository of text-adventure">
+                    <img class="thumbnail" src="./media/thumbnails/website-part1.png" alt="lennarthesse.com landing page">
                     <div class="article-head">
-                        <h2>Terminal based text-adventure game in Java</h2>
-                        <small>September 21, 1978</small>
+                        <h2>Creating a Personal Website (Part 1/2): HTML, CSS & JavaScript</h2>
+                        <small>August 2, 2022</small>
                     </div>
-                    <p>In this article I want to show the process of how I built my own little text-adventure game. My motivation was to gain more experience in coding besides the tasks that I work on for university that are also why I have been using Java alot for the last year. Because of that, I decided to build the game using Java.</p>
+                    <p>In todays increasingly digitized world having a proper digital presence is important. But what do you do if you don't want to feed your data to tech giants like Google or Facebook, or simply don't like todays Social Media Networks?</p>
+                    <p> This is exactly what I thought to myself just a few weeks ago. The answer is simple: Build your own social platform, independent and exactly fitted to your needs.</p>
                     
                     <div class="panel">
-                        <p>I wanted a simple approach where I don't have to worry about getting to know the entire environment beforehand like with Unity3D. So instead of building a complete UI, I simply print the output to the console. That way you can just execute the .jar and let it run in the terminal, which is already the exact feel I wanted to achieve for this game.</p>
-                        <img src="./media/favicon.ico">
+                        <p>In this article series I want to show the steps it took me to develop and afterwards host my own website, giving a rough outline of the entire process.</p>
+    
+                        <h3>What We Will Need</h3>
+                        <p>The basic components of a website are HTML, CSS, and JavaScript. Additionally, if you want you website to be publicly available on the internet, you will need a webserver to serve your page to visitors. For now, we will conentrate on building the website, leaving the setup of the webserver for part two.</p>
+    
+                        <h3>HTML - The Basic Structure</h3>
+                        <p>HTML can be thought of as the backbone of a website. It structures the different parts and provides elements for CSS and JavaScript to attach to.</p>
+                        <p>For my website, I wanted to have a large header filling the entire screen when you first visit the site. I also liked the idea of having everything on one site, not using any subsites, with a feed of all articles and a sidebar with additional information.</p>
+                        <p>This left me with a basic outline of the HTML document's structure like this:</p>
+                        <pre><code class="lang-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;header&gt;&lt;/header&gt;
+        &lt;main&gt;
+            &lt;article&gt;&lt;/article&gt;
+        &lt;/main&gt;
+        &lt;aside&gt;
+            &lt;div class="card"&gt;&lt;/div&gt;
+        &lt;/aside&gt;
+        &lt;footer&gt;&lt;/footer&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                        <div class="credit">
+                            <small class="credit"><a href="https://prismjs.com/" target="_blank">Powered by PRISM</a></small>
+                        </div>
+                        <p>Next, it was time to prepare the individual elements for styling with CSS. For the header and the cards of the sidebar I basically just used regular headings and paragraphs. The articles, however, needed a more complex structure. I ended up adding an image, followed by a container with an <code class="lang-html">article-head</code> class for the title and date of the article, which will be styled differently.</p>
+                        <pre><code class="lang-html">&lt;article&gt;
+    &lt;img src="./path/to/image" alt="description"&gt;
+    &lt;div class="article-head"&gt;
+        &lt;h2&gt;Title&lt;/h2&gt;
+        &lt;small&gt;Date&lt;/small&gt;
+    &lt;/div&gt;
+    &lt;p&gt;Article content&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+                        <div class="credit">
+                            <small class="credit"><a href="https://prismjs.com/" target="_blank">Powered by PRISM</a></small>
+                        </div>
+    
+                        <h3>CSS - The Looks</h3>
+                        <p>If you take a look at the website so far, you probably won't be convinced to let *that* be your online presence. This is where CSS comes in. It is used to style elements' parameters according to certain rules and will take our website from looking something like this:</p>
+                        <a href="./articles/website-part1/before.png" target="_blank"><img src="./articles/website-part1/before.png" alt="Website without CSS"></a>
+                        <p>...to looking like this:</p>
+                        <a href="./articles/website-part1/after.png" target="_blank"><img src="./articles/website-part1/after.png" alt="Website with CSS"></a>
+                        <p>The first thing I did, was to style the header.</p>
                     </div>
-
+    
                     <div class="center-wrapper">
                         <button class="centered colored-button" onclick="readMore(this)">Read More</button>
                     </div>
@@ -84,8 +150,9 @@
                     <img src="./media/profile.jpg" alt="Lennart Hesse">
 
                     <h2>Hi, I'm Lennart!</h2>
-                    <p>And this is my little tech-project blog! I created it because I wanted to have a platform to show what I'm up to in my freetime and outline my personal development.</p>
-                    <p> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    <p>And welcome to my little tech-project blog. I'm a computer science student at the University of Bremen, Germany and created this blog to document and share my experiences as a software developer.</p>
+                    <p>Here you can find me talking about how I work on projects, experimenting with algorithms, and giving advice from things I've learned along the way.</p>
+                    <p>So, if you're interested, why don't you give it a go and search for a topic below?</p>
                 </div>
 
                 <!-- Search Card -->
@@ -101,6 +168,7 @@
                 <div class="card" id="contact">
                     <h2>Contact Me</h2>
                     <p>Email: <a href=mailto:info@lennarthesse.com>info@lennarthesse.com</a></p>
+                    <p>Github: <a href="https://github.com/lennarthesse">lennarthesse</a></p>
                 </div>
             </aside>
         </div>
@@ -126,5 +194,6 @@
         </footer>
 
         <script src="./scripts/main.js"></script>
+        <script src="./scripts/prism.js"></script>
     </body>
 </html>
