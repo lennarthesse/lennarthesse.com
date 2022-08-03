@@ -9,7 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <link rel="stylesheet" href="./css/stylesheet.css">
-        <link rel="stylesheet" href="./css/prism-okaidia.css">
+        <link rel="stylesheet" href="./css/prism-coy.css">
         <link rel="icon" type="image/x-icon" href="./media/favicon.ico">
     </head>
 
@@ -66,6 +66,12 @@
                         <p>Content</p>
                         <img src="source" alt="whats depicted?">
                         <h3>Section Title</h3>
+
+                        <pre><code class="lang-"></code></pre>
+                        <div class="credit">
+                            <small class="credit"><a href="https://prismjs.com/" target="_blank">Powered by PRISM</a></small>
+                        </div>
+
                     </div>
 
                     <div class="center-wrapper">
@@ -79,21 +85,22 @@
                     <img class="thumbnail" src="./media/thumbnails/website-part1.png" alt="lennarthesse.com landing page">
                     <div class="article-head">
                         <h2>Creating a Personal Website (Part 1/2): HTML, CSS & JavaScript</h2>
-                        <small>August 2, 2022</small>
+                        <small>August 3, 2022</small>
                     </div>
-                    <p>In todays increasingly digitized world having a proper digital presence is important. But what do you do if you don't want to feed your data to tech giants like Google or Facebook, or simply don't like todays Social Media Networks?</p>
-                    <p> This is exactly what I thought to myself just a few weeks ago. The answer is simple: Build your own social platform, independent and exactly fitted to your needs.</p>
+                    <p>In today's increasingly digitized world, having a proper digital presence is important. But what do you do if you don't want to feed your data to tech giants like Google or Facebook, or simply don't like today's social media networks?</p>
+                    <p> This is exactly what I thought to myself just a few weeks ago. The answer is simple: build your own platform, independent and exactly fitted to your needs.</p>
                     
                     <div class="panel">
-                        <p>In this article series I want to show the steps it took me to develop and afterwards host my own website, giving a rough outline of the entire process.</p>
+                        <p>In this article series, I want to show the steps it took me to develop and afterwards host my own website, giving a rough outline of the entire process.</p>
     
                         <h3>What We Will Need</h3>
-                        <p>The basic components of a website are HTML, CSS, and JavaScript. Additionally, if you want you website to be publicly available on the internet, you will need a webserver to serve your page to visitors. For now, we will conentrate on building the website, leaving the setup of the webserver for part two.</p>
+                        <p>The basic components of a website are HTML, CSS, and JavaScript. Additionally, if you want your website to be publicly available on the internet, you will need a web server to serve your page to visitors. For now, we will concentrate on building the website, leaving the setup of the webserver for part two.</p>
     
                         <h3>HTML - The Basic Structure</h3>
                         <p>HTML can be thought of as the backbone of a website. It structures the different parts and provides elements for CSS and JavaScript to attach to.</p>
                         <p>For my website, I wanted to have a large header filling the entire screen when you first visit the site. I also liked the idea of having everything on one site, not using any subsites, with a feed of all articles and a sidebar with additional information.</p>
                         <p>This left me with a basic outline of the HTML document's structure like this:</p>
+
                         <pre><code class="lang-html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
@@ -112,7 +119,9 @@
                         <div class="credit">
                             <small class="credit"><a href="https://prismjs.com/" target="_blank">Powered by PRISM</a></small>
                         </div>
+
                         <p>Next, it was time to prepare the individual elements for styling with CSS. For the header and the cards of the sidebar I basically just used regular headings and paragraphs. The articles, however, needed a more complex structure. I ended up adding an image, followed by a container with an <code class="lang-html">article-head</code> class for the title and date of the article, which will be styled differently.</p>
+
                         <pre><code class="lang-html">&lt;article&gt;
     &lt;img src="./path/to/image" alt="description"&gt;
     &lt;div class="article-head"&gt;
@@ -126,11 +135,124 @@
                         </div>
     
                         <h3>CSS - The Looks</h3>
-                        <p>If you take a look at the website so far, you probably won't be convinced to let *that* be your online presence. This is where CSS comes in. It is used to style elements' parameters according to certain rules and will take our website from looking something like this:</p>
+                        <p>If you take a look at the website so far, you probably won't be convinced to let *that* be your online presence. This is where CSS comes in. It is used to style elements' attributes according to certain rules and will take our website from looking something like this:</p>
                         <a href="./articles/website-part1/before.png" target="_blank"><img src="./articles/website-part1/before.png" alt="Website without CSS"></a>
-                        <p>...to looking like this:</p>
+                        <p>...to looking more like this:</p>
                         <a href="./articles/website-part1/after.png" target="_blank"><img src="./articles/website-part1/after.png" alt="Website with CSS"></a>
-                        <p>The first thing I did, was to style the header.</p>
+                        <p>The first thing I did was to style the header. Since I wanted it to take up the entire screen, I set its <code class="lang-css">height</code> to <code class="lang-css">100vh</code>, which means 100% of the vertical height of the viewport, the viewport being the part of the website that is currently visible.</p>
+                        <p>For a complete reference of CSS units, HTML tags, and more I highly recommend <a href="https://w3schools.com" target="_blank">W3Schools</a>; it is where i got most of my information from and it provides interactive examples for basically everything.</p>
+                        <p>After that, I set the background color, text color, and font size. To then center the text <i>vertically</i>, there are multiple solutions: the newer flexbox, and position/transform. I used the combination of position and transform, since flexbox only works on newer versions of browsers.</p>
+
+                        <pre><code class="lang-css">header {
+    height: 100vh;
+    background-color: #99ccdd;
+}
+
+header .container {
+    color: white;
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%):
+}
+
+header h1 {
+    font-size: 4.5em;
+}</code></pre>
+                        <div class="credit">
+                            <small class="credit"><a href="https://prismjs.com/" target="_blank">Powered by PRISM</a></small>
+                        </div>
+
+                        <p>I proceeded in a similar fashion with the other elements. To display the main content next to the sidebar, the <code class="lang-css">float</code> property can be used. This, however, can create complications with elements occluding each other. To fix this, the so-called "clearfix" hack can be used.</p>
+                        <p>After a little bit more touching up, adjusting margins and paddings, and adding stylistic elements like borders, the bulk of the work is already done. Now we can move on to what brings our website from the ordinary to the exceptional.</p>
+
+                        <h3>JavaScript - Interaction, Animation, and More</h3>
+                        <p>Up to this point, our website is pretty static and doesn't do much. To add functionality when we press a button or create pop-ups and animations, we need JavaScript, the first real programming language in our trio.</p>
+                        <p>In my case, I had to add a "Read More" button to the articles that would then expand the article, since I wanted to have everything on the main page. Firstly, I added a <code class="lang-html">&lt;button&gt;</code> element to the HTML document:</p>
+                        
+                        <pre><code class="lang-html">&lt;div class="center-wrapper"&gt;
+    &lt;button class="centered colored-button"&gt;
+        Read More
+    &lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                        <div class="credit">
+                            <small class="credit"><a href="https://prismjs.com/" target="_blank">Powered by PRISM</a></small>
+                        </div>
+
+                        <p>I then styled it in CSS, centering it and adjusting a few attributes:</p>
+
+                        <pre><code class="lang-css">.center-wrapper {
+    position: relative;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.colored-button {
+    cursor: pointer;
+    background-color: #4682b4;
+    color: white;
+    font-weight: bold;
+    padding: 0.5em 1em;
+}</code></pre>
+                        <div class="credit">
+                            <small class="credit"><a href="https://prismjs.com/" target="_blank">Powered by PRISM</a></small>
+                        </div>
+
+                        <p>Now, to add a function to the button, we can use its onclick event by writing <code class="lang-html">&lt;button onclick="our-javascript"&gt;</code>. This will execute the JavaScript code inside the quotes. And while we could write it directly in there, it is better to call an earlier defined function that sits in a dedicated JavaScript file.</p>
+                        <p>The function for my button looks like this:</p>
+
+                        <pre><code class="lang-js">function readMore(btn) {
+    var parent = btn.parentElement.parentElement;
+    var panel = parent.querySelector(".panel");
+
+    if (panel.style.maxHeight == "0px") {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+        btn.innerHTML = "Read Less";
+    } else {
+        panel.style.maxHeight = "0px";
+        btn.innerHTML = "Read More"
+    }                        
+}</code></pre>
+                        <div class="credit">
+                            <small class="credit"><a href="https://prismjs.com/" target="_blank">Powered by PRISM</a></small>
+                        </div>
+
+                        <p>Upon call, the button passes itself to the function so that a variable of its parent, or rather grandparent, can be initialized. That element is actually the article that contains the button. This way, the function only targets the article whose "Read More" button has been pressed.</p>
+                        <p>Then we check whether the article is collapsed, which is realized through a panel, containing the rest of the article, having a height of 0. If this is the case at the time the button is pressed, the panel is expanded to fit its content and the button's text is adjusted to "Read Less".</p>
+                        <p>If the panel already is expanded, the function notices that the button is now a "Read Less" button and accordingly collapses the panel.</p>
+
+                        <h4>Animation</h4>
+                        <p>Animating an element is quite simple, too. At the bottom of the header, I wanted to have a hint that shows that there is more content waiting below. Again, I first added an HTML element, this time containing an icon, styled it, and then created a function in my JavaScript file.</p>
+                        <p>The basic idea of an animation is to change an element's position by a small amount for every small timestep. Moving a positioned element can be done by changing one or more of the defining attributes <code class="lang-css">top</code>, <code class="lang-css">bottom</code>, <code class="lang-css">left</code>, and <code class="lang-css">right</code>.</p>
+                        <p>Moving up or down can be realized by adding or subtracting from the <code class="lang-css">bottom</code> attribute. I added a boolean variable <code class="lang-css">up</code>, that changes at specified thresholds, and adjusted the position accordingly.</p>
+
+                        <pre><code class="lang-js">function animateHint() {
+    if (xPos == 10) {
+        up = false;
+    } else if (xPos == 0) {
+        up = true;
+    }
+    if (up) {
+        xPos++;
+    } else if (!up) {
+        xPos--;
+    }
+    downIcon.style.bottom = xPos + "px";
+}
+                        </code></pre>
+                        <div class="credit">
+                            <small class="credit"><a href="https://prismjs.com/" target="_blank">Powered by PRISM</a></small>
+                        </div>
+
+                        <p>This function is then called at a specified interval with <code class="lang-js">setInterval(animateHint, 75);</code>.</p>
+
+                        <h3>Wrapping Up</h3>
+                        <p>Having the basics laid down, it is only a matter of expanding on it. For example, I went on to add a different styling for small screens, where the sidebar is displayed underneath the articles, and a pop-up menu to navigate there. Also, I added more buttons and a search bar to look for specific articles.</p>
+                        <p>The next step is to actually host our website on a server, which I will talk about in part two of this series.</p>
                     </div>
     
                     <div class="center-wrapper">
