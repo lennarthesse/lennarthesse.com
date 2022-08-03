@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Lennart A. Hesse</title>
+        <title>Lennart Hesse</title>
         <meta charset="UTF-8">
         <meta name="description" content="A blog covering tech and programming related topics by Lennart Hesse.">
         <meta name="keywords" content="blog, tech, programming, lennart, hesse, computer, science">
@@ -69,7 +69,7 @@
 
                         <pre><code class="lang-"></code></pre>
                         <div class="credit">
-                            <small class="credit"><a href="https://prismjs.com/" target="_blank">Powered by PRISM</a></small>
+                            <small class="credit"><a href="https://prismjs.com/" target="_blank">Powered by Prism</a></small>
                         </div>
 
                     </div>
@@ -91,7 +91,7 @@
                     <p> This is exactly what I thought to myself just a few weeks ago. The answer is simple: build your own platform, independent and exactly fitted to your needs.</p>
                     
                     <div class="panel">
-                        <p>In this article series, I want to show the steps it took me to develop and afterwards host my own website, giving a rough outline of the entire process.</p>
+                        <p>In this article series, I want to show the steps it took me to develop and afterwards host my own website, giving a rough outline of the entire process. You can take a look at the full source code on <a href="https://www.github.com/lennarthesse/lennarthesse.com" target="_blank">Github</a>.</p>
     
                         <h3>What We Will Need</h3>
                         <p>The basic components of a website are HTML, CSS, and JavaScript. Additionally, if you want your website to be publicly available on the internet, you will need a web server to serve your page to visitors. For now, we will concentrate on building the website, leaving the setup of the webserver for part two.</p>
@@ -117,7 +117,7 @@
     &lt;/body&gt;
 &lt;/html&gt;</code></pre>
                         <div class="credit">
-                            <small class="credit"><a href="https://prismjs.com/" target="_blank">Powered by PRISM</a></small>
+                            <small class="credit"><a href="https://prismjs.com/" target="_blank">Powered by Prism</a></small>
                         </div>
 
                         <p>Next, it was time to prepare the individual elements for styling with CSS. For the header and the cards of the sidebar I basically just used regular headings and paragraphs. The articles, however, needed a more complex structure. I ended up adding an image, followed by a container with an <code class="lang-html">article-head</code> class for the title and date of the article, which will be styled differently.</p>
@@ -131,7 +131,7 @@
     &lt;p&gt;Article content&lt;/p&gt;
 &lt;/article&gt;</code></pre>
                         <div class="credit">
-                            <small class="credit"><a href="https://prismjs.com/" target="_blank">Powered by PRISM</a></small>
+                            <small class="credit"><a href="https://prismjs.com/" target="_blank">Powered by Prism</a></small>
                         </div>
     
                         <h3>CSS - The Looks</h3>
@@ -159,7 +159,7 @@ header h1 {
     font-size: 4.5em;
 }</code></pre>
                         <div class="credit">
-                            <small class="credit"><a href="https://prismjs.com/" target="_blank">Powered by PRISM</a></small>
+                            <small class="credit"><a href="https://prismjs.com/" target="_blank">Powered by Prism</a></small>
                         </div>
 
                         <p>I proceeded in a similar fashion with the other elements. To display the main content next to the sidebar, the <code class="lang-css">float</code> property can be used. This, however, can create complications with elements occluding each other. To fix this, the so-called "clearfix" hack can be used.</p>
@@ -175,7 +175,7 @@ header h1 {
     &lt;/button&gt;
 &lt;/div&gt;</code></pre>
                         <div class="credit">
-                            <small class="credit"><a href="https://prismjs.com/" target="_blank">Powered by PRISM</a></small>
+                            <small class="credit"><a href="https://prismjs.com/" target="_blank">Powered by Prism</a></small>
                         </div>
 
                         <p>I then styled it in CSS, centering it and adjusting a few attributes:</p>
@@ -199,7 +199,7 @@ header h1 {
     padding: 0.5em 1em;
 }</code></pre>
                         <div class="credit">
-                            <small class="credit"><a href="https://prismjs.com/" target="_blank">Powered by PRISM</a></small>
+                            <small class="credit"><a href="https://prismjs.com/" target="_blank">Powered by Prism</a></small>
                         </div>
 
                         <p>Now, to add a function to the button, we can use its onclick event by writing <code class="lang-html">&lt;button onclick="our-javascript"&gt;</code>. This will execute the JavaScript code inside the quotes. And while we could write it directly in there, it is better to call an earlier defined function that sits in a dedicated JavaScript file.</p>
@@ -218,7 +218,7 @@ header h1 {
     }                        
 }</code></pre>
                         <div class="credit">
-                            <small class="credit"><a href="https://prismjs.com/" target="_blank">Powered by PRISM</a></small>
+                            <small class="credit"><a href="https://prismjs.com/" target="_blank">Powered by Prism</a></small>
                         </div>
 
                         <p>Upon call, the button passes itself to the function so that a variable of its parent, or rather grandparent, can be initialized. That element is actually the article that contains the button. This way, the function only targets the article whose "Read More" button has been pressed.</p>
@@ -245,7 +245,7 @@ header h1 {
 }
                         </code></pre>
                         <div class="credit">
-                            <small class="credit"><a href="https://prismjs.com/" target="_blank">Powered by PRISM</a></small>
+                            <small class="credit"><a href="https://prismjs.com/" target="_blank">Powered by Prism</a></small>
                         </div>
 
                         <p>This function is then called at a specified interval with <code class="lang-js">setInterval(animateHint, 75);</code>.</p>
@@ -290,7 +290,7 @@ header h1 {
                 <div class="card" id="contact">
                     <h2>Contact Me</h2>
                     <p>Email: <a href=mailto:info@lennarthesse.com>info@lennarthesse.com</a></p>
-                    <p>Github: <a href="https://github.com/lennarthesse">lennarthesse</a></p>
+                    <p>Github: <a href="https://github.com/lennarthesse" target="_blank">lennarthesse</a></p>
                 </div>
             </aside>
         </div>
@@ -311,7 +311,7 @@ header h1 {
                     <input type="submit" value="Submit">
                 </form>
                 -->
-            <p>The source code for this site can be found on <a href="https://www.github.com/lennarthesse/portfolio">Github</a></p>
+            <p>The source code for this site can be found on <a href="https://www.github.com/lennarthesse/lennarthesse.com" target="_blank">Github</a></p>
             <small>&copy; Lennart Hesse</small>
         </footer>
 

@@ -66,7 +66,8 @@ function readMore(btn) {
         btn.innerHTML = "Read Less";
     } else {
         panel.style.maxHeight = "0px";
-        btn.innerHTML = "Read More"
+        btn.innerHTML = "Read More";
+        scrollTo(0, parent.offsetTop);
     }
 }
 
