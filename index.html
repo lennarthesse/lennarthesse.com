@@ -13,7 +13,7 @@
         <link rel="icon" type="image/x-icon" href="./media/favicon.ico">
     </head>
 
-    <body class="line-numbers">
+    <body>
         <noscript>
             <h1 style="text-align: center;">This website uses JavaScript. Make sure to enable it for full functionality.</h1>
         </noscript>
@@ -51,7 +51,7 @@
         </button>
 
         <!-- Main Content -->
-        <div class="content">
+        <div class="flex content">
             <main id="articles">
                 <!-- Article Template
                 <article class="card">
@@ -79,6 +79,32 @@
                     </div>
                 </article>
                 -->
+
+                <!-- Second article-->
+                <article class="card">
+                    <img class="thumbnail" src="./media/thumbnails/website-part2.png" alt="Terminal view of apache2 directory">
+                    <div class="article-head">
+                        <h2>Creating a Personal Website (Part 2/2): Hosting It Online</h2>
+                        <small>Month 00, Year</small>
+                    </div>
+                    <p>Introductory Paragraph</p>
+                    
+                    <div class="panel">
+                        <p>Content</p>
+                        <img src="source" alt="whats depicted?">
+                        <h3>Section Title</h3>
+                
+                        <pre><code class="lang-"></code></pre>
+                        <div class="credit">
+                            <small class="credit"><a href="https://prismjs.com/" target="_blank">Powered by Prism</a></small>
+                        </div>
+                
+                    </div>
+                
+                    <div class="center-wrapper">
+                        <button class="centered colored-button" onclick="readMore(this)">Read More</button>
+                    </div>
+                </article>
 
                 <!-- First article -->
                 <article class="card">
@@ -283,6 +309,12 @@ header h1 {
                         <input id="js-search-bar" type="search" placeholder="Search article..." ><button onclick="searchArticles()"> 
                             <img src="./media/icons/search.png" alt="Start search">
                         </button>
+                    </div>
+                    <div class="flex">
+                        <p class="keyword" onclick="search('HTML CSS')">HTML/CSS</p>
+                        <p class="keyword" onclick="search('JavaScript')">JavaScript</p>
+                        <p class="keyword" onclick="search('Website')">Website</p>
+                        <p class="keyword" onclick="search('Server')">Server</p>
                     </div>
                 </div>
 

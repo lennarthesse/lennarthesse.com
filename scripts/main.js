@@ -92,8 +92,8 @@ function loadMore() {
 }
 
 // Search Articles 
-function searchArticles() {
-    var searchTerm = input.value.toLowerCase();
+function search(input) {
+    var searchTerm = input.toLowerCase();
     var keywords = searchTerm.split(" ");
     var matches = new Set();
     // If search term is empty, reset articles and show load more
@@ -105,7 +105,7 @@ function searchArticles() {
     }
     // Loop through all articles
     for (var i = 0; i < articles.length; i++) {
-        // If the article contains part of ALL of the keywords, add it to results
+        // If the article contains all of the keywords, add it to results
         matches.add(articles[i])
         for (var j = 0; j < keywords.length; j++) {
             if (articles[i].innerText.toLowerCase().search(keywords[j]) < 0) {
@@ -121,6 +121,11 @@ function searchArticles() {
     scrollTo(0, thresholdTop);
     // [Add notifier if no results?]
     loadMoreButton.style.visibility = "hidden";
+}
+
+function searchArticles() {
+    var searchTerm = input.value;
+    search(searchTerm);
 }
 
 // Show side nav on burger click

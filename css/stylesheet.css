@@ -213,6 +213,7 @@ header p {
 /* Search Bar */
 .search-container {
     border: 1px solid gray;
+    margin-bottom: 1em;
 }
 
 .search-container input {
@@ -236,8 +237,21 @@ header p {
             filter: invert();
 }
 
+.keyword {
+    float: left;
+    color: white;
+    font-size: smaller;
+    cursor: pointer;
+    background-color: #4682b4;
+    padding: 0.5em 1em;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+}
+
 /* Mobile styling */
-.content::after {
+.flex::after {
     content: "";
     clear: both;
     display: table;
