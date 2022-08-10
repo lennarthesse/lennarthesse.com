@@ -239,8 +239,8 @@ header p {
     font-size: smaller;
     cursor: pointer;
     background-color: #4682b444;
-    outline: 1px solid #4682b488;
-    padding: 0.5em 1em;
+    border: 1px solid #4682b488;
+    padding: 0.25em 0.5em;
     margin-top: 0;
     margin-left: 0;
     margin-right: 0.5em;
