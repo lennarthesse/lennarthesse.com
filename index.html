@@ -26,32 +26,32 @@
                 <p>Projects | Insights | Tutorials and More</p>
                 <button class="colored-button" onclick="scrollContent()">Start Reading</button>
             </div>
-            <button id="js-scroll-down-icon" class="scroll-down-hint icon-button" onclick="scrollContent()">
+            <div id="js-scroll-down-icon" class="scroll-down-hint icon-button" onclick="scrollContent()">
                 <img src="./media/icons/arrow-icon.png" alt="Scroll down">
-            </button>
+            </div>
         </header>
 
         <!-- Sidenav -->
-        <button id="js-nav-burger" class="nav-burger icon-button" onclick="showNav()">
+        <div id="js-nav-burger" class="nav-burger icon-button" onclick="showNav()">
             <img src="./media/icons/burger.png" alt="Open navigation menu">
-        </button>
+        </div>
 
         <div class="sidenav" id="js-sidenav">
-            <button id="js-close-btn" class="close-nav icon-button" onclick="hideNav()">
+            <div id="js-close-btn" class="close-nav icon-button" onclick="hideNav()">
                 <img src="./media/icons/cross.png" alt="Close navigation menu">
-            </button>
+            </div>
             <a href="#articles" onclick="hideNav()">Articles</a>
             <a href="#about" onclick="hideNav()">About</a>
             <a href="#search" onclick="hideNav()">Search</a>
             <a href="#contact" onclick="hideNav()">Contact</a>
         </div>
 
-        <button onclick="scrollToTop()" id="js-top-btn" class="scroll-top icon-button">
+        <div onclick="scrollToTop()" id="js-top-btn" class="scroll-top icon-button">
             <img src="./media/icons/arrow-icon.png" alt="Scroll to top">
-        </button>
+        </div>
 
         <!-- Main Content -->
-        <div class="flex content">
+        <div class="clearfix content">
             <main id="articles">
                 <!-- Article Template
                 <article class="card">
@@ -84,21 +84,169 @@
                 <article class="card">
                     <img class="thumbnail" src="./media/thumbnails/website-part2.png" alt="Terminal view of apache2 directory">
                     <div class="article-head">
-                        <h2>Creating a Personal Website (Part 2/2): Hosting It Online</h2>
-                        <small>Month 00, Year</small>
+                        <h2>Creating a Personal Website (Part 2/2): The Web Server</h2>
+                        <small>August 10, 2022</small>
                     </div>
-                    <p>Introductory Paragraph</p>
+                    <p>In the first part of this series, we built our own website. Now we want to actually put it on the internet in a professional but still affordable way. This will allow you to have a professional online appearance beyond just having a website.</p>
                     
                     <div class="panel">
-                        <p>Content</p>
-                        <img src="source" alt="whats depicted?">
-                        <h3>Section Title</h3>
+                        <h3>Serving to The Web</h3>
+                        <p>In order to serve a website to the world wide web, we need a so-called web server. It consists of a hardware and a software part, where the hardware can basically be any computer that is connected to the internet. For the software, we have several options like Apache or Nginx.</p>
+                        <p>For this article I will be using Apache2. However, the setup for Nginx won't be much different. Additionally, I will use Ubuntu as the operating system.</p>
                 
-                        <pre><code class="lang-"></code></pre>
+                        <h3>Installing Apache</h3>
+                        <p>In Ubuntu, the installation is as simple as using the built-in package manager to download and install Apache. Note that we are using the root user and thus have all privileges. Otherwise, you will need to add <code class="lang-">sudo</code> in front of the commands.</p>
+                
+                        <pre><code class="lang-">root@localhost:~# apt install apache2</code></pre>
                         <div class="credit">
                             <small class="credit"><a href="https://prismjs.com/" target="_blank">Powered by Prism</a></small>
                         </div>
                 
+                        <p>Now everything should be set up and the web server should be running. To check, we can print out the contents of Apaches's configuration folder by typing <code class="lang-">ls /etc/apache2/</code>, which should look like this:</p>
+                
+                        <pre><code class="lang-">root@localhost:~# ls /etc/apache2/
+apache2.conf    magic           sites-available
+conf-available  mods-available  sites-enabled
+conf-enabled    mods-enabled
+envvars         ports.conf</code></pre>
+                        <div class="credit">
+                            <small class="credit"><a href="https://prismjs.com/" target="_blank">Powered by Prism</a></small>
+                        </div>
+                
+                        <p>We can also request the status with <code class="lang-">systemctl</code>. If the server is running, the output should look like the following. The relevant thing here is that it says <code class="lang-">Active: active (running)</code>.</p>
+                
+                        <pre><code class="lang-">root@localhost:~# systemctl status apache2.service
+apache2.service - The Apache HTTP Server
+    Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+    Active: active (running) since Mon 2022-08-08 16:21:53 CEST; 3s ago
+      Docs: https://httpd.apache.org/docs/2.4/
+   Process: 12010 ExecStart=/usr/sbin/apachectl start (code=exited, status=0/SUCCESS)
+  Main PID: 12014 (apache2)
+     Tasks: 55 (limit: 18342)
+    Memory: 5.1M
+    CGroup: /system.slice/apache2.service
+            ├─12014 /usr/sbin/apache2 -k start
+            ├─12015 /usr/sbin/apache2 -k start
+            └─12016 /usr/sbin/apache2 -k start</code></pre>
+                        <div class="credit">
+                            <small class="credit"><a href="https://prismjs.com/" target="_blank">Powered by Prism</a></small>
+                        </div>
+                
+                        <p>If it says <code class="lang-">inactive</code> or <code class="lang-">failed</code>, you can try to restart the server by using <code class="lang-">systemctl restart apache2.service</code>.</p>
+                
+                        <h3>Uploading The Website</h3>
+                        <p>If we now type the IP address of the computer running Apache (you can find it by typing <code class="lang-">hostname -I</code> in the terminal) into our browser, we will see Apache's default page. </p>
+                
+                        <a href="./articles/website/apache.png" target="_blank"><img src="./articles/website/apache.png" alt="Apache's default page"></a>
+                
+                        <p>It gives some useful information about the structure of the configuration folder and, crucially for our next step, where the document root for our website's files is situated, being <code class="lang-">/var/www/</code>. Here we can already create a folder for our website and copy all files into it.</p>
+                        <p>Now we have to configure Apache to serve our website instead of the default page. Inside of the configuration folder <code class="lang-">/etc/apache2/</code> we change into the <code class="lang-">sites-available/</code> folder and copy the <code class="lang-">000-default.conf</code> file to a file with some name, e.g. our domain name, keeping the ending <code class="lang-">.conf</code>.</p>
+                
+                        <p>Here we change/uncomment the following directives, replacing the [information] with our actual details.</p>
+                
+                        <pre><code class="lang-markup">&lt;VirtualHost *:80&gt;
+    ServerAdmin [contact email address]
+    ServerName [domain name]
+    ServerAlias www.[domain name]
+    DocumentRoot /var/www/[website folder]
+&lt;/VirtualHost&gt;</code></pre>
+                        <div class="credit">
+                            <small class="credit"><a href="https://prismjs.com/" target="_blank">Powered by Prism</a></small>
+                        </div>
+                
+                        <p>Both <code class="lang-">ServerName</code> and <code class="lang-">ServerAlias</code> are relevant if you have bought a domain, which I will talk about in a moment, and should be left out if there is no domain associated with the IP address.</p>
+                
+                        <p>We now enable our website's configuration, disable the default one, and restart the server with these three commands:</p>
+                
+                        <pre><code class="lang-">root@localhost:~# a2ensite [name].conf
+root@localhost:~# a2dissite 000-default.conf
+root@localhost:~# systemctl restart apache2.service</code></pre>
+                        <div class="credit">
+                            <small class="credit"><a href="https://prismjs.com/" target="_blank">Powered by Prism</a></small>
+                        </div>
+                
+                        <p>Now we have our website showing up.</p>
+                
+                        <h3>Intermezzo</h3>
+                        <p>Up to this point, you could use your personal computer connected to your local network to serve your website. And it would be sufficient if you only wanted you and your family or roommates to see it.</p>
+                        <p>To make it accessible for everyone connected to the internet, however, you would need to configure your router in a way to let outside traffic pass through. Furthermore, you would have to contact your internet provider and ask them for a static IP address since the address of your router that is actually connected to the internet can change.</p>
+                        <p>While there are workarounds to obtain an effectively static IP address by constantly updating the address associated with the domain in the DNS record, I decided against this option. Simply renting a server will provide you with a static IP address, take care of making the server accessible from the outside, and often come with a professional email address and SSL certificate which allows traffic through the encrypted HTTPS protocol.</p>
+                
+                        <h3>Renting a Server</h3>
+                        <p>At first, I was disappointed since all the hosting solutions I could find cost more than I was willing to spend. But after a little bit more research, I found that beside managed hosting, you can rent so-called root servers that simply provide a (virtual) machine running an operating system, leaving setup and configuration of the server to you, but costing significantly less.</p>
+                        <p>So I went ahead and rented the smallest virtual private server at IONOS for 2€ a month and also bought a domain. To then set up Apache, we follow the steps I described above, connecting to the server through SSH.</p>
+                        <p>To connect the domain to the IP address of our server, we add the domain and address to the DNS record through the server provider's control panel. Now we can actually add the <code class="lang-">ServerName</code> and <code class="lang-">ServerAlias</code> directives to our site's configuration and restart Apache for the changes to take effect. The server should now be accessible through our domain name.</p>
+                        
+                        <h3>Adding SSL</h3>
+                        <p>Now we want to allow traffic to use the encrypted HTTPS instead of HTTP. To enable HTTPS, we need an SSL certificate, which in my case was included in the root server package. First, we enable Apache's SSL module:</p>
+                
+                        <pre><code class="lang-">root@localhost:~# a2enmod ssl</code></pre>
+                        <div class="credit">
+                            <small class="credit"><a href="https://prismjs.com/" target="_blank">Powered by Prism</a></small>
+                        </div>
+                
+                        <p>Then we edit our website's configuration to support HTTPS traffic through port 443 and redirect any HTTP requests to HTTPS:</p>
+                
+                        <pre><code class="lang-markup">&lt;VirtualHost *:80&gt;
+    ServerAdmin [contact email address]
+    ServerName [domain name]
+    ServerAlias www.[domain name]
+    DocumentRoot /var/www/[website folder]
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+    Redirect permanent / https://[domain name]
+&lt;/VirtualHost&gt;
+
+&lt;VirtualHost *:443&gt;
+    ServerAdmin [contact email address]
+    ServerName [domain name]
+    ServerAlias www.[domain name]
+    DocumentRoot /var/www/[website folder]
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+    SSLEngine on
+    SSLCertificateFile      /path/to/certificate.cer
+    SSLCertificateKeyFile   /path/to/private-key.key
+&lt;/VirtualHost&gt;</code></pre>
+                        <div class="credit">
+                            <small class="credit"><a href="https://prismjs.com/" target="_blank">Powered by Prism</a></small>
+                        </div>
+                
+                        <p>When setting up your SSL certificate through the provider, you will get access to a certificate and a private key file, which need to be linked with the <code class="lang-">SSLCertificateFile</code> and <code class="lang-">SSLCertificateKeyFile</code> directives.</p>
+                
+                        <p>Finally, we will configure a firewall to allow both HTTP and HTTPS traffic. Using UFW, you can see the status of the firewall by typing <code class="lang-">ufw status</code> and available profiles by typing <code class="lang-">ufw app list</code>. Upon installation, Apache creates preset profiles, so the output should look like this:</p>
+                        
+                        <pre><code class="lang-">root@localhost:~# ufw app list
+Available applications:
+    Apache
+    Apache Full
+    Apache Secure
+    OpenSSH</code></pre>
+                        <div class="credit">
+                            <small class="credit"><a href="https://prismjs.com/" target="_blank">Powered by Prism</a></small>
+                        </div>
+                            
+                        <p>First, in order to ensure that we will still be able to connect to our server, we allow SSH traffic with <code class="lang-">ufw allow OpenSSH</code>. Then, we allow the profile <code class="lang-">Apache Full</code> which opens ports 80 for HTTP and 443 for HTTPS traffic. We then enable the firewall and check the status. The result should look like this:</p>
+                
+                        <pre><code class="lang-">root@localhost:~# ufw enable
+root@localhost:~# ufw status
+Status: active
+
+To                  Action      From
+--                  ------      ----
+OpenSSH             ALLOW       Anywhere                  
+Apache Full         ALLOW       Anywhere                  
+OpenSSH (v6)        ALLOW       Anywhere (v6)             
+Apache Full (v6)    ALLOW       Anywhere (v6)</code></pre>
+                        <div class="credit">
+                            <small class="credit"><a href="https://prismjs.com/" target="_blank">Powered by Prism</a></small>
+                        </div>
+                
+                        <p>And that's it already! We have set up our webserver and enabled SSL to allow a secure connection to our website.</p>
+                
+                        <h3>Where to Go From Here</h3>
+                        <p>What I have shown here is still only a small part of what you can do. For example, it could be a good idea to use PHP to create more server-side interaction like loading data from a database, creating forms, or uploading files. Or you could dive deeper into JavaScript and add more fancy animations or host you own web app.</p>
+                        <p>Still, a static website like the one we built is a good starting point for your online presence. Also, being able to have your own personalized email address helps you appear more professional and will definitely leave an impression on employers and other people researching you.</p>
                     </div>
                 
                     <div class="center-wrapper">
@@ -162,9 +310,9 @@
     
                         <h3>CSS - The Looks</h3>
                         <p>If you take a look at the website so far, you probably won't be convinced to let *that* be your online presence. This is where CSS comes in. It is used to style elements' attributes according to certain rules and will take our website from looking something like this:</p>
-                        <a href="./articles/website-part1/before.png" target="_blank"><img src="./articles/website-part1/before.png" alt="Website without CSS"></a>
+                        <a href="./articles/website/before.png" target="_blank"><img src="./articles/website/before.png" alt="Website without CSS"></a>
                         <p>...to looking more like this:</p>
-                        <a href="./articles/website-part1/after.png" target="_blank"><img src="./articles/website-part1/after.png" alt="Website with CSS"></a>
+                        <a href="./articles/website/after.png" target="_blank"><img src="./articles/website/after.png" alt="Website with CSS"></a>
                         <p>The first thing I did was to style the header. Since I wanted it to take up the entire screen, I set its <code class="lang-css">height</code> to <code class="lang-css">100vh</code>, which means 100% of the vertical height of the viewport, the viewport being the part of the website that is currently visible.</p>
                         <p>For a complete reference of CSS units, HTML tags, and more I highly recommend <a href="https://w3schools.com" target="_blank">W3Schools</a>; it is where i got most of my information from and it provides interactive examples for basically everything.</p>
                         <p>After that, I set the background color, text color, and font size. To then center the text <i>vertically</i>, there are multiple solutions: the newer flexbox, and position/transform. I used the combination of position and transform, since flexbox only works on newer versions of browsers.</p>
@@ -310,11 +458,11 @@ header h1 {
                             <img src="./media/icons/search.png" alt="Start search">
                         </button>
                     </div>
-                    <div class="flex">
-                        <p class="keyword" onclick="search('HTML CSS')">HTML/CSS</p>
-                        <p class="keyword" onclick="search('JavaScript')">JavaScript</p>
-                        <p class="keyword" onclick="search('Website')">Website</p>
-                        <p class="keyword" onclick="search('Server')">Server</p>
+                    <div class="clearfix">
+                        <p class="search-keyword" onclick="search('HTML CSS')">HTML/CSS</p>
+                        <p class="search-keyword" onclick="search('JavaScript')">JavaScript</p>
+                        <p class="search-keyword" onclick="search('Website')">Website</p>
+                        <p class="search-keyword" onclick="search('Web Hosting')">Web Hosting</p>
                     </div>
                 </div>
 
@@ -329,20 +477,6 @@ header h1 {
 
         <!-- Footer -->
         <footer>
-                <!--
-                <form action="">
-                    <label>Name</label>
-                    <input type="text" required>
-
-                    <label>Email</label>
-                    <input type="email" pattern="" placeholder="example@mail.com" required>
-
-                    <label>Message</label>
-                    <textarea placeholder="Write something..."></textarea>
-
-                    <input type="submit" value="Submit">
-                </form>
-                -->
             <p>The source code for this site can be found on <a href="https://www.github.com/lennarthesse/lennarthesse.com" target="_blank">Github</a></p>
             <small>&copy; Lennart Hesse</small>
         </footer>
