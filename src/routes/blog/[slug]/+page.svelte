@@ -7,13 +7,4 @@
     <title>{post.title} | Lennart Hesse</title>
 </svelte:head>
 
-<div class="blog">
-    <section class="main-aside bg-light">
-        <main>
-            <svelte:component this={post.post.default}></svelte:component>
-        </main>
-        <aside>
-            <h1>Aside</h1>
-        </aside>
-    </section>
-</div>
+<svelte:component this={post.content.default}></svelte:component>

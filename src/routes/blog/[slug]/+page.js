@@ -11,7 +11,8 @@ for (const path in modules) {
     if (post) {
         const slug = post.metadata.slug;
         const title = post.metadata.title;
-        const p = {post, slug, title};
+        const content = post;
+        const p = {content, slug, title};
         allPosts.push(p);
     }
 }
