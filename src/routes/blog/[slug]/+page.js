@@ -22,7 +22,7 @@ export function load({ params }) {
     const { slug } = params;
     for (const path in allPosts) {
         const post = allPosts[path];
-        if (post.slug == slug) {
+        if (post.slug.toLowerCase() === slug.toLowerCase()) {
             return {
                 post: post
             }

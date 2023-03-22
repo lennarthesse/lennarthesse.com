@@ -1,15 +1,16 @@
 <script>
     export let data;
+    let { post } = data;
 </script>
 
 <svelte:head>
-    <title>{data.post.title} | Lennart Hesse</title>
+    <title>{post.title} | Lennart Hesse</title>
 </svelte:head>
 
 <div class="blog">
     <section class="main-aside bg-light">
         <main>
-            <svelte:component this={data.post.post.default}></svelte:component>
+            <svelte:component this={post.post.default}></svelte:component>
         </main>
         <aside>
             <h1>Aside</h1>
