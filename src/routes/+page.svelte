@@ -47,7 +47,7 @@
 </div>
 
 <section id="leistungen">
-    <h1><i class="fa fa-desktop"></i> Web Development</h1>
+    <h1 class="underlined underlined-center"><i class="fa fa-desktop"></i> Web Development</h1>
     <div class="grid">
         <div class="grid-item">
             <ColorPalette />
@@ -65,7 +65,7 @@
         </div>
     </div>
     
-    <h1><i class="fa fa-edit"></i> Corporate Design</h1>
+    <h1 class="underlined underlined-center"><i class="fa fa-edit"></i> Corporate Design</h1>
     <div class="grid">
         <div class="grid-item">
             <ColorPalette />
@@ -98,22 +98,22 @@
     </div>
 </section>
 
-<section id="preise">
+<!--<section id="preise">
     <h1>Preise</h1>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit tempore corporis eaque, aperiam autem accusamus a voluptas libero esse officiis possimus soluta! Recusandae, assumenda pariatur voluptates atque eveniet provident neque?</p>
-</section>
-
-<div class="bg-primary-dark">
-    <section class="divider">
-        <h1>Content</h1>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit tempore corporis eaque, aperiam autem accusamus a voluptas libero esse officiis possimus soluta! Recusandae, assumenda pariatur voluptates atque eveniet provident neque?</p>
-    </section>
-</div>
+</section>-->
 
 <section id="ablauf">
     <h1>Wie geht es weiter?</h1>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit tempore corporis eaque, aperiam autem accusamus a voluptas libero esse officiis possimus soluta! Recusandae, assumenda pariatur voluptates atque eveniet provident neque?</p>
 </section>
+
+<div class="bg-primary-dark">
+    <section class="divider">
+        <h1>Portfolio</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit tempore corporis eaque, aperiam autem accusamus a voluptas libero esse officiis possimus soluta! Recusandae, assumenda pariatur voluptates atque eveniet provident neque?</p>
+    </section>
+</div>
 
 <section id="about">
     <h1>Über mich</h1>

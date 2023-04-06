@@ -45,6 +45,7 @@ h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:la
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font);
     font-weight: 900;
+    position: relative;
 }
 
 h1 {font-size: 2rem;}
@@ -78,6 +79,23 @@ hr {
     border: none;
     background-color: #ddd;
     height: 2px;
+}
+
+h1.underlined::after {
+    content: "";
+    width: 8rem;
+    height: 0.25rem;
+    border-radius: 1000rem;
+    background-color: var(--primary);
+
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+}
+
+h1.underlined-center::after {
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* UNIVERSAL */
@@ -162,6 +180,14 @@ aside {
     transform: translateX(-50%);
 }
 
+#leistungen h1 {
+    text-align: center;
+}
+
+#leistungen h1:not(:first-child) {
+    margin-top: 4rem;
+}
+
 #leistungen h1 i {
     margin-right: 1rem;
 }
@@ -169,7 +195,7 @@ aside {
 #leistungen .grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 4rem;
+    gap: 2rem 4rem;
 }
 
 #leistungen .grid-item {
