@@ -1,6 +1,7 @@
 <script>
     import { onMount } from "svelte";
     import ScrollHint from "$lib/assets/icons/scroll-hint.svelte";
+    import ColorPalette from "$lib/assets/icons/color-palette.svelte";
 
     let bannerTitles = ["Landing Pages.", "Personal Websites.", "Corporate Design.", "Custom Logos."];
     let bannerTitle = "";
@@ -46,8 +47,55 @@
 </div>
 
 <section id="leistungen">
-    <h1>Leistungen</h1>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit tempore corporis eaque, aperiam autem accusamus a voluptas libero esse officiis possimus soluta! Recusandae, assumenda pariatur voluptates atque eveniet provident neque?</p>
+    <h1><i class="fa fa-desktop"></i> Web Development</h1>
+    <div class="grid">
+        <div class="grid-item">
+            <ColorPalette />
+            <div>
+                <h2>Landing Pages</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, dolores magnam similique pariatur ea recusandae qui sunt natus laboriosam quisquam optio impedit totam nisi commodi maiores obcaecati perspiciatis! Aliquid, numquam.</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <ColorPalette />
+            <div>
+                <h2>Personal Websites</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod perferendis mollitia asperiores alias tempora inventore velit, quia pariatur similique. Libero, fugit. Et, nihil. Repudiandae, quis mollitia laboriosam soluta eaque rem!</p>
+            </div>
+        </div>
+    </div>
+    
+    <h1><i class="fa fa-edit"></i> Corporate Design</h1>
+    <div class="grid">
+        <div class="grid-item">
+            <ColorPalette />
+            <div>
+                <h2>Logos</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa deleniti officia explicabo soluta facere minima laudantium laborum! Quasi iste eveniet, aperiam ratione nisi cumque, itaque quo non quos maiores odio.</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <ColorPalette />
+            <div>
+                <h2>Farbpaletten</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa deleniti officia explicabo soluta facere minima laudantium laborum! Quasi iste eveniet, aperiam ratione nisi cumque, itaque quo non quos maiores odio.</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <ColorPalette />
+            <div>
+                <h2>Schriftarten</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa deleniti officia explicabo soluta facere minima laudantium laborum! Quasi iste eveniet, aperiam ratione nisi cumque, itaque quo non quos maiores odio.</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <ColorPalette />
+            <div>
+                <h2>Corporate Identity</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa deleniti officia explicabo soluta facere minima laudantium laborum! Quasi iste eveniet, aperiam ratione nisi cumque, itaque quo non quos maiores odio.</p>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section id="preise">

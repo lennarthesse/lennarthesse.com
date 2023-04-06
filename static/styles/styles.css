@@ -30,6 +30,10 @@ h1, h2, h3, h4, h5, h6, p {
     line-height: 1.5;
 }
 
+p {
+    text-align: justify;
+}
+
 h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child, p:first-child {
     margin-top: 0;
 }
@@ -144,6 +148,7 @@ aside {
 
 #banner p {
     margin-top: 2rem;
+    text-align: center;
 }
 
 #banner {
@@ -155,6 +160,26 @@ aside {
     bottom: 2rem;
     left: 50%;
     transform: translateX(-50%);
+}
+
+#leistungen h1 i {
+    margin-right: 1rem;
+}
+
+#leistungen .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+}
+
+#leistungen .grid-item {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2rem;
+}
+
+#leistungen svg {
+    flex: 0 0 6rem;
 }
 
 /* Blog */
@@ -170,13 +195,19 @@ aside {
 
 /* TABLET */
 @media only screen and (min-width: 768px) {
-
+    #leistungen .grid-item {
+        flex-direction: row;
+    }
 }
 
 /* SMALL LAPTOPS */
 @media only screen and (min-width: 992px) {
     .main-aside {
         flex-direction: row;
+    }
+
+    #leistungen .grid {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
