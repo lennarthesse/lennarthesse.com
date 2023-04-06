@@ -1,7 +1,7 @@
 <script>
     import { onMount } from 'svelte';
 
-    let bannerTitles = ["Landing Pages.", "Personal Websites.", "Corporate Design."];
+    let bannerTitles = ["Landing Pages.", "Personal Websites.", "Corporate Design.", "Custom Logos."];
     let bannerTitle = "";
 
     onMount(typeWrite);
@@ -35,9 +35,10 @@
     <title>Lennart Hesse Design & Development</title>
 </svelte:head>
 
-<div id="banner" class="bg-primary">
+<div id="banner">
     <section>
         <h1>{bannerTitle}</h1>
+        <hr>
         <p>Egal ob persönlicher Blog, Portfolio, oder Landing Page, hier sind Sie richtig!</p>
     </section>
 </div>

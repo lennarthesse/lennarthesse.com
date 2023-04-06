@@ -2,7 +2,7 @@
 slug: "webseite-erstellen-webserver"
 title: "Eine eigene Webseite erstellen (Teil 2/2): Der Webserver"
 author: "Lennart Hesse"
-date: "2022 08 10"
+date: "2022/08/10"
 description: "Der zweite Teil"
 keywords: "web, server, hosting"
 ---

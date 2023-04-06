@@ -1,4 +1,4 @@
-/* Templating */
+/* TEMPLATING */
 :root {
     --primary: #4682b4;
     --primary-dark: #1d374d;
@@ -6,8 +6,10 @@
     --accent: #ed9842;
     --accent-dark: #b66311;
 
-    --dark: #333;
     --light: #fff;
+    --dark: #333;
+
+    --gradient-accent: linear-gradient(135deg, #ff4942, #dbe643);
 
     --font: comfortaa;
 }
@@ -22,7 +24,7 @@ body {
     color: var(--dark);
 }
 
-/* Typography */
+/* TYPOGRAPHY */
 h1, h2, h3, h4, h5, h6, p {
     margin: 1em 0 0.5em 0;
     line-height: 1.5;
@@ -49,7 +51,7 @@ h3 {font-size: 1.5rem;}
 
 h4 {font-size: 1.25rem;}
 
-/* Misc */
+/* MISC */
 .bg-primary {
     background-color: var(--primary);
     color: var(--light);
@@ -74,7 +76,7 @@ hr {
     height: 2px;
 }
 
-/* Universal */
+/* UNIVERSAL */
 nav {
     background-image: linear-gradient(#000000dd, transparent);
     color: var(--light);
@@ -85,7 +87,7 @@ nav {
 
 section {
     padding: 2rem;
-    max-width: 80rem;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -103,7 +105,9 @@ aside {
     gap: 2rem;
 }
 
-/* Specific */
+/* SPECIFIC */
+
+/* Landing Page */
 #banner {
     height: 100vh;
     height: 100svh;
@@ -117,34 +121,60 @@ aside {
     justify-content: center;
 
     text-align: center;
+
+    overflow-x: hidden;
 }
 
-#banner section h1 {
-    min-height: 6rem;
+#banner h1 {
+    min-height: 9rem;
     word-spacing: 1000rem;
+    color: transparent;
+    background: var(--gradient-accent);
+    background-clip: text;
+    font-size: 3rem;
 }
 
+#banner hr {
+    max-width: 15rem;
+    height: 0.25rem;
+    margin: auto;
+    border-radius: 1000rem;
+    background-color: var(--accent);
+}
+
+#banner p {
+    color: var(--light);
+    margin-top: 2rem;
+}
+
+/* Blog */
 .blog {
     background-color: #eee;
-    padding: 2rem 0;
+    padding-top: 7rem;
+    padding-bottom: 2rem;
 }
 
 .post-preview {
     margin: 2rem 0;
 }
 
-/* Tablet */
+/* TABLET */
 @media only screen and (min-width: 768px) {
 
 }
 
-/* Small Laptops */
+/* SMALL LAPTOPS */
 @media only screen and (min-width: 992px) {
     .main-aside {
         flex-direction: row;
     }
 }
 
-/* Desktops */
+/* DESKTOPS */
 @media only screen and (min-width: 1200px) {
+    #banner h1 {
+        min-height: 6rem;
+        word-spacing: normal;
+        font-size: 4rem;
+    }
 }

@@ -2,7 +2,7 @@
 slug: "webseite-erstellen-html-css-javascript"
 title: "Eine eigene Webseite erstellen (Teil 1/2): HTML, CSS & JavaScript"
 author: "Lennart Hesse"
-date: "2022 08 03"
+date: "2022/08/03"
 description: "Der erste Teil"
 keywords: "html, css, javascript"
 ---
