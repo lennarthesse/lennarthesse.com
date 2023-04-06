@@ -1,5 +1,6 @@
 <script>
-    import { onMount } from 'svelte';
+    import { onMount } from "svelte";
+    import ScrollHint from "$lib/assets/icons/scroll-hint.svelte";
 
     let bannerTitles = ["Landing Pages.", "Personal Websites.", "Corporate Design.", "Custom Logos."];
     let bannerTitle = "";
@@ -35,11 +36,12 @@
     <title>Lennart Hesse Design & Development</title>
 </svelte:head>
 
-<div id="banner">
+<div id="banner" class="bg-primary-dark">
     <section>
         <h1>{bannerTitle}</h1>
         <hr>
         <p>Egal ob persönlicher Blog, Portfolio, oder Landing Page, hier sind Sie richtig!</p>
+        <ScrollHint />
     </section>
 </div>
 

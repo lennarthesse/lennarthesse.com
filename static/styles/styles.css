@@ -143,8 +143,18 @@ aside {
 }
 
 #banner p {
-    color: var(--light);
     margin-top: 2rem;
+}
+
+#banner {
+    position: relative;
+}
+
+#banner svg {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* Blog */
