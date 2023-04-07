@@ -216,6 +216,9 @@ aside {
 #ablauf .timeline {
     position: relative;
     padding-left: 2rem;
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
 #ablauf .timeline::before {
@@ -224,13 +227,13 @@ aside {
     width: 0.25rem;
     top: 1rem;
     bottom: 0;
-    left: calc(0.5rem - 0.125rem);
+    left: 0.5rem;
+    transform: translateX(-50%);
     background-color: var(--primary);
 }
 
 #ablauf .timeline .event {
     position: relative;
-    margin-top: 2rem;
 }
 
 #ablauf .timeline .event::before {
@@ -268,6 +271,40 @@ aside {
 @media only screen and (min-width: 768px) {
     #leistungen .grid-item {
         flex-direction: row;
+    }
+
+    #ablauf .timeline {
+        padding: 0;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 3rem;
+    }
+
+    #ablauf .timeline::before {
+        left: 50%;
+    }
+
+    #ablauf .timeline .event:nth-child(2n) {
+        margin-top: 6rem;
+    }
+
+    #ablauf .timeline .event:nth-child(2n+1) {
+        text-align: right;
+    }
+    
+    #ablauf .timeline .event:nth-child(2n+1) p {
+        text-align: right;
+    }
+
+    #ablauf .timeline .event:nth-child(2n) p {
+        text-align: left;
+    }
+    
+    #ablauf .timeline .event:nth-child(2n+1)::before {
+        left: calc(100% + 1.125rem);
+    }
+
+    #ablauf .timeline .event {
+        display: inline-block;
     }
 }
 

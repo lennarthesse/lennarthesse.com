@@ -109,23 +109,23 @@
 
     <div class="timeline">
         <div class="event">
-            <h2>Event</h2>
+            <h2>Event 1</h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti repellat porro voluptate tempora quos iusto pariatur, voluptatem quibusdam illum placeat labore amet cupiditate quidem delectus, autem dicta neque enim odit.</p>
         </div>
         <div class="event">
-            <h2>Event</h2>
+            <h2>Event 2</h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti repellat porro voluptate tempora quos iusto pariatur, voluptatem quibusdam illum placeat labore amet cupiditate quidem delectus, autem dicta neque enim odit.</p>
         </div>
         <div class="event">
-            <h2>Event</h2>
+            <h2>Event 3</h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti repellat porro voluptate tempora quos iusto pariatur, voluptatem quibusdam illum placeat labore amet cupiditate quidem delectus, autem dicta neque enim odit.</p>
         </div>
         <div class="event">
-            <h2>Event</h2>
+            <h2>Event 4</h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti repellat porro voluptate tempora quos iusto pariatur, voluptatem quibusdam illum placeat labore amet cupiditate quidem delectus, autem dicta neque enim odit.</p>
         </div>
         <div class="event">
-            <h2>Event</h2>
+            <h2>Event 5</h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti repellat porro voluptate tempora quos iusto pariatur, voluptatem quibusdam illum placeat labore amet cupiditate quidem delectus, autem dicta neque enim odit.</p>
         </div>
     </div>
