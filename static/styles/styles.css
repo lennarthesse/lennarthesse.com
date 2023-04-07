@@ -7,6 +7,7 @@
     --accent-dark: #b66311;
 
     --light: #fff;
+    --grey: #777;
     --dark: #333;
 
     --gradient-accent: linear-gradient(135deg, #ff4942, #dbe643);
@@ -79,6 +80,10 @@ hr {
     border: none;
     background-color: #ddd;
     height: 2px;
+}
+
+h1.underlined {
+    margin-bottom: 1em;
 }
 
 h1.underlined::after {
@@ -206,6 +211,46 @@ aside {
 
 #leistungen svg {
     flex: 0 0 6rem;
+}
+
+#ablauf .timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+#ablauf .timeline::before {
+    content: "";
+    position: absolute;
+    width: 0.25rem;
+    top: 1rem;
+    bottom: 0;
+    left: calc(0.5rem - 0.125rem);
+    background-color: var(--primary);
+}
+
+#ablauf .timeline .event {
+    position: relative;
+    margin-top: 2rem;
+}
+
+#ablauf .timeline .event::before {
+    content: "";
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: var(--accent);
+    outline: 0.5rem solid var(--light);
+    position: absolute;
+    left: -1.875rem;
+    top: 0.75rem;
+}
+
+#ablauf .timeline .event h2 {
+    margin-bottom: 0;
+}
+
+#ablauf .timeline .event p {
+    color: var(--grey);
+    margin: 0;
 }
 
 /* Blog */
