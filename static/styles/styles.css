@@ -23,6 +23,8 @@
 body {
     background-color: var(--light);
     color: var(--dark);
+
+    overflow-x: hidden;
 }
 
 /* TYPOGRAPHY */
@@ -49,7 +51,14 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
 }
 
-h1 {font-size: 2rem;}
+h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.blog h1 {
+    text-align: left;
+}
 
 h2 {font-size: 1.75rem;}
 
@@ -82,25 +91,10 @@ hr {
     height: 2px;
 }
 
-h1.underlined {
-    margin-bottom: 1em;
-}
-
-h1.underlined::after {
+.clearfix::after {
     content: "";
-    width: 8rem;
-    height: 0.25rem;
-    border-radius: 1000rem;
-    background-color: var(--primary);
-
-    position: absolute;
-    bottom: -0.5rem;
-    left: 0;
-}
-
-h1.underlined-center::after {
-    left: 50%;
-    transform: translateX(-50%);
+    clear: both;
+    display: table;
 }
 
 /* UNIVERSAL */
@@ -185,10 +179,6 @@ aside {
     transform: translateX(-50%);
 }
 
-#leistungen h1 {
-    text-align: center;
-}
-
 #leistungen h1:not(:first-child) {
     margin-top: 4rem;
 }
@@ -256,6 +246,55 @@ aside {
     margin: 0;
 }
 
+#about .profile {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#about .profile-deco {
+    max-width: 16rem;
+    align-self: center;
+    margin: 3rem;
+    position: relative;
+    transform: rotate(35deg);
+}
+
+#about .profile-deco::before {
+    content: "";
+    width: 6rem;
+    height: 6rem;
+    border-radius: 2rem;
+    background-color: var(--primary);
+    position: absolute;
+    top: -10%;
+    left: 70%;
+}
+
+#about .profile-deco::after {
+    content: "";
+    width: 8rem;
+    height: 8rem;
+    border-radius: 2rem;
+    background-color: var(--primary-dark);
+    position: absolute;
+    left: 25%;
+    bottom: -20%;
+}
+
+#about .profile-deco .profile-picture {
+    border-radius: 4rem;
+    overflow: hidden;
+    box-shadow: 0 0 2rem #00000044;
+
+    position: relative;
+    z-index: 10;
+}
+
+#about .profile-picture img {
+    transform: rotate(-35deg) scale(120%);
+}
+
 /* Blog */
 .blog {
     background-color: #eee;
@@ -277,6 +316,8 @@ aside {
         padding: 0;
         grid-template-columns: 1fr 1fr;
         gap: 0 3rem;
+        max-width: 992px;
+        margin: auto;
     }
 
     #ablauf .timeline::before {
@@ -284,7 +325,7 @@ aside {
     }
 
     #ablauf .timeline .event:nth-child(2n) {
-        margin-top: 6rem;
+        margin-top: 8rem;
     }
 
     #ablauf .timeline .event:nth-child(2n+1) {
@@ -316,6 +357,15 @@ aside {
 
     #leistungen .grid {
         grid-template-columns: 1fr 1fr;
+    }
+
+    #about .profile {
+        flex-direction: row-reverse;
+        gap: 4rem;
+    }
+
+    #about .profile-picture {
+        align-self: flex-start;
     }
 }
 

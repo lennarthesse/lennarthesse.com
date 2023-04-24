@@ -47,7 +47,7 @@
 </div>
 
 <section id="leistungen">
-    <h1 class="underlined underlined-center"><i class="fa fa-desktop"></i> Web Development</h1>
+    <h1>Web Development</h1>
     <div class="grid">
         <div class="grid-item">
             <ColorPalette />
@@ -65,7 +65,7 @@
         </div>
     </div>
     
-    <h1 class="underlined underlined-center"><i class="fa fa-edit"></i> Corporate Design</h1>
+    <h1>Corporate Design</h1>
     <div class="grid">
         <div class="grid-item">
             <ColorPalette />
@@ -98,14 +98,8 @@
     </div>
 </section>
 
-<!--<section id="preise">
-    <h1>Preise</h1>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit tempore corporis eaque, aperiam autem accusamus a voluptas libero esse officiis possimus soluta! Recusandae, assumenda pariatur voluptates atque eveniet provident neque?</p>
-</section>-->
-
 <section id="ablauf">
     <h1>Der Ablauf</h1>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit tempore corporis eaque, aperiam autem accusamus a voluptas libero esse officiis possimus soluta! Recusandae, assumenda pariatur voluptates atque eveniet provident neque?</p>
 
     <div class="timeline">
         <div class="event">
@@ -140,5 +134,16 @@
 
 <section id="about">
     <h1>Über mich</h1>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit tempore corporis eaque, aperiam autem accusamus a voluptas libero esse officiis possimus soluta! Recusandae, assumenda pariatur voluptates atque eveniet provident neque?</p>
+    <div class="profile">
+        <div class="profile-deco">
+            <div class="profile-picture">
+                <img src="/media/profile.jpg" alt="Lennart Hesse">
+            </div>
+        </div>
+        <div class="profile-text">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit tempore corporis eaque, aperiam autem accusamus a voluptas libero esse officiis possimus soluta! Recusandae, assumenda pariatur voluptates atque eveniet provident neque?</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque reiciendis quia tempora soluta illum amet repellendus dolor dolore suscipit expedita. Consectetur adipisci veritatis perferendis doloribus nisi eos inventore nulla alias!</p>
+            
+        </div>
+    </div>
 </section>
