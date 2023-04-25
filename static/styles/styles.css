@@ -246,6 +246,59 @@ aside {
     margin: 0;
 }
 
+#portfolio .slide {
+    display: none;
+    margin: 0 1rem;
+}
+
+#portfolio .slide.active {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#portfolio .slide-thumbnail {
+    position: relative;
+}
+
+#portfolio .slide-thumbnail img {
+    border-radius: 2rem;
+}
+
+#portfolio .slide-thumbnail [class*=arrow-] {
+    position: absolute;
+    top: 50%;
+    font-size: 1.5rem;
+    color: var(--light);
+
+    transition: 0.2s;
+}
+
+#portfolio .slide-thumbnail [class*=arrow-]:hover,
+#portfolio .slide-thumbnail [class*=arrow-]:focus {
+    font-size: 2rem; 
+}
+
+#portfolio .slide-thumbnail .arrow-left {
+    left: -1.5rem;
+    transform: translate(-50%, -50%);
+}
+
+#portfolio .slide-thumbnail .arrow-right {
+    right: -1.5rem;
+    transform: translate(50%, -50%);
+}
+
+#portfolio .slide-thumbnail img {
+    width: 100%;
+    
+    aspect-ratio: 1/1;
+}
+
+#about {
+    overflow: hidden;
+}
+
 #about .profile {
     display: flex;
     flex-direction: column;
@@ -346,6 +399,19 @@ aside {
 
     #ablauf .timeline .event {
         display: inline-block;
+    }
+
+    #portfolio .slide.active {
+        flex-direction: row;
+        gap: 4rem;
+    }
+
+    #portfolio .slide.active * {
+        flex: 0 1 calc(50% - 2rem);
+    }
+
+    #portfolio .slide.active .slide-body {
+        align-self: center;
     }
 }
 

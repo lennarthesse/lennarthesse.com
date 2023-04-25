@@ -126,9 +126,28 @@
 </section>
 
 <div class="bg-primary-dark">
-    <section class="divider">
+    <section id="portfolio" class="divider">
         <h1>Portfolio</h1>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit tempore corporis eaque, aperiam autem accusamus a voluptas libero esse officiis possimus soluta! Recusandae, assumenda pariatur voluptates atque eveniet provident neque?</p>
+        
+        <div class="slideshow">
+            <div class="slide active">
+                <div class="slide-thumbnail">
+                    <button class="arrow-left">❮</button>
+                    <img src="/media/office.jpg" alt="">
+                    <button class="arrow-right">❯</button>
+                </div>
+                <div class="slide-body">
+                    <h2>Company</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quam sint laborum minus ex nihil possimus velit rerum autem fuga? Saepe rerum explicabo error dicta reprehenderit quibusdam dolore voluptates ad?</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="" alt="">
+                <h2>Company</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In mollitia suscipit aliquam nostrum nulla cum ullam, soluta hic laborum debitis perspiciatis natus. Et delectus quam mollitia reprehenderit? Aliquid, dolores perferendis!</p>
+            </div>
+        </div>
+
     </section>
 </div>
 
