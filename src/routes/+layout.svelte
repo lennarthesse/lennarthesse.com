@@ -9,8 +9,10 @@
 
 <footer>
     <div class="bg-primary">
-        <section>
-            <p>Socials</p>
+        <section id="networks">
+            <a href="https://www.xing.com/profile/Lennart_Hesse23" target="_blank"><i class="fa fa-xing"></i></a>
+            <a href="https://github.com/lennarthesse" target="_blank"><i class="fa fa-github"></i></a>
+            <a href="https://www.instagram.com/lennart0113/" target="_blank"><i class="fa fa-instagram"></i></a>
         </section>
     </div>
     

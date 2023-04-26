@@ -348,6 +348,13 @@ aside {
     transform: rotate(-35deg) scale(120%);
 }
 
+#networks {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
 /* Blog */
 .blog {
     background-color: #eee;
