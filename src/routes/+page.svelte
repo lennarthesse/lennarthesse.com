@@ -137,14 +137,29 @@
                     <button class="arrow-right">❯</button>
                 </div>
                 <div class="slide-body">
-                    <h2>Company</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quam sint laborum minus ex nihil possimus velit rerum autem fuga? Saepe rerum explicabo error dicta reprehenderit quibusdam dolore voluptates ad?</p>
+                    <h2>BUN Bau und Projektentwicklung</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <ul>
+                        <li>Gestaltung des Firmenlogos und Briefpapiers</li>
+                        <li>Unterstützung beim Aufbau der digitalen Präsenz</li>
+                    </ul>
                 </div>
             </div>
             <div class="slide">
-                <img src="" alt="">
-                <h2>Company</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In mollitia suscipit aliquam nostrum nulla cum ullam, soluta hic laborum debitis perspiciatis natus. Et delectus quam mollitia reprehenderit? Aliquid, dolores perferendis!</p>
+                <div class="slide-thumbnail">
+                    <button class="arrow-left">❮</button>
+                    <img src="/media/office.jpg" alt="">
+                    <button class="arrow-right">❯</button>
+                </div>
+                <div class="slide-body">
+                    <h2>Pambia Haushaltswaren</h2>
+                    <p>Nachhaltige Bambuswaren. Simpel und minimalistisch.</p>
+                    <ul>
+                        <li><p>Gestaltung der Firmenidentität samt Logos, Schriftart, Farbeschema und Motto</p></li>
+                        <li><p>Programmierung der Webseite</p></li>
+                        <li><p>Hosten der Webseite</p></li>
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -152,7 +167,6 @@
 </div>
 
 <section id="about">
-    <h1>Über mich</h1>
     <div class="profile">
         <div class="profile-deco">
             <div class="profile-picture">
@@ -160,9 +174,11 @@
             </div>
         </div>
         <div class="profile-text">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit tempore corporis eaque, aperiam autem accusamus a voluptas libero esse officiis possimus soluta! Recusandae, assumenda pariatur voluptates atque eveniet provident neque?</p>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque reiciendis quia tempora soluta illum amet repellendus dolor dolore suscipit expedita. Consectetur adipisci veritatis perferendis doloribus nisi eos inventore nulla alias!</p>
-            
+            <h1>Über mich</h1>
+            <p>Schon als Jugendlicher habe ich mich für das Programmieren interessiert und erste kleine Programme und Webseiten geschrieben. Als ich älter wurde, fing ich außerdem an, Musik zu produzieren und sie auf YouTube hochzuladen, wodurch ich erste Erfahrungen im Bereich des Brandings und der allgemeinen Gestaltung machte.</p>
+            <p>Nach der Schule habe ich ein Informatikstudium an der Universität Bremen begonnen und später zum Studiengang Medieninformatik an der Hochschule in Wernigerode gewechselt, um den kreativen Aspekt mehr einbringen zu können.</p>
+            <p>In der Zwischenzeit arbeitete ich an verschiedenen Projekten, teils kleinere Spielereien für mich selbst, um mehr Erfahrungen zu sammeln, teils mit einem Kollegen, um mir ein Wenig dazu zu verdienen. Infolgedessen entschloss ich mich, mein erstes eigenes Unternehmen zu gründen, um meine Fähigkeiten zu Nutzen zu bringen.</p>
+            <p>Jetzt biete ich auf meiner Webseite Dienstleistungen rund um die Webpräsenz und Markengestalung kleiner aufstrebender Unternehmen an und hoste einen kleinen Blog, in dem ich Anleitungen und Einblicke in einige meiner privaten Projekte gebe.</p>
         </div>
     </div>
 </section>

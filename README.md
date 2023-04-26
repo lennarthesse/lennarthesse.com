@@ -4,16 +4,16 @@ Repository for [https://lennarthesse.com](https://lennarthesse.com).
 
 ## Todo
 
-[ ] Profile picture hover effect
-
 [ ] Portfolio slideshow functionality
 
+[ ] Profile picture hover effect
+
 [ ] Portfolio image hover effect
+
+[ ] (Timeline hover effect for dots?)
 
 [ ] SVG icons (+ animation?)
 
 [ ] Scroll hint animation
 
 [ ] Navbar
-
-[ ] (Timeline hover effect for dots?)
