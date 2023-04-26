@@ -331,9 +331,9 @@ li:not(:first-child) {
 
 #about .profile-deco::before {
     content: "";
-    width: 6rem;
-    height: 6rem;
-    border-radius: 2rem;
+    width: 40%;
+    height: 40%;
+    border-radius: 33%;
     background-color: var(--primary);
     position: absolute;
     top: -10%;
@@ -342,9 +342,9 @@ li:not(:first-child) {
 
 #about .profile-deco::after {
     content: "";
-    width: 8rem;
-    height: 8rem;
-    border-radius: 2rem;
+    width: 50%;
+    height: 50%;
+    border-radius: 25%;
     background-color: var(--primary-dark);
     position: absolute;
     left: 25%;
@@ -352,7 +352,7 @@ li:not(:first-child) {
 }
 
 #about .profile-deco .profile-picture {
-    border-radius: 4rem;
+    border-radius: 25%;
     overflow: hidden;
     box-shadow: 0 0 2rem #00000044;
 
