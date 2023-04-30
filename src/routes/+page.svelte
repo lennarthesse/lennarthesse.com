@@ -130,39 +130,40 @@
         <h1>Portfolio</h1>
         
         <div class="slideshow">
-            <div class="slide active">
-                <div class="slide-thumbnail">
-                    <button class="arrow-left">❮</button>
-                    <img src="/media/office.jpg" alt="">
-                    <button class="arrow-right">❯</button>
-                </div>
-                <div class="slide-body">
-                    <h2>BUN Bau und Projektentwicklung</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <ul>
-                        <li>Gestaltung des Firmenlogos und Briefpapiers</li>
-                        <li>Unterstützung beim Aufbau der digitalen Präsenz</li>
-                    </ul>
-                </div>
+            <div class="slide-thumbnail">
+                <button class="arrow-left">❮</button>
+                <ul class="slides">
+                    <li class="slide active">
+                        <img src="/media/office.jpg" alt="">        
+                    </li>
+                    <li class="slide">
+                        <img src="/media/office.jpg" alt="">
+                    </li>
+                </ul>
+                <button class="arrow-right">❯</button>
             </div>
-            <div class="slide">
-                <div class="slide-thumbnail">
-                    <button class="arrow-left">❮</button>
-                    <img src="/media/office.jpg" alt="">
-                    <button class="arrow-right">❯</button>
-                </div>
-                <div class="slide-body">
-                    <h2>Pambia Haushaltswaren</h2>
-                    <p>Nachhaltige Bambuswaren. Simpel und minimalistisch.</p>
-                    <ul>
-                        <li><p>Gestaltung der Firmenidentität samt Logos, Schriftart, Farbeschema und Motto</p></li>
-                        <li><p>Programmierung der Webseite</p></li>
-                        <li><p>Hosten der Webseite</p></li>
-                    </ul>
-                </div>
+            <div class="slide-body">
+                <ul class="slides">
+                    <li class="slide active">
+                        <h2>BUN Bau und Projektentwicklung</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <ul>
+                            <li>Gestaltung des Firmenlogos und Briefpapiers</li>
+                            <li>Unterstützung beim Aufbau der digitalen Präsenz</li>
+                        </ul>
+                    </li>
+                    <li class="slide">
+                        <h2>Pambia Haushaltswaren</h2>
+                        <p>Nachhaltige Bambuswaren. Simpel und minimalistisch.</p>
+                        <ul>
+                            <li><p>Gestaltung der Firmenidentität samt Logos, Schriftart, Farbeschema und Motto</p></li>
+                            <li><p>Programmierung der Webseite</p></li>
+                            <li><p>Hosten der Webseite</p></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
-
     </section>
 </div>
 
