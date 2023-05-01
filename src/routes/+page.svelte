@@ -135,28 +135,28 @@
             <ColorPalette />
             <div>
                 <h2>Logos</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa deleniti officia explicabo soluta facere minima laudantium laborum! Quasi iste eveniet, aperiam ratione nisi cumque, itaque quo non quos maiores odio.</p>
+                <p>Das Logo ist das Aushängeschild eines Unternehmens und verkörpert die Unternehmensphilosophie. Es sollte einen großen Wiedererkennungswert haben und steht stellvertretend für das Unternehmen. Demnach lege ich einen besonders großen Wert darauf, ein professionelles und aussagekräftiges Logo mit hoher Qualität für Ihr Unternehmen zu entwerfen und zu gestalten.</p>
             </div>
         </div>
         <div class="grid-item">
             <ColorPalette />
             <div>
                 <h2>Farbpaletten</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa deleniti officia explicabo soluta facere minima laudantium laborum! Quasi iste eveniet, aperiam ratione nisi cumque, itaque quo non quos maiores odio.</p>
+                <p>Farben vermitteln ein starkes Bild und rufen Assoziationen in uns hervor. Daher ist es wichtig, die passende Farbpalette für Ihr Unternehmen zu wählen. Ich helfe dabei, die gewünschten Emotionen und Assoziationen festzustellen und entwerfe eine Farbpalette, die genau den richtigen Eindruck auf Ihre Kunden macht.</p>
             </div>
         </div>
         <div class="grid-item">
             <ColorPalette />
             <div>
                 <h2>Schriftarten</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa deleniti officia explicabo soluta facere minima laudantium laborum! Quasi iste eveniet, aperiam ratione nisi cumque, itaque quo non quos maiores odio.</p>
+                <p>Jede Schriftart hat ihren eigenen Charakter. Ob modern, elegant oder geometrisch, alle haben eine bestimmte Aussagekraft. Häufig wird dieser Aspekt vernachlässigt, doch gerade er rundet das Erscheinungsbild eines Unternehmens ab und lässt es professionell erscheinen.</p>
             </div>
         </div>
         <div class="grid-item">
             <ColorPalette />
             <div>
-                <h2>Corporate Identity</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa deleniti officia explicabo soluta facere minima laudantium laborum! Quasi iste eveniet, aperiam ratione nisi cumque, itaque quo non quos maiores odio.</p>
+                <h2>Unterlagen</h2>
+                <p>Um die Firmenidentität auch in die analoge Welt zu bringen, ist es ratsam, eigenes Briefpapier sowie eigene Visitenkarten zu besitzen, um potentielle Kunden zu gewinnen und das Unternehmensbild zu festigen. Daher biete ich auch die Gestaltung von Geschäftsunterlagen an und helfe auf Wunsch auch beim Druck.</p>
             </div>
         </div>
     </div>
@@ -168,11 +168,11 @@
     <div class="timeline">
         <div class="event">
             <h2>Kontaktanfrage schicken</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti repellat porro voluptate tempora quos iusto pariatur, voluptatem quibusdam illum placeat labore amet cupiditate quidem delectus, autem dicta neque enim odit.</p>
+            <p>Zuerst geben Sie an, welche Leistungen Sie benötigen. Dabei können Sie ganz einfach aus einer Liste ankreuzen oder bei Sonderwünschen eine Bemerkung hinzufügen. Danach hinterlassen Sie Ihre Kontaktdaten und ich melde mich alsbald mit einem Terminvorschlag zurück.</p>
         </div>
         <div class="event">
             <h2>Erstgespräch</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti repellat porro voluptate tempora quos iusto pariatur, voluptatem quibusdam illum placeat labore amet cupiditate quidem delectus, autem dicta neque enim odit.</p>
+            <p>Hier klären wir zusammen Ihre genauen Wünsche und ...</p>
         </div>
         <div class="event">
             <h2>Präsentation des Konzepts</h2>
