@@ -4,7 +4,7 @@ Repository for [https://lennarthesse.com](https://lennarthesse.com).
 
 ## Todo
 
-[ ] Portfolio slideshow functionality
+[x] Portfolio slideshow functionality
 
 [ ] Profile picture hover effect
 

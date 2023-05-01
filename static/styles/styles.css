@@ -238,6 +238,19 @@ li:not(:first-child) {
     background-color: var(--primary);
 }
 
+#ablauf .timeline::after {
+    content: "";
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    bottom: 0;
+    border-bottom: 0.25rem solid var(--primary);
+    border-right: 0.25rem solid var(--primary);
+    border-left: 0.25rem solid transparent;
+    border-top: 0.25rem solid transparent;
+    transform: rotate(45deg);
+}
+
 #ablauf .timeline .event {
     position: relative;
 }
@@ -251,6 +264,7 @@ li:not(:first-child) {
     position: absolute;
     left: -1.875rem;
     top: 0.75rem;
+    /*border-radius: 100%;*/
 }
 
 #ablauf .timeline .event h2 {
@@ -404,8 +418,12 @@ li:not(:first-child) {
         left: 50%;
     }
 
+    #ablauf .timeline::after {
+        left: calc(50% - 0.5rem);
+    }
+
     #ablauf .timeline .event:nth-child(2n) {
-        margin-top: 8rem;
+        margin-top: 10rem;
     }
 
     #ablauf .timeline .event:nth-child(2n+1) {
@@ -422,10 +440,6 @@ li:not(:first-child) {
     
     #ablauf .timeline .event:nth-child(2n+1)::before {
         left: calc(100% + 1.125rem);
-    }
-
-    #ablauf .timeline .event {
-        display: inline-block;
     }
 
     #portfolio .slideshow {
