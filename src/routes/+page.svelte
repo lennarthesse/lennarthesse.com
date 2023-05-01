@@ -6,7 +6,47 @@
     let bannerTitles = ["Landing Pages.", "Personal Websites.", "Corporate Design.", "Custom Logos."];
     let bannerTitle = "";
 
-    onMount(typeWrite);
+    let slideIndex = 0;
+    let slides = [
+        {
+            active: false,
+            thumbnail: "<img src='/media/bunbau.png' alt='BUN Bau Briefpapier'>",
+            body: `<h2>BUN Bau und Projektentwicklung</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <ul>
+                        <li>Gestaltung des Firmenlogos und Briefpapiers</li>
+                        <li>Unterstützung beim Aufbau der digitalen Präsenz</li>
+                    </ul>`
+        },
+        {
+            active: false,
+            thumbnail: "<img src='/media/pambia-logo.png' alt='Pambia Haushaltswaren'>",
+            body: `<h2>Pambia Haushaltswaren</h2>
+                    <p>Nachhaltige Bambuswaren. Simpel und minimalistisch.</p>
+                    <ul>
+                        <li><p>Gestaltung der Firmenidentität samt Logos, Schriftart, Farbeschema und Motto</p></li>
+                        <li><p>Programmierung der Webseite</p></li>
+                        <li><p>Hosten der Webseite</p></li>
+                    </ul>`
+        },
+        {
+            active: false,
+            thumbnail: "<img src='/media/office.jpg' alt=''>",
+            body: `<h2>Bababooey</h2>
+                    <p>Nachhaltige Bamben. Simpel und minimal.</p>
+                    <ul>
+                        <li><p>Gestaltung der Firmenidentität samt Logos, Schriftart, Farbeschema und Motto</p></li>
+                        <li><p>Programmierung der Webseite</p></li>
+                        <li><p>Hosten der Webseite</p></li>
+                    </ul>`
+        }
+    ];
+
+    onMount(() => {
+        typeWrite();
+        updateSlides(slideIndex);
+    });
+    
 
     async function typeWrite() {
         let title = 0
@@ -30,6 +70,30 @@
 
     function sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    function incrementSlide() {
+        crementSlide(1);
+    }
+
+    function decrementSlide() {
+        crementSlide(-1);
+    }
+
+    function crementSlide(i) {
+        slides[slideIndex].active = false;
+        slideIndex += i;
+        if (slideIndex >= slides.length) {
+            slideIndex = 0;
+        }
+        if (slideIndex < 0) {
+            slideIndex = slides.length - 1;
+        }
+        updateSlides(slideIndex);
+    }
+
+    function updateSlides(index) {
+        slides[index].active = true;
     }
 </script>
 
@@ -131,37 +195,24 @@
         
         <div class="slideshow">
             <div class="slide-thumbnail">
-                <button class="arrow-left">❮</button>
-                <ul class="slides">
-                    <li class="slide active">
-                        <img src="/media/office.jpg" alt="">        
-                    </li>
-                    <li class="slide">
-                        <img src="/media/office.jpg" alt="">
-                    </li>
-                </ul>
-                <button class="arrow-right">❯</button>
+                <button class="arrow-left" on:click={decrementSlide}>❮</button>
+                <div class="slide">
+                    {#each slides as {active, thumbnail}}
+                        {#if active}
+                            {@html thumbnail}
+                        {/if}
+                    {/each}
+                <button class="arrow-right" on:click={incrementSlide}>❯</button>
+                </div>
             </div>
             <div class="slide-body">
-                <ul class="slides">
-                    <li class="slide active">
-                        <h2>BUN Bau und Projektentwicklung</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <ul>
-                            <li>Gestaltung des Firmenlogos und Briefpapiers</li>
-                            <li>Unterstützung beim Aufbau der digitalen Präsenz</li>
-                        </ul>
-                    </li>
-                    <li class="slide">
-                        <h2>Pambia Haushaltswaren</h2>
-                        <p>Nachhaltige Bambuswaren. Simpel und minimalistisch.</p>
-                        <ul>
-                            <li><p>Gestaltung der Firmenidentität samt Logos, Schriftart, Farbeschema und Motto</p></li>
-                            <li><p>Programmierung der Webseite</p></li>
-                            <li><p>Hosten der Webseite</p></li>
-                        </ul>
-                    </li>
-                </ul>
+                <div class="slide">
+                    {#each slides as {active, body}}
+                        {#if active}
+                            {@html body}
+                        {/if}
+                    {/each}
+                </div>
             </div>
         </div>
     </section>

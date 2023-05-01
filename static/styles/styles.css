@@ -268,19 +268,8 @@ li:not(:first-child) {
     gap: 2rem;
 }
 
-#portfolio ul.slides {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
 #portfolio .slide {
-    display: none;
     margin: 0 1rem;
-}
-
-#portfolio .slide.active {
-    display: block
 }
 
 #portfolio .slide-thumbnail {
