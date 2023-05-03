@@ -91,12 +91,6 @@ hr {
     height: 2px;
 }
 
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
 /* UNIVERSAL */
 nav {
     background-image: linear-gradient(#000000dd, transparent);
@@ -108,6 +102,7 @@ nav {
 
 section {
     padding: 2rem;
+    scroll-margin-top: 5rem; /* INSERT NAV HEIGHT HERE */
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -376,7 +371,7 @@ li:not(:first-child) {
 
 #networks {
     display: flex;
-    gap: 1.5rem;
+    gap: 2rem;
     justify-content: center;
     font-size: 1.5rem;
 }
@@ -389,6 +384,10 @@ li:not(:first-child) {
     transform: scale(120%);
 }
 
+.footer-links {
+    columns: 2;
+}
+
 /* Blog */
 .blog {
     background-color: #eee;
@@ -398,6 +397,11 @@ li:not(:first-child) {
 
 .post-preview {
     margin: 2rem 0;
+}
+
+/* Impressum */
+#impressum {
+    padding-top: 7rem; /* INSERT NAV HEIGHT + 2rem HERE */
 }
 
 /* TABLET */
@@ -469,10 +473,6 @@ li:not(:first-child) {
     #about .profile {
         flex-direction: row-reverse;
         gap: 4rem;
-    }
-
-    #about .profile-picture {
-        align-self: flex-start;
     }
 }
 

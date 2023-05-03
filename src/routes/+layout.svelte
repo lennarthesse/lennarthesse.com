@@ -1,7 +1,11 @@
 <nav>
     <section>
-        <a href="/">Home</a>
-        <a href="/blog">Blog</a>
+        <a href="/">Lennart Hesse</a>
+        <a href="/#leistungen">Leistungen</a>
+        <a href="/#ablauf">Ablauf</a>
+        <a href="/#portfolio">Portfolio</a>
+        <a href="/#about">About</a>
+        <a href="/blog/">Blog</a>
     </section>
 </nav>
 
@@ -17,11 +21,14 @@
     </div>
     
     <div class="bg-primary-dark">
-        <section>
-            <p>Footer</p>
-            <p>Links</p>
-            <p>Impressum</p>
-            <p>Etc</p>
+        <section class="footer-links">
+            <p><a href="/#leistungen">Leistungen</a></p>
+            <p><a href="/#ablauf">Ablauf</a></p>
+            <p><a href="/#portfolio">Portfolio</a></p>
+            <p><a href="/#about">About</a></p>
+            <p><a href="/blog/">Blog</a></p>
+            <p><a href="/impressum/">Impressum</a></p>
+            <p><a href="/datenschutz/">Datenschutz</a></p>
         </section>
     </div>
 </footer>

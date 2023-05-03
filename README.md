@@ -16,4 +16,8 @@ Repository for [https://lennarthesse.com](https://lennarthesse.com).
 
 [ ] Scroll hint animation
 
+[ ] Imprint
+
+[ ] DSGVO
+
 [ ] Navbar
