@@ -21,14 +21,41 @@
     </div>
     
     <div class="bg-primary-dark">
-        <section class="footer-links">
-            <p><a href="/#leistungen">Leistungen</a></p>
-            <p><a href="/#ablauf">Ablauf</a></p>
-            <p><a href="/#portfolio">Portfolio</a></p>
-            <p><a href="/#about">About</a></p>
-            <p><a href="/blog/">Blog</a></p>
-            <p><a href="/impressum/">Impressum</a></p>
-            <p><a href="/datenschutz/">Datenschutz</a></p>
+        <section>
+            <div class="footer-info">
+                <div class="footer-links">
+                    <h1>Links</h1>
+                    <div class="links">
+                        <p><a href="/#leistungen">Leistungen</a></p>
+                        <p><a href="/#ablauf">Ablauf</a></p>
+                        <p><a href="/#portfolio">Portfolio</a></p>
+                        <p><a href="/#about">About</a></p>
+                        <p><a href="/blog/">Blog</a></p>
+                        <p><a href="/impressum/">Impressum</a></p>
+                        <p><a href="/datenschutz/">Datenschutz</a></p>
+                        <!--
+                        <a href="/#leistungen"><p>Leistungen</p></a>
+                        <a href="/#ablauf"><p>Ablauf</p></a>
+                        <a href="/#portfolio"><p>Portfolio</p></a>
+                        <a href="/#about"><p>About</p></a>
+                        <a href="/blog/"><p>Blog</p></a>
+                        <a href="/impressum/"><p>Impressum</p></a>
+                        <a href="/datenschutz/"><p>Datenschutz</p></a>
+                        -->
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <h1>Kontakt</h1>
+                    <p><strong>Lennart Hesse Design & Development</strong></p>
+                    <p>Potsdamer Straße 13 <br>
+                        28211 Bremen <br>
+                        Deutschland</p>
+                    <p>E-Mail: hesse@lennarthesse.com <br>
+                        Telefon: +49 176 39886008</p>
+                </div>
+            </div>
+
+            <p class="copyright"><small>&copy; Lennart Hesse Design & Development</small></p>
         </section>
     </div>
 </footer>
