@@ -15,7 +15,7 @@
     <div class="bg-primary">
         <section id="networks">
             <a href="https://www.xing.com/profile/Lennart_Hesse23" target="_blank"><i class="fa fa-xing"></i></a>
-            <a href="https://github.com/lennarthesse" target="_blank"><i class="fa fa-github"></i></a>
+            <a href="https://www.github.com/lennarthesse" target="_blank"><i class="fa fa-github"></i></a>
             <a href="https://www.instagram.com/lennart0113/" target="_blank"><i class="fa fa-instagram"></i></a>
         </section>
     </div>
@@ -46,12 +46,13 @@
                 </div>
                 <div class="footer-contact">
                     <h1>Kontakt</h1>
-                    <p><strong>Lennart Hesse Design & Development</strong></p>
+                    <p>Lennart Hesse Design & Development</p>
                     <p>Potsdamer Straße 13 <br>
                         28211 Bremen <br>
                         Deutschland</p>
-                    <p>E-Mail: hesse@lennarthesse.com <br>
-                        Telefon: +49 176 39886008</p>
+                    <p>Telefon: +49 176 39886008 <br>
+                        E-Mail: info@lennarthesse.com <br>
+                        Web: www.lennarthesse.com</p>
                 </div>
             </div>
 
