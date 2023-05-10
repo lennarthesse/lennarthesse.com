@@ -33,15 +33,6 @@
                         <p><a href="/blog/">Blog</a></p>
                         <p><a href="/impressum/">Impressum</a></p>
                         <p><a href="/datenschutz/">Datenschutz</a></p>
-                        <!--
-                        <a href="/#leistungen"><p>Leistungen</p></a>
-                        <a href="/#ablauf"><p>Ablauf</p></a>
-                        <a href="/#portfolio"><p>Portfolio</p></a>
-                        <a href="/#about"><p>About</p></a>
-                        <a href="/blog/"><p>Blog</p></a>
-                        <a href="/impressum/"><p>Impressum</p></a>
-                        <a href="/datenschutz/"><p>Datenschutz</p></a>
-                        -->
                     </div>
                 </div>
                 <div class="footer-contact">

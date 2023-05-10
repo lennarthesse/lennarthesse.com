@@ -422,7 +422,7 @@ footer .copyright {
 }
 
 /* Impressum */
-#impressum {
+#impressum, #datenschutz {
     padding-top: 7rem; /* INSERT NAV HEIGHT + 2rem HERE */
 }
 

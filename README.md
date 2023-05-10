@@ -16,8 +16,10 @@ Repository for [https://lennarthesse.com](https://lennarthesse.com).
 
 [ ] Scroll hint animation
 
-[ ] Imprint
+[x] Imprint
 
 [ ] DSGVO
 
 [ ] Navbar
+
+[ ] Color accent in headings (+ more space?)

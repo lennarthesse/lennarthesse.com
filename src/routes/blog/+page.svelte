@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-    <title>Blog | Lennart Hesse</title>
+    <title>Blog | Lennart Hesse Design & Development</title>
 </svelte:head>
 
 <h1>Neue Artikel</h1>
