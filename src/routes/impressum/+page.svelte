@@ -9,7 +9,7 @@
     <p>Lennart Hesse Design & Development<br>
         Potsdamer Straße 13<br>
         28211 Bremen<br>
-        Deutschland </p>
+        Deutschland</p>
 
     <h2>Kontakt</h2>
     <p>Telefon: +49 176 39886008<br>
@@ -26,7 +26,7 @@
     <p>Lennart Hesse<br>
         Potsdamer Straße 13<br>
         28211 Bremen<br>
-        Deutschland </p>
+        Deutschland</p>
 
     <h2>Streitschlichtung</h2>
     <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit. Die Plattform finden Sie unter <a href="http://www.ec.europa.eu/consumers/odr/" target="_blank">https://ec.europa.eu/consumers/odr</a>. Wir sind weder bereit noch verpflichtet, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>

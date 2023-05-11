@@ -18,7 +18,7 @@ Repository for [https://lennarthesse.com](https://lennarthesse.com).
 
 [x] Imprint
 
-[ ] DSGVO
+[x] DSGVO
 
 [ ] Navbar
 
