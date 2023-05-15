@@ -1,5 +1,5 @@
 <div class="blog">
-    <section class="main-aside bg-light">
+    <section class="main-aside bg-light shadow">
         <main>
             <slot />
         </main>

@@ -31,6 +31,7 @@
                         <p><a href="/#portfolio">Portfolio</a></p>
                         <p><a href="/#about">About</a></p>
                         <p><a href="/blog/">Blog</a></p>
+                        <p><a href="/kontakt/">Kontakt</a></p>
                         <p><a href="/impressum/">Impressum</a></p>
                         <p><a href="/datenschutz/">Datenschutz</a></p>
                     </div>

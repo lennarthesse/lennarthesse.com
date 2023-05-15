@@ -172,7 +172,7 @@
         </div>
         <div class="event">
             <h2>Erstgespräch</h2>
-            <p>Hier klären wir zusammen Ihre genauen Wünsche und ...</p>
+            <p>Hier klären wir zusammen Ihre genauen Wünsche und ... Vertragsschluss</p>
         </div>
         <div class="event">
             <h2>Präsentation des Konzepts</h2>

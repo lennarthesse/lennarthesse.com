@@ -4,7 +4,7 @@
     --primary-dark: #1d374d;
 
     --accent: #ed9842;
-    --accent-dark: #b66311;
+    --accent-dark: hsl(30, 83%, 50%);
 
     --light: #fff;
     --grey: #777;
@@ -85,10 +85,18 @@ h4 {font-size: 1.25rem;}
     background-color: var(--light);
 }
 
+.bg-light-gray {
+    background-color: #eee;
+}
+
 hr {
     border: none;
     background-color: #ddd;
     height: 2px;
+}
+
+.shadow {
+    box-shadow: 0 0 4rem #00000022;
 }
 
 /* UNIVERSAL */
@@ -129,6 +137,20 @@ li p {
 
 li:not(:first-child) {
     margin-top: 0.5em;
+}
+
+fieldset {
+    margin: 2rem 0;
+    padding-top: 1rem;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+fieldset h2 {
+    padding-left: 0rem;
+    padding-right: 0.5rem;
 }
 
 .main-aside {
@@ -421,10 +443,56 @@ footer .copyright {
     margin: 2rem 0;
 }
 
-/* Impressum */
-#impressum, #datenschutz {
+/* Impressum etc */
+#impressum, #datenschutz, #kontakt {
     padding-top: 7rem; /* INSERT NAV HEIGHT + 2rem HERE */
 }
+
+#kontakt .input-checkbox {
+    display: flex;
+    gap: 0.5rem;
+}
+
+#kontakt .input-labeled-text {
+    position: relative;
+    margin-top: 1.5rem;
+}
+
+#kontakt .input-labeled-text input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: var(--dark);
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid var(--dark);
+
+}
+
+#kontakt .input-labeled-text label {
+    position: absolute;
+    top: 0;
+    left: 0.5rem;
+    transform: translateY(50%);
+    transition: 0.5s;
+    color: var(--grey);
+}
+
+#kontakt .input-labeled-text input:focus {
+    outline: none;
+}
+
+#kontakt .input-labeled-text input:focus ~ label,
+#kontakt .input-labeled-text input:not(:placeholder-shown) ~ label {
+    top: -1.75rem;
+}
+
+#kontakt .input-labeled-text input:invalid ~ label,
+#kontakt .input-labeled-text input:invalid {
+    color: #d00;
+    border-color: #d00;
+}
+
 
 /* TABLET */
 @media only screen and (min-width: 768px) {

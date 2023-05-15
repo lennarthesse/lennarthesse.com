@@ -20,6 +20,10 @@ Repository for [https://lennarthesse.com](https://lennarthesse.com).
 
 [x] DSGVO
 
+[ ] Contact form
+
+[ ] Links styles
+
 [ ] Navbar
 
 [ ] Color accent in headings (+ more space?)
