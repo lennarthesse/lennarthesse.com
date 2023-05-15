@@ -184,8 +184,7 @@ fieldset h2 {
     word-spacing: 1000rem;
     color: transparent;
     background: var(--gradient-accent);
-    -webkit-background-clip: text;
-            background-clip: text;
+    background-clip: text;
     font-size: 3rem;
 }
 
@@ -426,8 +425,7 @@ footer .footer-info {
 }
 
 footer .footer-info .footer-links .links {
-    -moz-columns: 2;
-         columns: 2;
+    columns: 2;
 }
 
 footer .copyright {
@@ -482,10 +480,6 @@ footer .copyright {
 
 #kontakt .input-labeled-text input:focus {
     outline: none;
-}
-
-#kontakt .input-labeled-text input:not(:-moz-placeholder-shown) ~ label {
-    top: -1.75rem;
 }
 
 #kontakt .input-labeled-text input:focus ~ label,
