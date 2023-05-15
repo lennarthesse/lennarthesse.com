@@ -115,6 +115,12 @@ section {
     margin: 0 auto;
 }
 
+.main-aside {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
 main {
     flex-basis: 70%;
 }
@@ -145,18 +151,7 @@ fieldset {
     border: none;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-}
-
-fieldset h2 {
-    padding-left: 0rem;
-    padding-right: 0.5rem;
-}
-
-.main-aside {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    gap: 1.25rem;
 }
 
 /* SPECIFIC */
@@ -208,17 +203,13 @@ fieldset h2 {
 
 #banner svg {
     position: absolute;
-    bottom: 2rem;
+    bottom: 1rem;
     left: 50%;
     transform: translateX(-50%);
 }
 
 #leistungen h1:not(:first-child) {
     margin-top: 4rem;
-}
-
-#leistungen h1 i {
-    margin-right: 1rem;
 }
 
 #leistungen .grid {
@@ -355,6 +346,7 @@ fieldset h2 {
     margin: 3rem;
     position: relative;
     transform: rotate(35deg);
+    flex-shrink: 0;
 }
 
 #about .profile-deco::before {
@@ -420,7 +412,6 @@ footer #networks a:hover {
 footer .footer-info {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     gap: 2rem;
     margin-bottom: 2rem;
 }
@@ -452,12 +443,13 @@ footer .copyright {
 
 #kontakt .input-checkbox {
     display: flex;
+    align-items: center;
     gap: 0.5rem;
 }
 
 #kontakt .input-labeled-text {
     position: relative;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 
 #kontakt .input-labeled-text input {
@@ -473,9 +465,9 @@ footer .copyright {
 
 #kontakt .input-labeled-text label {
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 0.5rem;
-    transform: translateY(50%);
+    transform: translateY(-50%);
     transition: 0.5s;
     color: var(--grey);
 }
@@ -485,12 +477,12 @@ footer .copyright {
 }
 
 #kontakt .input-labeled-text input:not(:-moz-placeholder-shown) ~ label {
-    top: -1.75rem;
+    top: -0.5rem;
 }
 
 #kontakt .input-labeled-text input:focus ~ label,
 #kontakt .input-labeled-text input:not(:placeholder-shown) ~ label {
-    top: -1.75rem;
+    top: -0.5rem;
 }
 
 #kontakt .input-labeled-text input:invalid ~ label,
@@ -548,7 +540,7 @@ footer .copyright {
     }
 
     #portfolio .slideshow > * {
-        flex: 0 1 calc(50% - 1rem);
+        flex: 0 0 calc(50% - 2rem);
     }
 
     #portfolio .slideshow .slide-body {
@@ -562,7 +554,7 @@ footer .copyright {
 
     footer .footer-info .footer-links,
     footer .footer-info .footer-contact {
-        flex-basis: 50%
+        flex: 0 0 50%
     }
 
     footer .footer-info .footer-links {
