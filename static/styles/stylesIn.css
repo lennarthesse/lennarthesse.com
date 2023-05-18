@@ -108,8 +108,12 @@ nav {
     width: 100%;
 }
 
-section {
+nav section {
     padding: 2rem;
+}
+
+section {
+    padding: 4rem 2rem;
     scroll-margin-top: 5rem; /* INSERT NAV HEIGHT HERE */
     max-width: 1200px;
     margin: 0 auto;
@@ -383,6 +387,10 @@ fieldset {
     transform: rotate(-35deg) scale(120%);
 }
 
+footer section {
+    padding: 2rem;
+}
+
 footer p {
     text-align: left;
 }
@@ -475,6 +483,7 @@ footer .copyright {
 }
 
 #kontakt .input-labeled-text input:focus ~ label,
+#kontakt .input-labeled-text input:hover ~ label,
 #kontakt .input-labeled-text input:not(:placeholder-shown) ~ label {
     top: -0.5rem;
 }

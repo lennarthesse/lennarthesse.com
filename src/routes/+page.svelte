@@ -3,7 +3,7 @@
     import ScrollHint from "$lib/assets/icons/scroll-hint.svelte";
     import ColorPalette from "$lib/assets/icons/color-palette.svelte";
 
-    let bannerTitles = ["Landing Pages.", "Personal Websites.", "Corporate Design.", "Custom Logos."];
+    let bannerTitles = ["Landing Pages.", "Corporate Design.", "Personal Websites.", "Custom Logos.", "Business Websites."];
     let bannerTitle = "";
 
     let slideIndex = 0;
@@ -116,15 +116,17 @@
         <div class="grid-item">
             <ColorPalette />
             <div>
-                <h2>Landing Pages</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, dolores magnam similique pariatur ea recusandae qui sunt natus laboriosam quisquam optio impedit totam nisi commodi maiores obcaecati perspiciatis! Aliquid, numquam.</p>
+                <h2>Business Websites</h2>
+                <p>Eine Firmenwebseite präsentiert Ihr Unternehmen im Internet. Dort können Sie alle wichtigen Informationen für Ihre Kunden bereit halten und ihnen eine leichte und moderne Kontaktaufnahme ermöglichen.</p>
+                <p>Genau so können Sie eine Landing Page verwenden, um ein bestimmtes Produkt oder eine bestimmte Dienstleistung zu bewerben. Hier liegt der Fokus allein auf der angebotenen Leistung, um die Konversionsrate zu maximieren.</p>
             </div>
         </div>
         <div class="grid-item">
             <ColorPalette />
             <div>
                 <h2>Personal Websites</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod perferendis mollitia asperiores alias tempora inventore velit, quia pariatur similique. Libero, fugit. Et, nihil. Repudiandae, quis mollitia laboriosam soluta eaque rem!</p>
+                <p>Als Privatperson oder Einzelunternehmer ist eine Webseite zur eigenen Person interessant. So kann man beispielsweise über Interessen und Hobbies erzählen oder Projekte wie Webanwendungen hosten.</p>
+                <p>Einzelunternehmer oder Freelancer können außerdem in Form einer Portfolioseite ihre Fähigkeiten und Dienstleistungen auflisten und ihren Werdegang skizzieren. Das macht besonders bei potenziellen Arbeitgebern einen guten Eindruck und wirkt professionell.</p>
             </div>
         </div>
     </div>

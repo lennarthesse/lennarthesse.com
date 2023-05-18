@@ -46,7 +46,7 @@
                 </div>
                 <div class="input-labeled-text">
                     <input type="tel" name="telefon" id="telefon" placeholder="" pattern="[+]?[0-9\s-]+">
-                    <label for="telefon" title="Form: +01 234 56789">Telefon</label>
+                    <label for="telefon" title="Zahlen 0-9, +, -">Telefon</label>
                 </div>
             </fieldset>
 
