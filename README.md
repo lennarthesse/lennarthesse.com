@@ -24,6 +24,10 @@ Repository for [https://lennarthesse.com](https://lennarthesse.com).
 
 [ ] Links styles
 
-[ ] Navbar
+[x] Navbar
+
+[ ] Navbar gradient button
+
+[ ] Navburger animation
 
 [ ] Color accent in headings (+ more space?)
