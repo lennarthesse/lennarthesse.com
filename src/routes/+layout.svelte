@@ -1,12 +1,45 @@
+<script>
+    import NavBurger from "$lib/assets/icons/nav-burger.svelte";
+
+    function toggleNav() {
+        let navLinks = document.getElementById("js-navLinks");
+        if (navLinks.classList.contains("hidden")) {
+            navLinks.classList.remove("hidden");
+        } else {
+            navLinks.classList.add("hidden");
+        }
+    }
+
+    function closeNav() {
+        let navLinks = document.getElementById("js-navLinks");
+        if (!(navLinks.classList.contains("hidden"))) {
+            navLinks.classList.add("hidden");
+        }
+    }
+</script>
+
 <nav>
-    <section>
-        <a href="/">Lennart Hesse</a>
-        <a href="/#leistungen">Leistungen</a>
-        <a href="/#ablauf">Ablauf</a>
-        <a href="/#portfolio">Portfolio</a>
-        <a href="/#about">About</a>
-        <a href="/blog/">Blog</a>
-    </section>
+    <div class="nav-container">
+        <div class="nav-buttons">
+            <div class="nav-logo">
+                <a href="/" on:click={closeNav}>
+                    <img class="logo" src="/media/lennarthesse-white-text.svg" alt="Lennart Hesse">
+                </a>
+            </div>
+            
+            <button class="nav-burger" on:click={toggleNav}>
+                <NavBurger />
+            </button>
+        </div>
+
+        <div class="nav-links hidden" id="js-navLinks">
+            <a href="/#leistungen" on:click={closeNav}>Leistungen</a>
+            <a href="/#ablauf" on:click={closeNav}>Ablauf</a>
+            <a href="/#portfolio" on:click={closeNav}>Portfolio</a>
+            <a href="/#about" on:click={closeNav}>About</a>
+            <a href="/blog/" on:click={closeNav}>Blog</a>
+        </div>
+    </div>
 </nav>
 
 <slot />
