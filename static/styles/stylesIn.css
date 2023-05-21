@@ -4,7 +4,7 @@
     --primary-dark: #1d374d;
 
     --accent: #ed9842;
-    --accent-dark: hsl(30, 83%, 50%);
+    --accent-dark: #e98016;
 
     --light: #fff;
     --grey: #777;
@@ -229,6 +229,7 @@ fieldset {
 
 #leistungen svg {
     flex: 0 0 6rem;
+    margin: auto;
 }
 
 #ablauf .timeline {

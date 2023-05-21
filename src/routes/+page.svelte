@@ -2,6 +2,8 @@
     import { onMount } from "svelte";
     import ScrollHint from "$lib/assets/icons/scroll-hint.svelte";
     import ColorPalette from "$lib/assets/icons/color-palette.svelte";
+    import Typeface from "$lib/assets/icons/typeface.svelte";
+    import Documents from "$lib/assets/icons/documents.svelte";
 
     let bannerTitles = ["Landing Pages.", "Corporate Design.", "Personal Websites.", "Custom Logos.", "Business Websites."];
     let bannerTitle = "";
@@ -148,14 +150,14 @@
             </div>
         </div>
         <div class="grid-item">
-            <ColorPalette />
+            <Typeface />
             <div>
                 <h2>Schriftarten</h2>
                 <p>Jede Schriftart hat ihren eigenen Charakter. Ob modern, elegant oder geometrisch, alle haben eine bestimmte Aussagekraft. Häufig wird dieser Aspekt vernachlässigt, doch gerade er rundet das Erscheinungsbild eines Unternehmens ab und lässt es professionell erscheinen.</p>
             </div>
         </div>
         <div class="grid-item">
-            <ColorPalette />
+            <Documents />
             <div>
                 <h2>Unterlagen</h2>
                 <p>Um die Firmenidentität auch in die analoge Welt zu bringen, ist es ratsam, eigenes Briefpapier sowie eigene Visitenkarten zu besitzen, um potentielle Kunden zu gewinnen und das Unternehmensbild zu festigen. Daher biete ich auch die Gestaltung von Geschäftsunterlagen an und helfe auf Wunsch auch beim Druck.</p>
