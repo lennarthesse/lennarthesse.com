@@ -6,6 +6,7 @@
     import Documents from "$lib/assets/icons/documents.svelte";
     import Business from "$lib/assets/icons/business.svelte";
     import Personal from "$lib/assets/icons/personal.svelte";
+    import Logo from "$lib/assets/icons/logo.svelte";
 
     let bannerTitles = ["Landing Pages.", "Corporate Design.", "Personal Websites.", "Custom Logos.", "Business Websites."];
     let bannerTitle = "";
@@ -138,7 +139,7 @@
     <h1>Corporate Design</h1>
     <div class="grid">
         <div class="grid-item">
-            <ColorPalette />
+            <Logo />
             <div>
                 <h2>Logos</h2>
                 <p>Das Logo ist das Aushängeschild eines Unternehmens und verkörpert die Unternehmensphilosophie. Es sollte einen großen Wiedererkennungswert haben und steht stellvertretend für das Unternehmen. Demnach lege ich einen besonders großen Wert darauf, ein professionelles und aussagekräftiges Logo mit hoher Qualität für Ihr Unternehmen zu entwerfen und zu gestalten.</p>
