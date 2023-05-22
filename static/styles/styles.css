@@ -120,7 +120,7 @@ nav .nav-buttons {
     top: 0;
     left: 0;
     z-index: 120;
-    padding: 1.5rem;
+    padding: 1.5rem 2rem;
     width: 100%;
     display: flex;
     align-items: center;
@@ -156,7 +156,7 @@ nav .hidden {
 }
 
 nav .nav-links a {
-    padding: 0.8rem 1.7rem;
+    padding: 0.8rem 2.3rem;
     border-radius: 1rem;
     transition: 0.2s;
 }
@@ -165,7 +165,7 @@ nav .nav-links a:hover,
 nav .nav-links a:focus {
     background-color: var(--primary);
     box-shadow: 0 0 2rem #00000022;
-    padding-left: 2.2rem;
+    padding-left: 2.8rem;
 }
 
 section {
@@ -275,18 +275,22 @@ fieldset {
 #leistungen .grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2rem 4rem;
+    gap: 4rem 6rem;
 }
 
 #leistungen .grid-item {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     gap: 2rem;
 }
 
 #leistungen svg {
-    flex: 0 0 6rem;
+    flex: 0 0 8rem;
     margin: auto;
+}
+
+#leistungen p {
+    text-align: left;
 }
 
 #ablauf .timeline {

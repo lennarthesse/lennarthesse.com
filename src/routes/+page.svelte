@@ -4,6 +4,8 @@
     import ColorPalette from "$lib/assets/icons/color-palette.svelte";
     import Typeface from "$lib/assets/icons/typeface.svelte";
     import Documents from "$lib/assets/icons/documents.svelte";
+    import Business from "$lib/assets/icons/business.svelte";
+    import Personal from "$lib/assets/icons/personal.svelte";
 
     let bannerTitles = ["Landing Pages.", "Corporate Design.", "Personal Websites.", "Custom Logos.", "Business Websites."];
     let bannerTitle = "";
@@ -116,7 +118,7 @@
     <h1>Web Development</h1>
     <div class="grid">
         <div class="grid-item">
-            <ColorPalette />
+            <Business />
             <div>
                 <h2>Business Websites</h2>
                 <p>Eine Firmenwebseite präsentiert Ihr Unternehmen im Internet. Dort können Sie alle wichtigen Informationen für Ihre Kunden bereit halten und ihnen eine leichte und moderne Kontaktaufnahme ermöglichen.</p>
@@ -124,7 +126,7 @@
             </div>
         </div>
         <div class="grid-item">
-            <ColorPalette />
+            <Personal />
             <div>
                 <h2>Personal Websites</h2>
                 <p>Als Privatperson oder Einzelunternehmer ist eine Webseite zur eigenen Person interessant. So kann man beispielsweise über Interessen und Hobbies erzählen oder Projekte wie Webanwendungen hosten.</p>
