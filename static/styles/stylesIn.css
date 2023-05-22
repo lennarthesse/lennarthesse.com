@@ -330,14 +330,14 @@ fieldset {
 
 #ablauf .timeline .event::before {
     content: "";
-    width: 0.75rem;
-    height: 0.75rem;
+    width: 1rem;
+    height: 1rem;
     background-color: var(--accent);
     outline: 0.5rem solid var(--light);
     position: absolute;
-    left: -1.875rem;
+    left: -2rem;
     top: 0.75rem;
-    /*border-radius: 100%;*/
+    border-radius: 100%;
 }
 
 #ablauf .timeline .event h2 {
@@ -347,6 +347,10 @@ fieldset {
 #ablauf .timeline .event p {
     color: var(--grey);
     margin: 0;
+}
+
+#portfolio p {
+    text-align: left;
 }
 
 #portfolio .slideshow {
@@ -558,41 +562,6 @@ footer .copyright {
 
 /* TABLET */
 @media only screen and (min-width: 768px) {
-    nav .nav-burger {
-        display: none;
-    }
-
-    nav .nav-links {
-        z-index: 130;
-        right: 0;
-        width: auto;
-        height: auto;
-        background-color: transparent;
-        padding: 1rem;
-        flex-direction: row;
-        gap: 0;
-    }
-
-    nav .nav-links a {
-        padding: 1rem;
-        border-radius: 0;
-        text-shadow: 1px 1px 2px #000000aa;
-    }
-
-    nav .nav-links a:hover,
-    nav .nav-links a:focus {
-        background-color: transparent;
-        box-shadow: none;
-        padding-left: 1rem;
-        transform: scale(105%);
-    }
-
-    nav .nav-logo:hover,
-    nav .nav-logo:focus {
-        transform: scale(105%);
-    }
-
-
     #leistungen .grid-item {
         flex-direction: row;
     }
@@ -630,7 +599,7 @@ footer .copyright {
     }
     
     #ablauf .timeline .event:nth-child(2n+1)::before {
-        left: calc(100% + 1.125rem);
+        left: calc(100% + 1rem);
     }
 
     #portfolio .slideshow {
@@ -663,6 +632,40 @@ footer .copyright {
 
 /* SMALL LAPTOPS */
 @media only screen and (min-width: 992px) {
+    nav .nav-burger {
+        display: none;
+    }
+
+    nav .nav-links {
+        z-index: 130;
+        right: 0;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        padding: 1rem;
+        flex-direction: row;
+        gap: 0;
+    }
+
+    nav .nav-links a {
+        padding: 1rem;
+        border-radius: 0;
+        text-shadow: 1px 1px 2px #000000aa;
+    }
+
+    nav .nav-links a:hover,
+    nav .nav-links a:focus {
+        background-color: transparent;
+        box-shadow: none;
+        padding-left: 1rem;
+        transform: scale(105%);
+    }
+
+    nav .nav-logo:hover,
+    nav .nav-logo:focus {
+        transform: scale(105%);
+    }
+
     .main-aside {
         flex-direction: row;
     }

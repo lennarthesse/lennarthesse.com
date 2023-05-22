@@ -110,7 +110,7 @@
     <section>
         <h1>{bannerTitle}</h1>
         <hr>
-        <p>Egal ob persönlicher Blog, Portfolio, oder Landing Page, hier sind Sie richtig!</p>
+        <p>Egal ob Firmenseite oder Portfolio, Logo oder Visitenkarte, hier sind Sie richtig!</p>
         <ScrollHint />
     </section>
 </div>
