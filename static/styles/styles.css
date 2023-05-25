@@ -169,7 +169,7 @@ nav .nav-links a:focus {
 }
 
 section {
-    padding: 4rem 2rem;
+    padding: 2rem;
     scroll-margin-top: 5rem; /* INSERT NAV HEIGHT HERE */
     max-width: 1200px;
     margin: 0 auto;
@@ -453,10 +453,6 @@ fieldset {
     transform: rotate(-35deg) scale(120%);
 }
 
-footer section {
-    padding: 2rem;
-}
-
 footer p {
     text-align: left;
 }
@@ -611,6 +607,7 @@ footer .copyright {
     #portfolio .slideshow {
         flex-direction: row;
         gap: 4rem;
+        margin-top: 2rem;
     }
 
     #portfolio .slideshow > * {
