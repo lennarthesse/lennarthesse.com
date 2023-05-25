@@ -12,44 +12,9 @@
     let bannerTitle = "";
 
     let slideIndex = 0;
-    let slides = [
-        {
-            active: false,
-            thumbnail: "<img src='/media/bunbau.png' alt='BUN Bau Briefpapier'>",
-            body: `<h2>BUN Bau und Projektentwicklung</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <ul>
-                        <li>Gestaltung des Firmenlogos und Briefpapiers</li>
-                        <li>Unterstützung beim Aufbau der digitalen Präsenz</li>
-                    </ul>`
-        },
-        {
-            active: false,
-            thumbnail: "<img src='/media/pambia-logo.png' alt='Pambia Haushaltswaren'>",
-            body: `<h2>Pambia Haushaltswaren</h2>
-                    <p>Nachhaltige Bambuswaren. Simpel und minimalistisch.</p>
-                    <ul>
-                        <li><p>Gestaltung der Firmenidentität samt Logos, Schriftart, Farbeschema und Motto</p></li>
-                        <li><p>Programmierung der Webseite</p></li>
-                        <li><p>Hosten der Webseite</p></li>
-                    </ul>`
-        },
-        {
-            active: false,
-            thumbnail: "<img src='/media/office.jpg' alt=''>",
-            body: `<h2>Bababooey</h2>
-                    <p>Nachhaltige Bamben. Simpel und minimal.</p>
-                    <ul>
-                        <li><p>Gestaltung der Firmenidentität samt Logos, Schriftart, Farbeschema und Motto</p></li>
-                        <li><p>Programmierung der Webseite</p></li>
-                        <li><p>Hosten der Webseite</p></li>
-                    </ul>`
-        }
-    ];
 
     onMount(() => {
         typeWrite();
-        updateSlides(slideIndex);
     });
     
 
@@ -86,19 +51,19 @@
     }
 
     function crementSlide(i) {
-        slides[slideIndex].active = false;
+        var thumbnails = document.getElementById("js-thumbnails").children;
+        var descriptions = document.getElementById("js-descriptions").children;
+        thumbnails[slideIndex].classList.remove("active");
+        descriptions[slideIndex].classList.remove("active");
         slideIndex += i;
-        if (slideIndex >= slides.length) {
+        if (slideIndex >= thumbnails.length) {
             slideIndex = 0;
         }
         if (slideIndex < 0) {
-            slideIndex = slides.length - 1;
+            slideIndex = thumbnails.length - 1;
         }
-        updateSlides(slideIndex);
-    }
-
-    function updateSlides(index) {
-        slides[index].active = true;
+        thumbnails[slideIndex].classList.add("active");
+        descriptions[slideIndex].classList.add("active");
     }
 </script>
 
@@ -207,23 +172,36 @@
         <div class="slideshow">
             <div class="slide-thumbnail">
                 <button class="arrow-left" on:click={decrementSlide}>❮</button>
-                <div class="slide">
-                    {#each slides as {active, thumbnail}}
-                        {#if active}
-                            {@html thumbnail}
-                        {/if}
-                    {/each}
+                <ul id="js-thumbnails" class="slide">
+                    <li class="slide-item active">
+                        <img src="/media/bunbau.png" alt="BUN Bau Briefpapier">
+                    </li>
+                    <li class="slide-item">
+                        <img src="/media/pambia-logo.png" alt="Pambia Haushaltswaren">
+                    </li>
+                </ul>
                 <button class="arrow-right" on:click={incrementSlide}>❯</button>
-                </div>
             </div>
             <div class="slide-body">
-                <div class="slide">
-                    {#each slides as {active, body}}
-                        {#if active}
-                            {@html body}
-                        {/if}
-                    {/each}
-                </div>
+                <ul id="js-descriptions" class="slide">
+                    <li class="slide-item active">
+                        <h2>BUN Bau und Projektentwicklung</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <ul>
+                            <li>Gestaltung des Firmenlogos und Briefpapiers</li>
+                            <li>Unterstützung beim Aufbau der digitalen Präsenz</li>
+                        </ul>
+                    </li>
+                    <li class="slide-item">
+                        <h2>Pambia Haushaltswaren</h2>
+                        <p>Nachhaltige Bambuswaren. Simpel und minimalistisch.</p>
+                        <ul>
+                            <li><p>Gestaltung der Firmenidentität samt Logos, Schriftart, Farbeschema und Motto</p></li>
+                            <li><p>Programmierung der Webseite</p></li>
+                            <li><p>Hosten der Webseite</p></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
