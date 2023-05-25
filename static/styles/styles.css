@@ -511,6 +511,18 @@ footer .copyright {
     padding-top: 7rem; /* INSERT NAV HEIGHT + 2rem HERE */
 }
 
+#kontakt .panels {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+}
+
+#kontakt .panels > * {
+    flex: 0 0 calc(50% - 2rem);
+}
+
 #kontakt .input-checkbox {
     display: flex;
     align-items: center;
@@ -519,25 +531,24 @@ footer .copyright {
 
 #kontakt .input-labeled-text {
     position: relative;
-    margin-top: 1rem;
+    border: 1px solid var(--grey);
+    border-radius: 1rem;
 }
 
 #kontakt .input-labeled-text input {
     width: 100%;
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
+    margin-top: 1.2rem;
     font-size: 1rem;
     color: var(--dark);
     background-color: transparent;
     border: none;
-    border-bottom: 2px solid var(--dark);
-
 }
 
 #kontakt .input-labeled-text label {
     position: absolute;
-    top: 50%;
-    left: 0.5rem;
-    transform: translateY(-50%);
+    bottom: 1.1rem;
+    left: 1rem;
     transition: 0.5s;
     color: var(--grey);
 }
@@ -547,13 +558,15 @@ footer .copyright {
 }
 
 #kontakt .input-labeled-text input:not(:-moz-placeholder-shown) ~ label {
-    top: -0.5rem;
+    bottom: 2rem;
+    font-size: 0.8rem;
 }
 
 #kontakt .input-labeled-text input:focus ~ label,
 #kontakt .input-labeled-text input:hover ~ label,
 #kontakt .input-labeled-text input:not(:placeholder-shown) ~ label {
-    top: -0.5rem;
+    bottom: 2rem;
+    font-size: 0.8rem;
 }
 
 /*#kontakt .input-labeled-text input:invalid ~ label,
@@ -630,6 +643,10 @@ footer .copyright {
 
     footer .footer-info .footer-links {
         padding-right: 2rem;
+    }
+
+    #kontakt .panels {
+        flex-direction: row;
     }
 }
 
