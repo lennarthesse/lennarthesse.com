@@ -6,11 +6,13 @@
     --accent: #ed9842;
     --accent-dark: #e98016;
 
+    --accent-red: #ff4942;
+
     --light: #fff;
     --grey: #777;
     --dark: #333;
 
-    --gradient-accent: linear-gradient(135deg, #ff4942, #dbe643);
+    --gradient-accent: linear-gradient(170deg, var(--accent), var(--accent-red));
 
     --font: comfortaa;
 }
@@ -189,6 +191,23 @@ aside {
     flex-basis: 30%;
 }
 
+.button {
+    background-image: var(--gradient-accent);
+    color: var(--light);
+    padding: 0.5rem 2rem;
+    margin: 0 auto;
+    border-radius: 100rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s;
+    display: block;
+}
+
+.button:hover,
+.button:focus {
+    transform: scale(102%);
+}
+
 ol, ul {
     list-style-type: disc;
     list-style-position: outside;
@@ -238,8 +257,8 @@ fieldset {
     min-height: 9rem;
     word-spacing: 1000rem;
     color: transparent;
-    background: var(--gradient-accent);
-    -webkit-background-clip: text;
+    background: linear-gradient(135deg, #ff4942, #dbe643);;
+    -webkit-background-clip: text;;
             background-clip: text;
     font-size: 3rem;
 }
@@ -291,6 +310,10 @@ fieldset {
 
 #leistungen p {
     text-align: left;
+}
+
+#leistungen .button {
+    margin-top: 2rem;
 }
 
 #ablauf .timeline {
@@ -348,6 +371,12 @@ fieldset {
 #ablauf .timeline .event p {
     color: var(--grey);
     margin: 0;
+}
+
+#ablauf .button {
+    width: 100%;
+    margin-top: 2rem;
+    /*background-image: var(--gradient-accent);*/
 }
 
 #portfolio p {
@@ -524,7 +553,7 @@ footer .copyright {
 
 #kontakt .panels {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     gap: 4rem;
@@ -626,6 +655,11 @@ footer .copyright {
     
     #ablauf .timeline .event:nth-child(2n+1)::before {
         left: calc(100% + 1rem);
+    }
+
+    #ablauf .button {
+        width: -moz-fit-content;
+        width: fit-content;
     }
 
     #portfolio .slideshow {

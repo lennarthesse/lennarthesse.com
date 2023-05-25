@@ -132,6 +132,7 @@
             </div>
         </div>
     </div>
+    <button class="button">Interesse geweckt?</button>
 </section>
 
 <section id="ablauf">
@@ -163,6 +164,7 @@
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti repellat porro voluptate tempora quos iusto pariatur, voluptatem quibusdam illum placeat labore amet cupiditate quidem delectus, autem dicta neque enim odit.</p>
         </div>
     </div>
+    <button class="button">Jetzt anfragen!</button>
 </section>
 
 <div class="bg-primary-dark">
