@@ -215,11 +215,13 @@ aside {
     cursor: pointer;
     transition: 0.2s;
     display: block;
+    width: fit-content;
 }
 
 .button:hover,
 .button:focus {
     transform: scale(102%);
+    box-shadow: 2px 2px 8px #00000022;
 }
 
 ol, ul {
@@ -271,7 +273,7 @@ fieldset {
     min-height: 9rem;
     word-spacing: 1000rem;
     color: transparent;
-    background: linear-gradient(135deg, #ff4942, #dbe643);;
+    background: linear-gradient(135deg, #dbe643, #ff4942);
     background-clip: text;
     font-size: 3rem;
 }
@@ -281,7 +283,7 @@ fieldset {
     height: 0.25rem;
     margin: auto;
     border-radius: 1000rem;
-    background-color: var(--accent);
+    background-image: var(--gradient-accent);
 }
 
 #banner p {
@@ -365,6 +367,14 @@ fieldset {
     position: relative;
 }
 
+#ablauf .timeline .event .event-body {
+    transition: 0.4s;
+}
+
+#ablauf .timeline .event .event-body:hover {
+    transform: scale(101%);
+}
+
 #ablauf .timeline .event::before {
     content: "";
     width: 1rem;
@@ -389,6 +399,7 @@ fieldset {
 #ablauf .button {
     width: 100%;
     margin-top: 2rem;
+    text-align: center;
     /*background-image: var(--gradient-accent);*/
 }
 
@@ -404,7 +415,7 @@ fieldset {
 
 #portfolio .slideshow h2 {
     color: transparent;
-    background: linear-gradient(135deg, #ff4942, #dbe643);
+    background: var(--gradient-accent) /*linear-gradient(135deg, #ff4942, #dbe643)*/;
     background-clip: text;
 }
 
@@ -428,6 +439,15 @@ fieldset {
 }
 
 #portfolio .slide-thumbnail img {
+    transition: 0.4s;
+}
+
+#portfolio .slide-thumbnail img:hover {
+    transform: scale(102%);
+    box-shadow: 4px 4px 16px #00000022;
+}
+
+#portfolio .slide-thumbnail img {
     border-radius: 2rem;
     width: 100%;
     
@@ -445,7 +465,8 @@ fieldset {
 
 #portfolio .slide-thumbnail [class*=arrow-]:hover,
 #portfolio .slide-thumbnail [class*=arrow-]:focus {
-    font-size: 2rem; 
+    font-size: 2rem;
+    text-shadow: 2px 2px 8px #00000022;
 }
 
 #portfolio .slide-thumbnail .arrow-left {
@@ -536,6 +557,7 @@ footer #networks a {
 footer #networks a:hover,
 footer #networks a:focus {
     transform: scale(120%);
+    text-shadow: 2px 2px 8px #00000022;
 }
 
 footer .footer-info {

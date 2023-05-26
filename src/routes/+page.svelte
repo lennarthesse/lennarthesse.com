@@ -132,7 +132,7 @@
             </div>
         </div>
     </div>
-    <button class="button">Interesse geweckt?</button>
+    <a class="button" href="/kontakt">Interesse geweckt?</a>
 </section>
 
 <section id="ablauf">
@@ -140,31 +140,43 @@
 
     <div class="timeline">
         <div class="event">
-            <h2>Kontaktanfrage schicken</h2>
-            <p>Zuerst geben Sie an, welche Leistungen Sie benötigen. Dabei können Sie ganz einfach aus einer Liste ankreuzen oder bei Sonderwünschen eine Bemerkung hinzufügen. Danach hinterlassen Sie Ihre Kontaktdaten und ich melde mich alsbald mit einem Terminvorschlag zurück.</p>
+            <div class="event-body">
+                <h2>Kontaktanfrage schicken</h2>
+                <p>Zuerst geben Sie an, welche Leistungen Sie benötigen. Dabei können Sie ganz einfach aus einer Liste ankreuzen oder bei Sonderwünschen eine Bemerkung hinzufügen. Danach hinterlassen Sie Ihre Kontaktdaten und ich melde mich alsbald mit einem Terminvorschlag zurück.</p>
+            </div>
         </div>
         <div class="event">
-            <h2>Erstgespräch</h2>
-            <p>Hier klären wir zusammen Ihre genauen Wünsche und ... Vertragsschluss</p>
+            <div class="event-body">
+                <h2>Erstgespräch</h2>
+                <p>Hier klären wir zusammen Ihre genauen Wünsche und ... Vertragsschluss</p>
+            </div>
         </div>
         <div class="event">
-            <h2>Präsentation des Konzepts</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti repellat porro voluptate tempora quos iusto pariatur, voluptatem quibusdam illum placeat labore amet cupiditate quidem delectus, autem dicta neque enim odit.</p>
+            <div class="event-body">
+                <h2>Präsentation des Konzepts</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti repellat porro voluptate tempora quos iusto pariatur, voluptatem quibusdam illum placeat labore amet cupiditate quidem delectus, autem dicta neque enim odit.</p>
+            </div>
         </div>
         <div class="event">
-            <h2>Ausfertigung</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti repellat porro voluptate tempora quos iusto pariatur, voluptatem quibusdam illum placeat labore amet cupiditate quidem delectus, autem dicta neque enim odit.</p>
+            <div class="event-body">
+                <h2>Ausfertigung</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti repellat porro voluptate tempora quos iusto pariatur, voluptatem quibusdam illum placeat labore amet cupiditate quidem delectus, autem dicta neque enim odit.</p>
+            </div>
         </div>
         <div class="event">
-            <h2>Letzte Änderungen</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti repellat porro voluptate tempora quos iusto pariatur, voluptatem quibusdam illum placeat labore amet cupiditate quidem delectus, autem dicta neque enim odit.</p>
+            <div class="event-body">
+                <h2>Letzte Änderungen</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti repellat porro voluptate tempora quos iusto pariatur, voluptatem quibusdam illum placeat labore amet cupiditate quidem delectus, autem dicta neque enim odit.</p>
+            </div>
         </div>
         <div class="event">
-            <h2>Finales Produkt</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti repellat porro voluptate tempora quos iusto pariatur, voluptatem quibusdam illum placeat labore amet cupiditate quidem delectus, autem dicta neque enim odit.</p>
+            <div class="event-body">
+                <h2>Finales Produkt</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti repellat porro voluptate tempora quos iusto pariatur, voluptatem quibusdam illum placeat labore amet cupiditate quidem delectus, autem dicta neque enim odit.</p>
+            </div>
         </div>
     </div>
-    <button class="button">Jetzt anfragen!</button>
+    <a class="button" href="/kontakt">Jetzt anfragen!</a>
 </section>
 
 <div class="bg-primary-dark">

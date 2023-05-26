@@ -8,11 +8,11 @@ Repository for [https://lennarthesse.com](https://lennarthesse.com).
 
 [ ] Profile picture hover effect
 
-[ ] Portfolio image hover effect
+[x] Portfolio image hover effect
 
-[ ] (Timeline hover effect for dots?)
+[x] Timeline hover effect
 
-[ ] SVG icons (+ animation?)
+[x] SVG icons (+ animation?)
 
 [ ] Scroll hint animation
 
@@ -30,4 +30,4 @@ Repository for [https://lennarthesse.com](https://lennarthesse.com).
 
 [ ] Navburger animation
 
-[ ] Color accent in headings (+ more space?)
+[x] Color accent in headings (+ more space?)
