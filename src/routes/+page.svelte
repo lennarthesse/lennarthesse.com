@@ -132,7 +132,7 @@
             </div>
         </div>
     </div>
-    <a class="button" href="/kontakt">Interesse geweckt?</a>
+    <a class="button" href="/kontakt/">Interesse geweckt?</a>
 </section>
 
 <section id="ablauf">
@@ -176,7 +176,7 @@
             </div>
         </div>
     </div>
-    <a class="button" href="/kontakt">Jetzt anfragen!</a>
+    <a class="button" href="/kontakt/">Jetzt anfragen!</a>
 </section>
 
 <div class="bg-primary-dark">

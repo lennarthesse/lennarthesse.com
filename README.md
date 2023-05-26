@@ -14,8 +14,6 @@ Repository for [https://lennarthesse.com](https://lennarthesse.com).
 
 [x] SVG icons (+ animation?)
 
-[ ] Scroll hint animation
-
 [x] Imprint
 
 [x] DSGVO
@@ -26,8 +24,10 @@ Repository for [https://lennarthesse.com](https://lennarthesse.com).
 
 [x] Navbar
 
-[ ] Navbar gradient button
+[x] Navbar gradient button
 
 [ ] Navburger animation
+
+[ ] Scroll hint animation
 
 [x] Color accent in headings (+ more space?)

@@ -38,7 +38,7 @@
             <a href="/#portfolio" on:click={closeNav}>Portfolio</a>
             <a href="/#about" on:click={closeNav}>About</a>
             <a href="/blog/" on:click={closeNav}>Blog</a>
-            <a href="/kontakt" on:click={closeNav}>Anfrage schicken</a>
+            <a class="button" href="/kontakt/" on:click={closeNav}>Anfrage schicken</a>
         </div>
     </div>
 </nav>
