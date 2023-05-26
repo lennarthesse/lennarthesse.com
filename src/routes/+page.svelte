@@ -187,7 +187,7 @@
             <div class="slide-body">
                 <ul id="js-descriptions" class="slide">
                     <li class="slide-item active">
-                        <h2>BUN Bau und Projektentwicklung</h2>
+                        <h2>BUN Bau und Projekt&shy;entwicklung</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         <ul>
                             <li>Gestaltung des Firmenlogos und Briefpapiers</li>

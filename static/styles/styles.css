@@ -62,7 +62,21 @@ h1 {
     text-align: left;
 }
 
-h2 {font-size: 1.75rem;}
+h2 {
+    font-size: 1.75rem;
+    position: relative;
+}
+
+#leistungen h2::after {
+    position: absolute;
+    bottom: -0.2rem;
+    left: 0;
+    content: "";
+    height: 0.2rem;
+    width: 4rem;
+    border-radius: 100rem;
+    background-image: var(--gradient-accent);
+}
 
 h3 {font-size: 1.5rem;}
 
@@ -387,6 +401,13 @@ fieldset {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+}
+
+#portfolio .slideshow h2 {
+    color: transparent;
+    background: linear-gradient(135deg, #ff4942, #dbe643);
+    -webkit-background-clip: text;
+            background-clip: text;
 }
 
 #portfolio .slide {
