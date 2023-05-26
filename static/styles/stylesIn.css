@@ -507,6 +507,11 @@ fieldset {
     position: relative;
     transform: rotate(35deg);
     flex-shrink: 0;
+    transition: 0.4s;
+}
+
+#about .profile-deco:hover {
+    transform: rotate(35deg) scale(102%);
 }
 
 #about .profile-deco::before {
@@ -518,6 +523,12 @@ fieldset {
     position: absolute;
     top: -10%;
     left: 70%;
+    transition: 0.4s;
+}
+
+#about .profile-deco:hover::before {
+    top: -15%;
+    left: 65%;
 }
 
 #about .profile-deco::after {
@@ -529,15 +540,26 @@ fieldset {
     position: absolute;
     left: 25%;
     bottom: -20%;
+    transition: 0.4s;
+}
+
+#about .profile-deco:hover::after {
+    left: 28%;
+    bottom: -30%;
 }
 
 #about .profile-deco .profile-picture {
     border-radius: 25%;
     overflow: hidden;
     box-shadow: 0 0 2rem #00000044;
-
     position: relative;
     z-index: 10;
+    transition: 0.4s;
+}
+
+#about .profile-deco:hover .profile-picture {
+    transform: scale(104%);
+    box-shadow: 0 0 2rem #00000088;
 }
 
 #about .profile-picture img {
