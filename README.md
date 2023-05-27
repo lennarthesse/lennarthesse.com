@@ -18,9 +18,11 @@ Repository for [https://lennarthesse.com](https://lennarthesse.com).
 
 [x] DSGVO
 
-[ ] Contact form
+[x] Contact form
 
-[ ] Links styles
+[x] Submit button
+
+[x] Links styles
 
 [x] Navbar
 

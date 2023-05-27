@@ -57,14 +57,21 @@
                     <label for="privacy">Ich habe die Hinweise in der <a href="/datenschutz">Datenschutzerklärung</a> zur Kenntnis genommen und akzeptiere diese. *</label>
                 </div>
 
-                <p>Felder mit * sind Pflichtfelder.</p>
+                <p class="hint"><small>Mit * gekennzeichnete Felder sind Pflichtfelder.</small></p>
 
                 <input class="button" type="submit" value="Absenden">
             </form>
 
-            <div>
-                <h2>Lennart Hesse</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, vel! Non laudantium est perferendis similique. Laborum aliquid animi odit necessitatibus dolorem eaque voluptatem. Quam minima impedit itaque ratione vel deleniti?</p>
+            <div class="address">
+                <img src="/media/lennarthesse-black-text.svg" alt="Lennart Hesse">
+                <p><strong>Lennart Hesse Design & Development</strong><br>
+                    Potsdamer Straße 13<br>
+                    28211 Bremen<br>
+                    Deutschland</p>
+
+                <p>Telefon: +49 176 39886008<br>
+                    E-Mail: info@lennarthesse.com<br>
+                    Web: www.lennarthesse.com</p>
             </div>
         </div>
     </section>

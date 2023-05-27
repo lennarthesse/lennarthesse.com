@@ -67,7 +67,8 @@ h2 {
     position: relative;
 }
 
-#leistungen h2::after {
+#leistungen h2::after,
+#kontakt h2::after {
     position: absolute;
     bottom: -0.2rem;
     left: 0;
@@ -184,7 +185,8 @@ nav .nav-links a.button {
     padding-bottom: 0.5rem;
 }
 
-nav .nav-links a.button:hover {
+nav .nav-links a.button:hover,
+nav .nav-links a.button:focus {
     padding-left: 2.3rem;
 }
 
@@ -214,6 +216,32 @@ main {
 
 aside {
     flex-basis: 30%;
+}
+
+p > a,
+label > a {
+    position: relative;
+    padding-left: 0.8rem;
+    color: var(--primary);
+    font-weight: bold;
+    transition: 0.1s;
+    text-decoration: underline transparent 1px;
+}
+
+p > a:hover,
+label > a:hover {
+    text-decoration: underline var(--primary) 1px;
+}
+
+p > a::before,
+label > a::before {
+    content: "❯ ";
+    color: var(--primary);
+    font-size: 0.8rem;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
 }
 
 .button {
@@ -604,6 +632,15 @@ footer .footer-info .footer-links .links {
     columns: 2;
 }
 
+footer .footer-links a {
+    color: var(--light);
+    font-weight: normal;
+}
+
+footer .footer-links a:hover {
+    text-decoration-color: var(--light);
+}
+
 footer .copyright {
     text-align: center;
 }
@@ -629,17 +666,25 @@ footer .copyright {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: 4rem;
+    gap: 8rem;
 }
 
 #kontakt .panels > * {
-    flex: 0 0 calc(50% - 2rem);
+    flex: 0 0 calc(50% - 4rem);
+}
+
+#kontakt .address img {
+    height: 4rem;
 }
 
 #kontakt .input-checkbox {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+}
+
+#kontakt .input-checkbox input {
+    flex: 0 0;
 }
 
 #kontakt .input-labeled-text {
@@ -675,6 +720,15 @@ footer .copyright {
 #kontakt .input-labeled-text input:not(:placeholder-shown) ~ label {
     bottom: 2rem;
     font-size: 0.8rem;
+}
+
+#kontakt input[type="submit"] {
+    border: none;
+    margin-top: 2rem;
+}
+
+#kontakt .hint {
+    color: var(--grey);
 }
 
 /*#kontakt .input-labeled-text input:invalid ~ label,
@@ -756,10 +810,6 @@ footer .copyright {
     footer .footer-info .footer-links {
         padding-right: 2rem;
     }
-
-    #kontakt .panels {
-        flex-direction: row;
-    }
 }
 
 /* SMALL LAPTOPS */
@@ -790,7 +840,8 @@ footer .copyright {
         margin: 0.5rem 0 0.5rem 1rem;
     }
     
-    nav .nav-links a.button:hover {
+    nav .nav-links a.button:hover,
+    nav .nav-links a.button:focus {
         transform: scale(100%);
         padding-left: 2rem;
     }
@@ -819,6 +870,10 @@ footer .copyright {
     #about .profile {
         flex-direction: row-reverse;
         gap: 4rem;
+    }
+
+    #kontakt .panels {
+        flex-direction: row;
     }
 }
 

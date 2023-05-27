@@ -180,7 +180,7 @@
 </section>
 
 <div class="bg-primary-dark">
-    <section id="portfolio" class="divider">
+    <section id="portfolio">
         <h1>Portfolio</h1>
         
         <div class="slideshow">
