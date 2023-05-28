@@ -686,18 +686,12 @@ footer .copyright {
 }
 
 /* Blog */
-.blog {
-    background-color: #eee;
-    padding-top: 7rem;
-    padding-bottom: 2rem;
-}
-
 .post-preview {
     margin: 2rem 0;
 }
 
 /* Impressum, Datenschutz, Kontakt */
-#impressum, #datenschutz, #kontakt {
+#impressum, #datenschutz, #kontakt, .blog {
     padding-top: 7rem; /* INSERT NAV HEIGHT + 2rem HERE */
 }
 
