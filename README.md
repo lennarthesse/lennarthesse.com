@@ -28,8 +28,12 @@ Repository for [https://lennarthesse.com](https://lennarthesse.com).
 
 [x] Navbar gradient button
 
-[ ] Navburger animation
+[x] Navburger animation
 
-[ ] Scroll hint animation
+[x] Scroll hint animation
+
+[ ] Scroll up hint
+
+[ ] Kontakt Bemerkungen
 
 [x] Color accent in headings (+ more space?)

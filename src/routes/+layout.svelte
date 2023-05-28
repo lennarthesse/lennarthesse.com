@@ -3,17 +3,22 @@
 
     function toggleNav() {
         let navLinks = document.getElementById("js-navLinks");
+        let navBurger = document.getElementById("js-navBurger");
         if (navLinks.classList.contains("hidden")) {
             navLinks.classList.remove("hidden");
+            navBurger.classList.add("crossed");
         } else {
             navLinks.classList.add("hidden");
+            navBurger.classList.remove("crossed");
         }
     }
 
     function closeNav() {
         let navLinks = document.getElementById("js-navLinks");
+        let navBurger = document.getElementById("js-navBurger");
         if (!(navLinks.classList.contains("hidden"))) {
             navLinks.classList.add("hidden");
+            navBurger.classList.remove("crossed");
         }
     }
 </script>
@@ -27,12 +32,12 @@
                 </a>
             </div>
             
-            <button class="nav-burger" on:click={toggleNav}>
+            <button id="js-navBurger" class="nav-burger" on:click={toggleNav}>
                 <NavBurger />
             </button>
         </div>
 
-        <div class="nav-links hidden" id="js-navLinks">
+        <div id="js-navLinks" class="nav-links hidden">
             <a href="/#leistungen" on:click={closeNav}>Leistungen</a>
             <a href="/#ablauf" on:click={closeNav}>Ablauf</a>
             <a href="/#portfolio" on:click={closeNav}>Portfolio</a>

@@ -29,6 +29,10 @@
                         <input type="checkbox" name="website" id="website">
                         <label for="website">Website</label>
                     </div>
+                    <div class="input-labeled-text">
+                        <textarea name="bemerkungen" id="bemerkungen" placeholder=""></textarea>
+                        <label for="bemerkungen">Bemerkungen</label>
+                    </div>
                 </fieldset>
 
                 <fieldset>

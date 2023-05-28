@@ -148,6 +148,23 @@ nav .nav-logo {
     transition: 0.2s;
 }
 
+nav .nav-burger svg rect {
+    transition: 0.4s;
+}
+
+nav .nav-burger.crossed #bar1 {
+    transform: translate(28%, 0%) rotate(45deg);
+}
+
+nav .nav-burger.crossed #bar2 {
+    fill: transparent;
+}
+
+nav .nav-burger.crossed #bar3 {
+    width: 100%;
+    transform: translate(-41%, 28%) rotate(-45deg);
+}
+
 nav .logo {
     height: 2rem;
 }
@@ -272,7 +289,6 @@ ol, ul {
 
 li p {
     text-align: left;
-    margin-left: 0.5em;
 }
 
 li:not(:first-child) {
@@ -289,6 +305,30 @@ fieldset {
 }
 
 /* SPECIFIC */
+
+/* Animations */
+.scroll-hint .arrow {
+    animation: scroll-hint 3s infinite;
+}
+
+@keyframes scroll-hint {
+    from {
+        transform: translateY(0);
+        stroke: #ffffff;
+    }
+
+    50% {
+        transform: translateY(20%);
+    }
+
+    80% {
+        transform: translateY(20%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
 
 /* Landing Page */
 #banner {
@@ -312,7 +352,7 @@ fieldset {
     min-height: 9rem;
     word-spacing: 1000rem;
     color: transparent;
-    background: linear-gradient(135deg, #dbe643, #ff4942);
+    background: var(--gradient-accent);
     background-clip: text;
     font-size: 3rem;
 }
