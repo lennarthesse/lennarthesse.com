@@ -747,6 +747,13 @@ footer .copyright {
     gap: 0.5rem;
 }
 
+#kontakt .more {
+    padding-left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
 #kontakt .input-checkbox input {
     flex: 0 0;
 }

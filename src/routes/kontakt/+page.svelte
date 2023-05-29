@@ -1,3 +1,7 @@
+<script>
+    let more = false;
+</script>
+
 <svelte:head>
     <title>Kontakt | Lennart Hesse Design & Development</title>
 </svelte:head>
@@ -22,9 +26,29 @@
                         <label for="schriftart">Auswahl Schriftart</label>
                     </div>
                     <div class="input-checkbox">
-                        <input type="checkbox" name="geschäftsunterlagen" id="geschäftsunterlagen">
+                        <input type="checkbox" name="geschäftsunterlagen" id="geschäftsunterlagen" bind:checked={more}>
                         <label for="geschäftsunterlagen">Geschäftsunterlagen</label>
                     </div>
+                    {#if more}
+                        <div id="js-more" class="more">
+                            <div class="input-checkbox">
+                                <input type="checkbox" name="visitenkarte" id="visitenkarte">
+                                <label for="visitenkarte">Visitenkarte</label>
+                            </div>
+                            <div class="input-checkbox">
+                                <input type="checkbox" name="briefpapier" id="briefpapier">
+                                <label for="briefpapier">Briefpapier</label>
+                            </div>
+                            <div class="input-checkbox">
+                                <input type="checkbox" name="flyer" id="flyer">
+                                <label for="flyer">Flyer</label>
+                            </div>
+                            <div class="input-checkbox">
+                                <input type="checkbox" name="anderes" id="anderes">
+                                <label for="anderes">Anderes</label>
+                            </div>
+                        </div>
+                    {/if}
                     <div class="input-checkbox">
                         <input type="checkbox" name="website" id="website">
                         <label for="website">Website</label>
