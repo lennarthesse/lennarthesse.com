@@ -4,36 +4,6 @@ Repository for [https://lennarthesse.com](https://lennarthesse.com).
 
 ## Todo
 
-[x] Portfolio slideshow functionality
+[ ] Contact php script
 
-[x] Profile picture hover effect
-
-[x] Portfolio image hover effect
-
-[x] Timeline hover effect
-
-[x] SVG icons (+ animation?)
-
-[x] Imprint
-
-[x] DSGVO
-
-[x] Contact form
-
-[x] Submit button
-
-[x] Links styles
-
-[x] Navbar
-
-[x] Navbar gradient button
-
-[x] Navburger animation
-
-[x] Scroll hint animation
-
-[x] Scroll up hint
-
-[x] Kontakt Bemerkungen
-
-[x] Color accent in headings (+ more space?)
+[ ] Blog

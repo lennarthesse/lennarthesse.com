@@ -10,7 +10,7 @@
     <section id="kontakt" class="bg-light shadow">
         <h1>Kontakt</h1>
         <div class="panels">
-            <form action="contact.php" method="post" autocomplete="on">
+            <form action="/contact.php" method="post" autocomplete="on">
                 <fieldset>
                     <legend><h2>Welche Leistungen suchen Sie?</h2></legend>
                     <div class="input-checkbox">
@@ -26,8 +26,8 @@
                         <label for="schriftart">Auswahl Schriftart</label>
                     </div>
                     <div class="input-checkbox">
-                        <input type="checkbox" name="geschäftsunterlagen" id="geschäftsunterlagen" bind:checked={more}>
-                        <label for="geschäftsunterlagen">Geschäftsunterlagen</label>
+                        <input type="checkbox" name="unterlagen" id="unterlagen" bind:checked={more}>
+                        <label for="unterlagen">Geschäftsunterlagen</label>
                     </div>
                     {#if more}
                         <div id="js-more" class="more">
@@ -97,9 +97,9 @@
                     28211 Bremen<br>
                     Deutschland</p>
 
-                    <p>Telefon: <a href="tel:+4917639886008">+49 176 39886008</a><br>
-                        E-Mail: <a href="mailto:info@lennarthesse.com">info@lennarthesse.com</a><br>
-                        Web: <a href="https://lennarthesse.com">www.lennarthesse.com</a></p>
+                <p>Telefon: <a href="tel:+4917639886008">+49 176 39886008</a><br>
+                    E-Mail: <a href="mailto:info@lennarthesse.com">info@lennarthesse.com</a><br>
+                    Web: <a href="https://lennarthesse.com">www.lennarthesse.com</a></p>
             </div>
         </div>
     </section>
