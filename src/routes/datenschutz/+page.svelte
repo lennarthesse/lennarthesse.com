@@ -34,9 +34,9 @@
             Potsdamer Straße 13<br>
             28211 Bremen<br>
             Deutschland</p>
-        <p>Telefon: +49 176 39886008<br>
-            E-Mail: info@lennarthesse.com<br>
-            Web: www.lennarthesse.com</p>
+        <p>Telefon: <a href="tel:+4917639886008">+49 176 39886008</a><br>
+            E-Mail: <a href="mailto:info@lennarthesse.com">info@lennarthesse.com</a><br>
+            Web: <a href="https://lennarthesse.com">www.lennarthesse.com</a></p>
         <p>Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.&nbsp;B. Namen, E-Mail-Adressen o. Ä.) entscheidet.</p>
 
         <h3>Speicherdauer</h3>

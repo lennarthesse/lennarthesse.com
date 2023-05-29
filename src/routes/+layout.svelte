@@ -51,7 +51,7 @@
             <a href="/#ablauf" on:click={closeNav}>Ablauf</a>
             <a href="/#portfolio" on:click={closeNav}>Portfolio</a>
             <a href="/#about" on:click={closeNav}>About</a>
-            <a href="/blog/" on:click={closeNav}>Blog</a>
+            <!--<a href="/blog/" on:click={closeNav}>Blog</a>-->
             <a class="button" href="/kontakt/" on:click={closeNav}>Anfrage schicken</a>
         </div>
     </div>
@@ -78,7 +78,7 @@
                         <p><a href="/#ablauf">Ablauf</a></p>
                         <p><a href="/#portfolio">Portfolio</a></p>
                         <p><a href="/#about">About</a></p>
-                        <p><a href="/blog/">Blog</a></p>
+                        <!--<p><a href="/blog/">Blog</a></p>-->
                         <p><a href="/kontakt/">Kontakt</a></p>
                         <p><a href="/impressum/">Impressum</a></p>
                         <p><a href="/datenschutz/">Datenschutz</a></p>
@@ -87,12 +87,12 @@
                 <div class="footer-contact">
                     <h1>Kontakt</h1>
                     <p>Lennart Hesse Design & Development</p>
-                    <p>Potsdamer Straße 13 <br>
-                        28211 Bremen <br>
+                    <p>Potsdamer Straße 13<br>
+                        28211 Bremen<br>
                         Deutschland</p>
-                    <p>Telefon: +49 176 39886008 <br>
-                        E-Mail: info@lennarthesse.com <br>
-                        Web: www.lennarthesse.com</p>
+                    <p>Telefon: <a href="tel:+4917639886008">+49 176 39886008</a><br>
+                        E-Mail: <a href="mailto:info@lennarthesse.com">info@lennarthesse.com</a><br>
+                        Web: <a href="https://lennarthesse.com">www.lennarthesse.com</a></p>
                 </div>
             </div>
 

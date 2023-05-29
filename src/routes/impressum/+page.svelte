@@ -13,9 +13,9 @@
             Deutschland</p>
 
         <h2>Kontakt</h2>
-        <p>Telefon: +49 176 39886008<br>
-            E-Mail: info@lennarthesse.com<br>
-            Web: www.lennarthesse.com</p>
+        <p>Telefon: <a href="tel:+4917639886008">+49 176 39886008</a><br>
+            E-Mail: <a href="mailto:info@lennarthesse.com">info@lennarthesse.com</a><br>
+            Web: <a href="https://lennarthesse.com">www.lennarthesse.com</a></p>
 
         <!--
         <h2>Umsatzsteuer</h2>

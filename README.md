@@ -32,7 +32,7 @@ Repository for [https://lennarthesse.com](https://lennarthesse.com).
 
 [x] Scroll hint animation
 
-[ ] Scroll up hint
+[x] Scroll up hint
 
 [ ] Kontakt Bemerkungen
 

@@ -678,12 +678,12 @@ footer .footer-info .footer-links .links {
          columns: 2;
 }
 
-footer .footer-links a {
+footer a {
     color: var(--light);
     font-weight: normal;
 }
 
-footer .footer-links a:hover {
+footer a:hover {
     text-decoration-color: var(--light);
 }
 
