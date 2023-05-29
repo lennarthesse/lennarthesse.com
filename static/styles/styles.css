@@ -324,7 +324,7 @@ fieldset {
         transform: translateY(20%);
     }
 
-    80% {
+    75% {
         transform: translateY(20%);
     }
 
@@ -689,6 +689,26 @@ footer .footer-links a:hover {
 
 footer .copyright {
     text-align: center;
+}
+
+.scroll-top {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 2rem 0 0 2rem;
+    background-image: linear-gradient(-45deg, #000000aa, transparent, transparent);
+    transition: 0.4s;
+    z-index: 20;
+}
+
+.scroll-top button {
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.scroll-top svg {
+    width: 2rem;
+    height: 2rem;
 }
 
 /* Blog */

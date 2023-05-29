@@ -1,5 +1,8 @@
 <script>
     import NavBurger from "$lib/assets/icons/nav-burger.svelte";
+    import ScrollTop from "$lib/assets/icons/scroll-top.svelte";
+
+    let y = 0;
 
     function toggleNav() {
         let navLinks = document.getElementById("js-navLinks");
@@ -21,7 +24,13 @@
             navBurger.classList.remove("crossed");
         }
     }
+
+    function scrollTop() {
+        document.documentElement.scrollTop = 0;
+    }
 </script>
+
+<svelte:window bind:scrollY={y} />
 
 <nav>
     <div class="nav-container">
@@ -91,3 +100,9 @@
         </section>
     </div>
 </footer>
+
+<div class="scroll-top" style="bottom: { y > '256' ? '0' : '-5rem'}; right: { y > '256' ? '0' : '-5rem'}">
+    <button title="Nach oben" on:click={scrollTop}>
+            <ScrollTop />
+    </button>
+</div>
