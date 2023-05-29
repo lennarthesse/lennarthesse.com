@@ -73,7 +73,7 @@
 
 <div id="banner" class="bg-primary-dark">
     <section>
-        <h1>{bannerTitle}</h1>
+        <h1>{bannerTitle}<noscript>Design & Development.</noscript> </h1>
         <hr>
         <p>Egal ob Firmenseite oder Portfolio, Logo oder Visitenkarte, hier sind Sie richtig!</p>
         <ScrollHint />

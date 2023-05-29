@@ -34,6 +34,6 @@ Repository for [https://lennarthesse.com](https://lennarthesse.com).
 
 [x] Scroll up hint
 
-[ ] Kontakt Bemerkungen
+[x] Kontakt Bemerkungen
 
 [x] Color accent in headings (+ more space?)
