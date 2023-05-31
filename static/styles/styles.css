@@ -283,7 +283,7 @@ label > a::before {
 
 .button:hover,
 .button:focus {
-    transform: scale(102%);
+    transform: scale(1.02);
     box-shadow: 2px 2px 8px #00000022;
 }
 
@@ -459,7 +459,7 @@ fieldset {
 }
 
 #ablauf .timeline .event .event-body:hover {
-    transform: scale(101%);
+    transform: scale(1.01);
 }
 
 #ablauf .timeline .event::before {
@@ -531,7 +531,7 @@ fieldset {
 }
 
 #portfolio .slide-thumbnail img:hover {
-    transform: scale(102%);
+    transform: scale(1.02);
     box-shadow: 4px 4px 16px #00000022;
 }
 
@@ -588,7 +588,7 @@ fieldset {
 }
 
 #about .profile-deco:hover {
-    transform: rotate(35deg) scale(102%);
+    transform: rotate(35deg) scale(1.02);
 }
 
 #about .profile-deco::before {
@@ -635,12 +635,12 @@ fieldset {
 }
 
 #about .profile-deco:hover .profile-picture {
-    transform: scale(104%);
+    transform: scale(1.04);
     box-shadow: 0 0 2rem #00000088;
 }
 
 #about .profile-picture img {
-    transform: rotate(-35deg) scale(120%);
+    transform: rotate(-35deg) scale(1.2);
 }
 
 footer p {
@@ -666,7 +666,7 @@ footer #networks a {
 
 footer #networks a:hover,
 footer #networks a:focus {
-    transform: scale(120%);
+    transform: scale(1.2);
     text-shadow: 2px 2px 8px #00000022;
 }
 
@@ -950,7 +950,7 @@ footer .copyright {
     
     nav .nav-links a.button:hover,
     nav .nav-links a.button:focus {
-        transform: scale(100%);
+        transform: scale(1);
         padding-left: 2rem;
     }
 
@@ -959,12 +959,12 @@ footer .copyright {
         background-color: transparent;
         box-shadow: none;
         padding-left: 1rem;
-        transform: scale(105%);
+        transform: scale(1.05);
     }
 
     nav .nav-logo:hover,
     nav .nav-logo:focus {
-        transform: scale(105%);
+        transform: scale(1.05);
     }
 
     .main-aside {

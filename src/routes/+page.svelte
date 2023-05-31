@@ -87,7 +87,7 @@
             <Business />
             <div>
                 <h2>Business Websites</h2>
-                <p>Eine Firmenwebseite präsentiert Ihr Unternehmen im Internet. Dort können Sie alle wichtigen Informationen für Ihre Kunden bereit halten und ihnen eine leichte und moderne Kontaktaufnahme ermöglichen.</p>
+                <p>Eine Firmenwebseite präsentiert Ihr Unternehmen im Internet. Dort können Sie alle wichtigen Informationen für Ihre Kunden bereithalten und ihnen eine leichte und moderne Kontaktaufnahme ermöglichen.</p>
                 <p>Genau so können Sie eine Landing Page verwenden, um ein bestimmtes Produkt oder eine bestimmte Dienstleistung zu bewerben. Hier liegt der Fokus allein auf der angebotenen Leistung, um die Konversionsrate zu maximieren.</p>
             </div>
         </div>
@@ -128,7 +128,7 @@
             <Documents />
             <div>
                 <h2>Unterlagen</h2>
-                <p>Um die Firmenidentität auch in die analoge Welt zu bringen, ist es ratsam, eigenes Briefpapier sowie eigene Visitenkarten zu besitzen, um potentielle Kunden zu gewinnen und das Unternehmensbild zu festigen. Daher biete ich auch die Gestaltung von Geschäftsunterlagen an und helfe auf Wunsch auch beim Druck.</p>
+                <p>Um die Firmenidentität auch in die analoge Welt zu bringen, ist es ratsam, eigenes Briefpapier sowie eigene Visitenkarten zu besitzen, um potenzielle Kunden zu gewinnen und das Unternehmensbild zu festigen. Daher biete ich auch die Gestaltung von Geschäftsunterlagen an und helfe auf Wunsch auch beim Druck.</p>
             </div>
         </div>
     </div>
@@ -232,7 +232,7 @@
             <h1>Über mich</h1>
             <p>Schon als Jugendlicher habe ich mich für das Programmieren interessiert und erste kleine Programme und Webseiten geschrieben. Als ich älter wurde, fing ich außerdem an, Musik zu produzieren und sie auf YouTube hochzuladen, wodurch ich erste Erfahrungen im Bereich des Brandings und der Gestaltung machte.</p>
             <p>Nach der Schule habe ich ein Informatikstudium an der Universität Bremen begonnen und später zum Studiengang Medieninformatik an der Hochschule in Wernigerode gewechselt, um den kreativen Aspekt mehr einbringen zu können.</p>
-            <p>In der Zwischenzeit arbeitete ich an verschiedenen Projekten, teils kleinere Spielereien für mich selbst, um mehr Erfahrungen zu sammeln, teils mit einem Kollegen, um mir ein Wenig dazu zu verdienen. Infolgedessen entschloss ich mich, mein erstes eigenes Unternehmen zu gründen, um mir meine Fähigkeiten zu Nutze zu machen.</p>
+            <p>In der Zwischenzeit arbeitete ich an verschiedenen Projekten, teils kleinere Spielereien für mich selbst, um mehr Erfahrungen zu sammeln, teils mit einem Kollegen, um mir ein Wenig dazuzuverdienen. Infolgedessen entschloss ich mich, mein erstes eigenes Unternehmen zu gründen, um mir meine Fähigkeiten zu Nutze zu machen.</p>
             <p>Jetzt biete ich auf meiner Webseite Dienstleistungen rund um die Webpräsenz und Markengestaltung kleiner aufstrebender Unternehmen an und hoste einen kleinen Blog, in dem ich Anleitungen und Einblicke in einige meiner privaten Projekte gebe.</p>
         </div>
     </div>

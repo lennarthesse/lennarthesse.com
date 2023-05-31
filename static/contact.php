@@ -64,7 +64,7 @@
     );
     fclose($file);
     
-    header("Location: /");
+    header("Location: /kontakt/");
 
     function secure($data) {
         $data = trim($data);
