@@ -12,7 +12,7 @@
     let bannerTitle = "";
 
     let slideIndex = 0;
-
+    
     onMount(() => {
         typeWrite();
     });

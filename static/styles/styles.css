@@ -817,6 +817,33 @@ footer .copyright {
     border-color: #d00;
 }*/
 
+/* Error page */
+#error {
+    min-height: calc(100vh - 6rem);
+    min-height: calc(100svh - 6rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#error h1 {
+    font-size: 8rem;
+    margin-bottom: 0;
+    color: transparent;
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+            background-clip: text;
+}
+
+#error p {
+    text-align: center;
+}
+
+#error .button {
+    margin-top: 2rem;
+}
+
 /* TABLET */
 @media only screen and (min-width: 768px) {
     #leistungen .grid-item {
