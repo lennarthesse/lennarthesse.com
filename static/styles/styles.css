@@ -817,6 +817,48 @@ footer .copyright {
     border-color: #d00;
 }*/
 
+#kontakt .success {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--primary);
+    color: var(--light);
+    z-index: 200;
+}
+
+#kontakt .success section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#kontakt .success p {
+    margin: 0;
+}
+
+#kontakt .success svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+#kontakt .crossed {
+    cursor: pointer;
+}
+
+#kontakt .crossed #bar1 {
+    transform: translate(28%, 0%) rotate(45deg);
+}
+
+#kontakt .crossed #bar2 {
+    fill: transparent;
+}
+
+#kontakt .crossed #bar3 {
+    width: 100%;
+    transform: translate(-41%, 28%) rotate(-45deg);
+}
+
 /* Error page */
 #error {
     min-height: calc(100vh - 6rem);

@@ -1,6 +1,7 @@
 <script>
     import { page } from '$app/stores';
     import { onMount } from 'svelte';
+    import NavBurger from "$lib/assets/icons/nav-burger.svelte";
     
     let more = false;
     let success = false;
@@ -9,20 +10,28 @@
         success = $page.url.searchParams.has('success');
     });
 
-
+    function closeBanner() {
+        success = false;
+    }
 </script>
 
 <svelte:head>
     <title>Kontakt | Lennart Hesse Design & Development</title>
 </svelte:head>
 
-{#if success}
-    <!-- Insert success pop up here -->
-    <h1>Success!</h1>
-{/if}
 
 <div class="bg-light-gray">
     <section id="kontakt" class="bg-light shadow">
+        {#if success}
+            <div class="success">
+                <section>
+                    <p>Anfrage wurde gesendet!</p>
+                    <button class="crossed" on:click={closeBanner}>
+                        <NavBurger />
+                    </button>
+                </section>
+            </div>
+        {/if}
         <h1>Kontakt</h1>
         <div class="panels">
             <form action="/contact.php" method="post" autocomplete="on">
