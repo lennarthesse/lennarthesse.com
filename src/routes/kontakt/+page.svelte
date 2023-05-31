@@ -1,10 +1,25 @@
 <script>
+    import { page } from '$app/stores';
+    import { onMount } from 'svelte';
+    
     let more = false;
+    let success = false;
+    
+    onMount(() => {
+        success = $page.url.searchParams.has('success');
+    });
+
+
 </script>
 
 <svelte:head>
     <title>Kontakt | Lennart Hesse Design & Development</title>
 </svelte:head>
+
+{#if success}
+    <!-- Insert success pop up here -->
+    <h1>Success!</h1>
+{/if}
 
 <div class="bg-light-gray">
     <section id="kontakt" class="bg-light shadow">

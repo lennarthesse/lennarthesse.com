@@ -6,38 +6,44 @@
 
     $leistungen = array();
     if(isset($_POST["logo"])) {
-        array_push($leistungen, secure($_POST["logo"]));
+        array_push($leistungen, "Logo");
     }
     if(isset($_POST["farbpalette"])) {
-        array_push($leistungen, secure($_POST["farbpalette"]));
+        array_push($leistungen, "Farbpalette");
     }
     if(isset($_POST["schriftart"])) {
-        array_push($leistungen, secure($_POST["schriftart"]));
+        array_push($leistungen, "Schriftart");
     }
     if(isset($_POST["unterlagen"])) {
-        array_push($leistungen, secure($_POST["unterlagen"]));
+        array_push($leistungen, "Unterlagen");
 
         if(isset($_POST["visitenkarte"])) {
-            array_push($leistungen, secure($_POST["visitenkarte"]));
+            array_push($leistungen, "Visitenkarte");
         }
         if(isset($_POST["briefpapier"])) {
-            array_push($leistungen, secure($_POST["briefpapier"]));
+            array_push($leistungen, "Briefpapier");
         }
         if(isset($_POST["flyer"])) {
-            array_push($leistungen, secure($_POST["flyer"]));
+            array_push($leistungen, "Flyer");
         }
         if(isset($_POST["anderes"])) {
-            array_push($leistungen, secure($_POST["anderes"]));
+            array_push($leistungen, "Anderes");
         }
     }
     if(isset($_POST["website"])) {
-        array_push($leistungen, secure($_POST["website"]));
+        array_push($leistungen, "Website");
+    }
+
+    $leistungenText = "";
+    foreach ($leistungen as $value) {
+        global $leistungenText;
+        $leistungenText = $leistungenText . $value . ", ";
     }
 
     $bemerkungen = secure($_POST["bemerkungen"]);
 
     $datenschutz = "";
-    if(!isset($_POST["privacy"])) {
+    if(isset($_POST["privacy"])) {
         global $datenschutz;
         $datenschutz = "Datenschutz akzeptiert.";
     } else {    
@@ -55,16 +61,16 @@
         "Telefon: " . $telefon . "\n" .
         "\n" .
         "Gewünschte Leistungen: " . "\n" .
-        $leistungen . "\n" .
+        $leistungenText . "\n" .
         "\n" .
         "Bemerkungen: " . "\n" .
         $bemerkungen . "\n" .
         "\n" .
-        $datenschutz
+        $datenschutz . "\n"
     );
     fclose($file);
     
-    header("Location: /kontakt/");
+    header("Location: /kontakt/?success");
 
     function secure($data) {
         $data = trim($data);
