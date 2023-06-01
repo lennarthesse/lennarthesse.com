@@ -1,4 +1,9 @@
 <?php
+    require "vendor/autoload.php";
+    
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\SMTP;
+
     $vorname = secure($_POST["vorname"]);
     $nachname = secure($_POST["nachname"]);
     $email = secure($_POST["email"]);
@@ -51,26 +56,36 @@
         $datenschutz = "Nicht in Datenschutz eingewilligt!";
     }
 
+    $message = "Vor- und Nachname: " . $vorname . " " . $nachname . "\n" .
+                "E-Mail: " . $email . "\n" .
+                "Telefon: " . $telefon . "\n" .
+                "\n" .
+                "Gewünschte Leistungen: " . "\n" .
+                $leistungenText . "\n" .
+                "\n" .
+                "Bemerkungen: " . "\n" .
+                $bemerkungen . "\n" .
+                "\n" .
+                $datenschutz . "\n";
 
-    $filename = date("Y-m-d_H:i:s") . ".txt";
-    $file = fopen($filename, "w");
-
-    fwrite($file,
-        "Vor- und Nachname: " . $vorname . " " . $nachname . "\n" .
-        "E-Mail: " . $email . "\n" .
-        "Telefon: " . $telefon . "\n" .
-        "\n" .
-        "Gewünschte Leistungen: " . "\n" .
-        $leistungenText . "\n" .
-        "\n" .
-        "Bemerkungen: " . "\n" .
-        $bemerkungen . "\n" .
-        "\n" .
-        $datenschutz . "\n"
-    );
-    fclose($file);
-    
-    header("Location: /kontakt/?success");
+    try {
+        $mail = new PHPMailer(true);
+        $mail->isSMTP();
+        $mail->SMTPAuth = true;
+        $mail->Host = "smtp.ionos.de";
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port = 587;
+        $mail->Username = "noreply@lennarthesse.com";
+        $mail->Password = "PASSWORD";
+        $mail->setFrom($email, $vorname . " " . $nachname);
+        $mail->addAddress("info@lennarthesse.com");
+        $mail->Subject = "Kontaktanfrage";
+        $mail->Body = $message;
+        $mail->send();
+        header("Location: /kontakt/?success");
+    } catch (Exception $e) {
+        header("Location: /kontakt/?failure");
+    }
 
     function secure($data) {
         $data = trim($data);

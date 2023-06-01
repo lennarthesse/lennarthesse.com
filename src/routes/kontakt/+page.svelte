@@ -5,13 +5,16 @@
     
     let more = false;
     let success = false;
+    let failure = false;
     
     onMount(() => {
         success = $page.url.searchParams.has('success');
+        failure = $page.url.searchParams.has('failure');
     });
 
     function closeBanner() {
         success = false;
+        failure = false;
     }
 </script>
 
@@ -23,9 +26,18 @@
 <div class="bg-light-gray">
     <section id="kontakt" class="bg-light shadow">
         {#if success}
-            <div class="success">
+            <div class="banner success">
                 <section>
                     <p>Anfrage wurde gesendet!</p>
+                    <button class="crossed" on:click={closeBanner}>
+                        <NavBurger />
+                    </button>
+                </section>
+            </div>
+        {:else if failure}
+            <div class="banner failure">
+                <section>
+                    <p>Ein Fehler ist aufgetreten. Die Anfrage wurde nicht gesendet.</p>
                     <button class="crossed" on:click={closeBanner}>
                         <NavBurger />
                     </button>

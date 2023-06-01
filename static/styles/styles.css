@@ -817,27 +817,34 @@ footer .copyright {
     border-color: #d00;
 }*/
 
-#kontakt .success {
+#kontakt .banner {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: var(--primary);
     color: var(--light);
     z-index: 200;
 }
 
-#kontakt .success section {
+#kontakt .banner.success {
+    background-color: var(--primary);
+}
+
+#kontakt .banner.failure {
+    background-color: var(--accent-red);
+}
+
+#kontakt .banner section {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#kontakt .success p {
+#kontakt .banner p {
     margin: 0;
 }
 
-#kontakt .success svg {
+#kontakt .banner svg {
     width: 1.5rem;
     height: 1.5rem;
 }
