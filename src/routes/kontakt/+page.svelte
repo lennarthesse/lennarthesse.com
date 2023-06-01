@@ -46,7 +46,7 @@
         {/if}
         <h1>Kontakt</h1>
         <div class="panels">
-            <form action="/contact.php" method="post" autocomplete="on">
+            <form action="/php/contact.php" method="post" autocomplete="on">
                 <fieldset>
                     <legend><h2>Welche Leistungen suchen Sie?</h2></legend>
                     <div class="input-checkbox">

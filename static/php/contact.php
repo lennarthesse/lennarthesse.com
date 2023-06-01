@@ -60,7 +60,7 @@
                 "E-Mail: " . $email . "\n" .
                 "Telefon: " . $telefon . "\n" .
                 "\n" .
-                "Gewünschte Leistungen: " . "\n" .
+                "Gewuenschte Leistungen: " . "\n" .
                 $leistungenText . "\n" .
                 "\n" .
                 "Bemerkungen: " . "\n" .
