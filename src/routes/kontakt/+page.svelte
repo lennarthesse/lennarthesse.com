@@ -90,7 +90,7 @@
                         <label for="website">Website</label>
                     </div>
                     <div class="input-labeled-text">
-                        <textarea name="bemerkungen" id="bemerkungen" placeholder="" rows="16"></textarea>
+                        <textarea name="bemerkungen" id="bemerkungen" placeholder=" " rows="16"></textarea>
                         <label for="bemerkungen">Bemerkungen</label>
                     </div>
                 </fieldset>
@@ -98,19 +98,19 @@
                 <fieldset>
                     <legend><h2>Ihre Daten</h2></legend>
                     <div class="input-labeled-text">
-                        <input type="text" name="vorname" id="vorname" placeholder="" required>
+                        <input type="text" name="vorname" id="vorname" placeholder=" " required>
                         <label for="vorname">Vorname *</label>
                     </div>
                     <div class="input-labeled-text">
-                        <input type="text" name="nachname" id="nachname" placeholder="" required>
+                        <input type="text" name="nachname" id="nachname" placeholder=" " required>
                         <label for="nachname">Nachname *</label>
                     </div>
                     <div class="input-labeled-text">
-                        <input type="email" name="email" id="email" placeholder="" required>
+                        <input type="email" name="email" id="email" placeholder=" " required>
                         <label for="email">E-Mail *</label>
                     </div>
                     <div class="input-labeled-text">
-                        <input type="tel" name="telefon" id="telefon" placeholder="" pattern="[+]?[0-9\s-]+">
+                        <input type="tel" name="telefon" id="telefon" placeholder=" " pattern="[+]?[0-9\s-]+">
                         <label for="telefon" title="Zahlen 0-9, +, -">Telefon</label>
                     </div>
                 </fieldset>

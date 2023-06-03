@@ -25,6 +25,7 @@
 body {
     background-color: var(--light);
     color: var(--dark);
+    font-size: 1rem;
 
     overflow-x: hidden;
 }
@@ -49,7 +50,7 @@ h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:la
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font);
-    font-weight: 900;
+    font-weight: bold;
     position: relative;
 }
 
@@ -185,7 +186,7 @@ nav .nav-links {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    overflow-y: scroll;
+    overflow-y: auto;
     transition: 0.4s;
 }
 
@@ -242,7 +243,8 @@ aside {
 p > a,
 label > a {
     position: relative;
-    padding-left: 0.8rem;
+    display: inline-block;
+    padding-left: 1rem;
     color: var(--primary);
     font-weight: bold;
     transition: 0.1s;
@@ -258,13 +260,12 @@ label > a:hover {
 
 p > a::before,
 label > a::before {
-    content: "❯ ";
+    content: "❯";
     color: var(--primary);
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 0;
-    transform: translateY(-50%);
 }
 
 .button {
@@ -502,7 +503,7 @@ fieldset {
 
 #portfolio .slideshow h2 {
     color: transparent;
-    background: var(--gradient-accent) /*linear-gradient(135deg, #ff4942, #dbe643)*/;
+    background: var(--gradient-accent);
     -webkit-background-clip: text;
             background-clip: text;
 }
@@ -755,7 +756,8 @@ footer .copyright {
 }
 
 #kontakt .input-checkbox input {
-    flex: 0 0;
+    flex-grow: 0;
+    flex-shrink: 0;
 }
 
 #kontakt .input-labeled-text {

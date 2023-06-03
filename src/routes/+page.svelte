@@ -188,7 +188,7 @@
                 <button class="arrow-left" on:click={decrementSlide}>❮</button>
                 <ul id="js-thumbnails" class="slide">
                     <li class="slide-item active">
-                        <img src="/media/bunbau.png" alt="BUN Bau Briefpapier">
+                        <img src="/media/bunbau.jpg" alt="BUN Bau Briefpapier">
                     </li>
                     <li class="slide-item">
                         <img src="/media/pambia-logo.png" alt="Pambia Haushaltswaren">
@@ -202,17 +202,19 @@
                         <h2>BUN Bau und Projekt&shy;entwicklung</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         <ul>
-                            <li><p>Gestaltung des Firmenlogos und Briefpapiers</p></li>
+                            <li><p>Gestaltung des Firmenlogos</p></li>
+                            <li><p>Gestaltung des Briefpapiers</p></li>
                             <li><p>Unterstützung beim Aufbau der digitalen Präsenz</p></li>
                         </ul>
                     </li>
                     <li class="slide-item">
                         <h2>Pambia Haushaltswaren</h2>
-                        <p>Nachhaltige Bambuswaren. Simpel und minimalistisch.</p>
+                        <p>Nachhaltige Haushaltswaren aus Bambus. Simpel und minimalistisch.</p>
                         <ul>
-                            <li><p>Gestaltung der Firmenidentität samt Logos, Schriftart, Farbeschema und Motto</p></li>
+                            <li><p>Gestaltung des Logos</p></li>
+                            <li><p>Auswahl der Schriftart und des Farbeschemas</p></li>
+                            <li><p>Gestaltung des Briefpapiers und der Firmentasse</p></li>
                             <li><p>Programmierung der Webseite</p></li>
-                            <li><p>Hosten der Webseite</p></li>
                         </ul>
                     </li>
                 </ul>
