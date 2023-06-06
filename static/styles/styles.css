@@ -244,7 +244,7 @@ p > a,
 label > a {
     position: relative;
     display: inline-block;
-    padding-left: 1rem;
+    padding-left: 0.8rem;
     color: var(--primary);
     font-weight: bold;
     transition: 0.1s;
@@ -275,6 +275,7 @@ label > a::before {
     margin: 0 auto;
     border-radius: 100rem;
     font-size: 1rem;
+    text-align: center;
     cursor: pointer;
     transition: 0.2s;
     display: block;
@@ -487,8 +488,6 @@ fieldset {
 #ablauf .button {
     width: 100%;
     margin-top: 2rem;
-    text-align: center;
-    /*background-image: var(--gradient-accent);*/
 }
 
 #portfolio p {

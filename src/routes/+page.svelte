@@ -75,7 +75,7 @@
     <section>
         <h1>{bannerTitle}<noscript>Design & Development.</noscript> </h1>
         <hr>
-        <p>Egal ob Firmenseite oder Portfolio, Logo oder Visitenkarte, hier sind Sie richtig!</p>
+        <p>Ob Firmenseite oder Portfolio, Logo oder Visitenkarte, hier sind Sie richtig!</p>
         <ScrollHint />
     </section>
 </div>
@@ -191,7 +191,7 @@
                         <img src="/media/bunbau.jpg" alt="BUN Bau Briefpapier">
                     </li>
                     <li class="slide-item">
-                        <img src="/media/pambia-logo.png" alt="Pambia Haushaltswaren">
+                        <img src="/media/pambia.jpg" alt="Pambia Haushaltswaren">
                     </li>
                 </ul>
                 <button class="arrow-right" on:click={incrementSlide}>❯</button>
@@ -200,7 +200,7 @@
                 <ul id="js-descriptions" class="slide">
                     <li class="slide-item active">
                         <h2>BUN Bau und Projekt&shy;entwicklung</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <p>Ingenieurdienstleistungen wie Bauwerkerrichtung, -sanierung und mehr. </p>
                         <ul>
                             <li><p>Gestaltung des Firmenlogos</p></li>
                             <li><p>Gestaltung des Briefpapiers</p></li>
@@ -211,7 +211,7 @@
                         <h2>Pambia Haushaltswaren</h2>
                         <p>Nachhaltige Haushaltswaren aus Bambus. Simpel und minimalistisch.</p>
                         <ul>
-                            <li><p>Gestaltung des Logos</p></li>
+                            <li><p>Gestaltung der Logos</p></li>
                             <li><p>Auswahl der Schriftart und des Farbeschemas</p></li>
                             <li><p>Gestaltung des Briefpapiers und der Firmentasse</p></li>
                             <li><p>Programmierung der Webseite</p></li>
