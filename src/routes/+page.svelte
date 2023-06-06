@@ -148,31 +148,31 @@
         <div class="event">
             <div class="event-body">
                 <h2>Erstgespräch</h2>
-                <p>Hier klären wir zusammen Ihre genauen Wünsche und ... Vertragsschluss</p>
+                <p>Hier klären wir zusammen Ihre genauen Wünsche und fertigen erste Skizzen an. Nachdem wir uns auf Inhalt und Umfang geeinigt haben, wird alles schriftlich festgehalten.</p>
             </div>
         </div>
         <div class="event">
             <div class="event-body">
                 <h2>Präsentation des Konzepts</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti repellat porro voluptate tempora quos iusto pariatur, voluptatem quibusdam illum placeat labore amet cupiditate quidem delectus, autem dicta neque enim odit.</p>
+                <p>Wenn das Konzept ausgearbeitet ist, gibt es eine Präsentation, die alle Aspekte des Designs beinhaltet. Sie entscheiden, was Ihnen gefällt und was noch einmal überarbeitet werden soll.</p>
             </div>
         </div>
         <div class="event">
             <div class="event-body">
                 <h2>Ausfertigung</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti repellat porro voluptate tempora quos iusto pariatur, voluptatem quibusdam illum placeat labore amet cupiditate quidem delectus, autem dicta neque enim odit.</p>
+                <p>Das Konzept wird verwirklicht. Dabei haben Sie stets die Möglichkeit, den Stand des Projekts einzusehen und gegebenenfalls Änderungen zu veranlassen.</p>
             </div>
         </div>
         <div class="event">
             <div class="event-body">
                 <h2>Letzte Änderungen</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti repellat porro voluptate tempora quos iusto pariatur, voluptatem quibusdam illum placeat labore amet cupiditate quidem delectus, autem dicta neque enim odit.</p>
+                <p>Nachdem die Endversion fertiggestellt ist, gibt es eine abschließende Präsentation. Hier können Sie letzte Kleinigkeiten anpassen lassen, bevor das Projekt fertiggestellt wird.</p>
             </div>
         </div>
         <div class="event">
             <div class="event-body">
                 <h2>Finales Produkt</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti repellat porro voluptate tempora quos iusto pariatur, voluptatem quibusdam illum placeat labore amet cupiditate quidem delectus, autem dicta neque enim odit.</p>
+                <p>Zuletzt findet die Übergabe und Einführung statt. Sie bekommen einen genauen Überblick über Dateien, Funktionen und Anwendung des Produkts.</p>
             </div>
         </div>
     </div>

@@ -36,10 +36,6 @@ h1, h2, h3, h4, h5, h6, p {
     line-height: 1.5;
 }
 
-p {
-    text-align: justify;
-}
-
 h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child, p:first-child {
     margin-top: 0;
 }
@@ -293,10 +289,6 @@ ol, ul {
     padding-left: 1.5em;
 }
 
-li p {
-    text-align: left;
-}
-
 li:not(:first-child) {
     margin-top: 0.5em;
 }
@@ -408,10 +400,6 @@ fieldset {
     margin: auto;
 }
 
-#leistungen p {
-    text-align: left;
-}
-
 #leistungen .button {
     margin-top: 2rem;
 }
@@ -484,10 +472,6 @@ fieldset {
 #ablauf .button {
     width: 100%;
     margin-top: 2rem;
-}
-
-#portfolio p {
-    text-align: left;
 }
 
 #portfolio .slideshow {
@@ -636,10 +620,6 @@ fieldset {
 
 #about .profile-picture img {
     transform: rotate(-35deg) scale(1.2);
-}
-
-footer p {
-    text-align: left;
 }
 
 footer h1 {
@@ -905,7 +885,7 @@ footer .copyright {
     }
 
     #ablauf .timeline .event:nth-child(2n) {
-        margin-top: 10rem;
+        margin-top: 8rem;
     }
 
     #ablauf .timeline .event:nth-child(2n+1) {
