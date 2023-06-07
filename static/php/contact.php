@@ -85,9 +85,9 @@
         $mail->Subject = "Kontaktanfrage";
         $mail->Body = $message;
         $mail->send();
-        header("Location: /kontakt/?success");
+        header("Location: ../kontakt/?success");
     } catch (Exception $e) {
-        header("Location: /kontakt/?failure");
+        header("Location: ../kontakt/?failure");
     }
 
     function secure($data) {
