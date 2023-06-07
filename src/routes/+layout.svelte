@@ -50,7 +50,7 @@
             <a href="/#leistungen" on:click={closeNav}>Leistungen</a>
             <a href="/#ablauf" on:click={closeNav}>Ablauf</a>
             <a href="/#portfolio" on:click={closeNav}>Portfolio</a>
-            <a href="/#about" on:click={closeNav}>About</a>
+            <a href="/#about" on:click={closeNav}>Über mich</a>
             <!--<a href="/blog/" on:click={closeNav}>Blog</a>-->
             <a class="button" href="/kontakt/" on:click={closeNav}>Anfrage schicken</a>
         </div>
@@ -77,7 +77,7 @@
                         <p><a href="/#leistungen">Leistungen</a></p>
                         <p><a href="/#ablauf">Ablauf</a></p>
                         <p><a href="/#portfolio">Portfolio</a></p>
-                        <p><a href="/#about">About</a></p>
+                        <p><a href="/#about">Über mich</a></p>
                         <!--<p><a href="/blog/">Blog</a></p>-->
                         <p><a href="/kontakt/">Kontakt</a></p>
                         <p><a href="/impressum/">Impressum</a></p>

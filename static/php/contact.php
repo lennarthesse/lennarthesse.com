@@ -1,8 +1,11 @@
 <?php
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\Exception;
+    use PHPMailer\PHPMailer\SMTP;
+
     require "vendor/autoload.php";
     
-    use PHPMailer\PHPMailer\PHPMailer;
-    use PHPMailer\PHPMailer\SMTP;
+    $auth = parse_ini_file("/etc/apache2/auth.ini");
 
     $vorname = secure($_POST["vorname"]);
     $nachname = secure($_POST["nachname"]);
@@ -75,8 +78,8 @@
         $mail->Host = "smtp.ionos.de";
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
-        $mail->Username = "noreply@lennarthesse.com";
-        $mail->Password = "PASSWORD";
+        $mail->Username = $auth["username"];
+        $mail->Password = $auth["password"];
         $mail->setFrom($email, $vorname . " " . $nachname);
         $mail->addAddress("info@lennarthesse.com");
         $mail->Subject = "Kontaktanfrage";
