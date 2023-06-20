@@ -200,7 +200,7 @@
                 <ul id="js-descriptions" class="slide">
                     <li class="slide-item active">
                         <h2>BUN Bau und Projekt&shy;entwicklung</h2>
-                        <p>Ingenieurdienstleistungen wie Bauwerkerrichtung, -sanierung und mehr. </p>
+                        <p>Ingenieurdienstleistungen wie Bauwerkerrichtung, &#8209;sanierung und mehr. </p>
                         <ul>
                             <li><p>Gestaltung des Firmenlogos</p></li>
                             <li><p>Gestaltung des Briefpapiers</p></li>
