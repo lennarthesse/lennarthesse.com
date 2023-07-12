@@ -34,8 +34,8 @@ export async function load() {
             slug,
             title,
             date,
-            description,
-            keywords
+            keywords,
+            description
         };
     });
 

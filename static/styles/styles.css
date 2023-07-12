@@ -230,6 +230,7 @@ section {
 
 main {
     flex-basis: 70%;
+    overflow: hidden;
 }
 
 aside {
