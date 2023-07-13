@@ -9,15 +9,15 @@ keywords: "keywords"
 
 # Eine Shopping-App programmieren
 
-Auf der Suche nach einem neuen Projekt habe ich daran gedacht, wie oft ich Einkaufszettel schreibe, nur um sie danach weg zu werfen und ein paar Tage später etwas aufzuschreiben, das ich letztens erst auf meinem Zettel stehen hatte.
+Auf der Suche nach einem neuen Projekt habe ich daran gedacht, wie oft ich Einkaufszettel schreibe, nur um sie danach wegzuwerfen und ein paar Tage später etwas aufzuschreiben, das ich letztens erst auf meinem Zettel stehen hatte.
 
-Die Idee: Eine App, in der man einmalig die Produkte hinzufügt, die man einkauft, um sie anschließend mit einem Klick zu einem digitalen Einkaufszettel hinzuzufügen und abzuhaken. Gleichzeitig könnte man die Häufigkeit, mit der bestimmte Produkte gekauft werden speichern, sodass oft zum Einkaufszettel hinzugefügte Produkte schnell erreichbar sind.
+Die Idee: Eine App, in der man einmalig die Produkte hinzufügt, die man einkauft, um sie anschließend mit einem Klick zu einem digitalen Einkaufszettel hinzuzufügen und abzuhaken. Gleichzeitig könnte man die Häufigkeit, mit der bestimmte Produkte gekauft werden, speichern, sodass oft zum Einkaufszettel hinzugefügte Produkte schnell erreichbar sind.
 
 Also habe ich mich an meinen Laptop gesetzt und einen neuen Ordner in meinem Projekt-Verzeichnis hinzugefügt.
 
 ## Als Erstes: Die Planung
 
-Bevor es jedoch zum Programmieren ging, habe ich die Funktionen, die ich mir überlegt hatte, aufgeschrieben und ein grobes Layout skizziert. Es besteht aus einem "Einkaufszettel", auf dem einzelne Produkte stehen, die entweder abgehakt oder wieder vom Zettel entfernt werden können. Darunter befinden sich die verschiedenen Kategorien, zu denen die Produkte zugeordnet werden können, um sie später leichter zu finden. Zuletzt findet sich eine Liste mit allen Produkten, die durch anklicken zum Einkaufszettel hinzugefügt werden können.
+Bevor es jedoch zum Programmieren ging, habe ich die Funktionen, die ich mir überlegt hatte, aufgeschrieben und ein grobes Layout skizziert. Es besteht aus einem "Einkaufszettel", auf dem einzelne Produkte stehen, die entweder abgehakt oder wieder vom Zettel entfernt werden können. Darunter befinden sich die verschiedenen Kategorien, zu denen die Produkte zugeordnet werden können, um sie später leichter zu finden. Zuletzt findet sich eine Liste mit allen Produkten, die durch Anklicken zum Einkaufszettel hinzugefügt werden können.
 
 Mit dieser Skizze im Kopf habe ich mich daran gemacht, die Benutzeroberfläche zu realisieren.
 
@@ -156,7 +156,7 @@ Zuerst wird das Pop-Up im HTML definiert. Zum Eintragen der Daten habe ich ein F
 </dialog>
 ```
 
-Wichtig dabei ist, das `type`-Attribut der Buttons zu setzen (`button`, `submit`, `reset`), da das Pop-Up sonst nicht weiß, welche Rolle die einzelnen Buttons spielen und es sich bei der Navigation mit der Tastatur nicht unbedingt wie gewollt verhält. Außerdem ist bei bei Formularen mit `method="dialog"` zu beachten, dass diese beim Abschicken die Daten der Eingabe nirgendwo hinschicken und sie auch nicht löschen. Daher wird der Inhalt beim Abbrechen mittels `<button type="reset">` und vor dem Öffnen gelöscht. Die Funktionen sehen wie folgt aus.
+Wichtig dabei ist, das `type`-Attribut der Buttons zu setzen (`button`, `submit`, `reset`), da das Pop-Up sonst nicht weiß, welche Rolle die einzelnen Buttons spielen und es sich bei der Navigation mit der Tastatur nicht unbedingt wie gewollt verhält. Außerdem ist bei Formularen mit `method="dialog"` zu beachten, dass diese beim Abschicken die Daten der Eingabe nirgendwo hinschicken und sie auch nicht löschen. Daher wird der Inhalt beim Abbrechen mittels `<button type="reset">` und vor dem Öffnen gelöscht. Die Funktionen sehen wie folgt aus.
 
 ```javascript
 onMount(() => {
@@ -174,7 +174,7 @@ function closeModal() {
 }
 ```
 
-Als Nächstes wird aus der Eingabe ein JavaScript-Objekt mit verschiedenen Attributen erstellt. Im Falle dieses Beispiels besteht es aus dem Namen des Produkts sowie der Marke. Um es später einer Kategorie zuzuordnen, bekommt es dann außerdem ein `category`-Attribut.
+Als nächstes wird aus der Eingabe ein JavaScript-Objekt mit verschiedenen Attributen erstellt. Im Falle dieses Beispiels besteht es aus dem Namen des Produkts sowie der Marke. Um es später einer Kategorie zuzuordnen, bekommt es dann außerdem ein `category`-Attribut.
 
 Die Eingabewerte werden in der `addProduct`-Funktion etwas länglich eingelesen:
 
@@ -185,7 +185,7 @@ function addProduct() {
 }
 ```
 
-Anschließend wird daraus ein Objekt erstellt das zu der Liste von Produkten hinzugefügt wird. Dabei wird die sogenannte Spread Syntax mit drei Punkten verwendet, da ansonsten die Benutzeroberfläche nicht aktualisiert wird.
+Anschließend wird daraus ein Objekt erstellt, das zu der Liste von Produkten hinzugefügt wird. Dabei wird die sogenannte Spread Syntax mit drei Punkten verwendet, da ansonsten die Benutzeroberfläche nicht aktualisiert wird.
 
 ```javascript
     let product = {
@@ -197,16 +197,106 @@ Anschließend wird daraus ein Objekt erstellt das zu der Liste von Produkten hin
 
 Da die Liste der Produkte nun aus Objekten besteht, muss im HTML statt `{product}` nun `{product.name}` stehen. Weitere Attribute können auf die gleiche Weise wie oben erklärt ergänzt werden und das Pop-Up zum Bearbeiten der Produkte funktioniert im Kern ebenso wie oben erklärt.
 
-## Produkte abhaken
+## Der Einkaufszettel
 
+Das Abhaken funktioniert mit Checkboxen und benötigt daher eigentlich kein JavaScript. Allerdings sind die Zustände der Boxen nicht an die Produkte gekoppelt, wodurch beim Entfernen eines Produktes vom Zettel eine falsche Zuordnung entstehen kann. Daher habe ich auch die `items` zu Objekten gemacht, die einen Namen und ein `checked`-Attribut haben. Der Wert der Checkbox kann dann an diesen Wert gebunden werden.
 
+```html
+<input type="checkbox" bind:checked={item.checked}>
+```
+
+Um das Element zum Einkaufszettel hinzuzufügen, wird ein `item`-Objekt erzeugt und zum `items`-Array hinzugefügt. Um es anschließend wieder zu entfernen, wird es in der Liste gesucht und entfernt.
+
+```javascript
+function addProductToList(product) {
+    let item = {
+        name: product.name,
+        checked: false
+    }
+    items = [...items, item];
+}
+
+function removeItemFromList(item) {
+    for (let i = 0; i < items.length; i++) {
+        if (items[i] == item) {
+            items.splice(i, 1);
+            items = [...items];
+            break;
+        }
+    }
+}
+```
 
 ## Kategorien
 
+Das letzte Feature, das ich in diesem Artikel erklären möchte, ist das Filtern nach Kategorien. Eine Kategorie ist wieder ein Objekt, diesmal bestehend aus Name und `active`-Attribut, das angibt, ob gerade nach dieser Kategorie gefiltert wird. Außerdem wird der Style angepasst, je nachdem, ob die Kategorie aktiv ist oder nicht. Dazu bietet Svelte praktischerweise die Möglichkeit, ein If-Statement im HTML zu benutzen.
 
+```html
+<div class="categories">
+    {#each categories as category}
+        <button class={category.active ? "active category" : "category"} on:click={() => {filterCategory(category)}}>
+            {category.name}
+        </button>
+    {/each}
+</div>
+```
 
-## Daten lokal speicher
+Beim Klicken auf eine Kategorie wird eine Funktion aufgerufen, die die angeklickte Kategorie sucht und sie entweder aktiviert oder, wenn sich zuvor aktiv war, wieder deaktiviert. Außerdem werden alle anderen Kategorien deaktiviert, da immer nur eine zurzeit aktiv sein soll.
 
+```javascript
+function filterCategory(category) {
+    for (let i = 0; i < categories.length; i++) {
+        if (categories[i] == category) {
+            if (categories[i].active) {
+                categories[i].active = false;
+                currentCategory = null;
+            } else {
+                categories[i].active = true;
+                currentCategory = category.name;
+            }
+        } else {
+            categories[i].active = false;
+        }
+    }
+}
+```
 
+Damit dann nur noch die entsprechenden Produkte angezeigt werden, habe ich einen If-Block dort eingefügt, wo die Produkte gerendert werden, sodass sie nur angezeigt werden, wenn ihre Kategorie der aktiven Kategorie entspricht, keine Kategorie ausgewählt ist oder "sonstige" Produkte angezeigt werden sollen, die keine Kategorie besitzen.
 
-## Fazit / Ausblick / Whatever
+```html
+{#each products as product}
+    {#if product.category == currentCategory || currentCategory == null || (currentCategory == "Sonstige" && product.category == null)}
+        <li class="product-wrapper">
+            <div class="product">
+                <button class="product-body" on:click={addProductToList(product)}>
+                    {product.name}
+                </button>
+                <button class="product-info" on:click={editProduct(product)}>?</button>
+            </div>
+        </li>
+    {/if}
+{/each}
+```
+
+## Daten lokal speichern
+
+Im jetzigen Zustand gehen alle eingetragenen Daten beim Neuladen verloren. Um das zu verhindern, habe ich die Liste von Produkten im lokalen Speicher ablegen lassen. Die Initialisierung ist schnell gemacht:
+
+```javascript
+onMount(() => {
+    const existingProducts = localStorage.getItem("products");
+    products = JSON.parse(existingProducts) || [];
+}
+```
+
+Das einzige, was dann noch fehlt ist, beim Hinzufügen, Bearbeiten und Löschen eines Produktes auch den lokalen Speicher zu aktualisieren.
+
+```javascript
+localStorage.setItem("products", JSON.stringify(products));
+```
+
+## Fazit und Ausblick
+
+Und fertig ist die erste Version der Shopping-App! Ich bin sehr zufrieden damit und habe sie auch schon für erste Einkäufe benutzt. Allerdings habe ich vor, auch den Zustand des Einkaufszettels zu speichern, damit, falls man aus Versehen den Browser schließt, nicht der Fortschritt des Einkaufs verloren geht. Und natürlich fehlt auch noch die eigentlich geplante Funktion, dass häufig gekaufte Produkte weiter oben angezeigt werden.
+
+Bis dahin werde ich die App noch weiter testen und bei Gelegenheit nach und nach mehr Features implementieren. Seid also gespannt auf Updates!
