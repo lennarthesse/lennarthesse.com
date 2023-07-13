@@ -7,4 +7,6 @@
     <title>{post.title} | Lennart Hesse</title>
 </svelte:head>
 
-<svelte:component this={post.content.default}></svelte:component>
+<article>
+    <svelte:component this={post.content.default}></svelte:component>
+</article>
