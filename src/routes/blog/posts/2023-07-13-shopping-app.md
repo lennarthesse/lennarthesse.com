@@ -2,7 +2,7 @@
 slug: "new"
 title: "New"
 author: "Lennart Hesse"
-date: "datum"
+date: "2023/07/13"
 description: "beschreibung"
 keywords: "keywords"
 ---

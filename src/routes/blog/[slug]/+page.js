@@ -1,19 +1,17 @@
+// Load blog content
+
 // Import error message and posts
 import { error } from "@sveltejs/kit";
-const modules = import.meta.glob('../posts/*.md', {eager: true});
+const paths = import.meta.glob('../posts/*.md', {eager: true});
 
 // Initialize array to hold posts
-const allPosts = [];
+const posts = [];
 
 // For every imported post, push it and its slug to the array
-for (const path in modules) {
-    const post = modules[path];
+for (const path in paths) {
+    const post = paths[path];
     if (post) {
-        const slug = post.metadata.slug;
-        const title = post.metadata.title;
-        const content = post;
-        const p = {content, slug, title};
-        allPosts.push(p);
+        posts.push(post);
     }
 }
 
@@ -21,9 +19,9 @@ for (const path in modules) {
 // return its data or throw not found error
 export function load({ params }) {
     const { slug } = params;
-    for (const path in allPosts) {
-        const post = allPosts[path];
-        if (post.slug.toLowerCase() === slug.toLowerCase()) {
+    for (const p in posts) {
+        const post = posts[p];
+        if (post.metadata.slug.toLowerCase() === slug.toLowerCase()) {
             return {
                 post: post
             }

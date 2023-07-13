@@ -4,9 +4,9 @@
 </script>
 
 <svelte:head>
-    <title>{post.title} | Lennart Hesse</title>
+    <title>{post.metadata.title} | Lennart Hesse</title>
 </svelte:head>
 
 <article>
-    <svelte:component this={post.content.default}></svelte:component>
+    <svelte:component this={post.default}></svelte:component>
 </article>
