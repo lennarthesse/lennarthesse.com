@@ -9,8 +9,6 @@ keywords: "html, css, javascript"
 
 # {title}
 
-<p><small>{date}</small></p>
-
 In der unserer digitalisierten Welt wird es immer wichtiger, eine ordentliche Online-Präsenz zu haben. Aber was tut man, wenn man keine Plattformen wie Twitter, Instagram oder TikTok benutzen möchte?
 
 Die Antwort: Man baut seine eigene Seite, mit voller Kontrolle über jedes einzelne Detail. Eine eigene Webseite zu programmieren und online zu hosten ist relativ simpel.

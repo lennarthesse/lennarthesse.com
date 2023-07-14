@@ -9,8 +9,6 @@ keywords: "web, server, hosting"
 
 # {title}
 
-<p><small>{date}</small></p>
-
 Im ersten Teil der Serie habe ich gezeigt, wie man eine einfache Webseite selbst programmiert. In diesem Teil möchte ich zeigen, wie man diese Seite im Internet preisgünstig hosten kann.
 
 ## Das World Wide Web
