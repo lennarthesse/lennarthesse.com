@@ -1,4 +1,11 @@
 <!--<div class="bg-light-gray">-->
+<div class="breadcrumbs">
+    <section>
+        <div>    
+            <p>Home / Blog</p>
+        </div>
+    </section>
+</div>
 <section class="blog main-aside"><!--bg-light shadow-->
     <main>
         <slot />

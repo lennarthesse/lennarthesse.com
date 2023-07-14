@@ -691,7 +691,7 @@ footer .copyright {
 }
 
 /* Impressum, Datenschutz, Kontakt */
-#impressum, #datenschutz, #kontakt, .blog {
+#impressum, #datenschutz, #kontakt {
     padding-top: 7rem; /* INSERT NAV HEIGHT + 2rem HERE */
 }
 
@@ -834,6 +834,21 @@ footer .copyright {
 }
 
 /* Blog */
+.breadcrumbs {
+    padding-top: 7rem;
+}
+
+.breadcrumbs section {
+    padding: 0 2rem;
+}
+
+.breadcrumbs section div {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 2rem;
+    box-shadow: 1px 2px 4px #00000022;
+}
+
 .post-preview {
     margin: 0 0 2rem 0;
     border: 1px solid #ccc;
@@ -871,6 +886,10 @@ footer .copyright {
     width: 0.3rem;
     border-radius: 100rem;
     background-color: var(--primary);
+}
+
+.blog article img {
+    border-radius: 2rem;
 }
 
 /* Error page */

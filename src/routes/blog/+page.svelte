@@ -11,7 +11,7 @@
     <a href="/blog/{post.slug}">
     <div class="post-preview">
             <div class="thumbnail">
-                <img src="/thumbnails/{post.slug}.jpg" alt="">
+                <img src="/thumbnails/{post.slug}.jpg" alt="{post.slug}">
             </div>
             <div class="body">
                 <header>

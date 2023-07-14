@@ -8,5 +8,6 @@
 </svelte:head>
 
 <article>
+    <img src="/thumbnails/{post.metadata.slug}.jpg" alt="{post.metadata.slug}">
     <svelte:component this={post.default}></svelte:component>
 </article>

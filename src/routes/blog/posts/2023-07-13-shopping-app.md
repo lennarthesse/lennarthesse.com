@@ -1,6 +1,6 @@
 ---
-slug: "new"
-title: "New"
+slug: "shopping-app"
+title: "Eine Shopping-App programmieren"
 author: "Lennart Hesse"
 date: "2023/07/13"
 description: "beschreibung"
