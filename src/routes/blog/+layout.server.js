@@ -16,7 +16,7 @@ for (const path in paths) {
 }
 
 // Sort array based on post's date
-const sortedPosts = posts.sort((a, b) =>
+const recentPosts = posts.sort((a, b) =>
     new Date(a.date).getTime() > new Date(b.date).getTime()
         ? -1
         : new Date(a.date).getTime() < new Date(b.date).getTime()
@@ -26,9 +26,9 @@ const sortedPosts = posts.sort((a, b) =>
 
 // Export sorted array with metadata and throw error if needed
 export function load() {
-    if (sortedPosts) {
+    if (recentPosts) {
         return {
-            posts: sortedPosts
+            recentPosts: recentPosts
         };
     }
     throw error(500, "Failed to load blog posts");

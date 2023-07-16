@@ -1,15 +1,15 @@
 <script>
     export let data;
-    let { posts } = data;
+    let { recentPosts } = data;
 </script>
 
 <svelte:head>
     <title>Blog | Lennart Hesse</title>
 </svelte:head>
 
-{#each posts as post}
+{#each recentPosts as post}
     <a href="/blog/{post.slug}">
-    <div class="post-preview bg-light">
+    <div class="post-preview card bg-light">
             <div class="thumbnail">
                 <img src="/thumbnails/{post.slug}.jpg" alt="{post.slug}">
             </div>

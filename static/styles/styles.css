@@ -111,8 +111,8 @@ h4 {font-size: 1.25rem;}
 
 hr {
     border: none;
-    background-color: #ddd;
-    height: 2px;
+    background-color: #ccc;
+    height: 1px;
 }
 
 .shadow {
@@ -872,35 +872,31 @@ footer .copyright {
     content: "";
 }
 
-.post-preview {
+.card {
     margin: 0 0 2rem 0;
     border: 1px solid #ccc;
     border-radius: 2.1rem;
     box-shadow: 1px 2px 4px #00000022;
 }
 
-.post-preview img {
-    border-radius: 2rem 2rem 0 0;
-}
-
-.post-preview .body {
+.card .body {
     padding: 2rem;
 }
 
-.post-preview header h2 {
+.card h2 {
     font-size: 1.5rem;
     margin-bottom: 0.4rem;
 }
 
-.post-preview header small {
-    color: var(--grey);
-}
-
-.post-preview header {
+.card header {
     position: relative;
 }
 
-.post-preview header::before {
+.card header small {
+    color: var(--grey);
+}
+
+.card header::before {
     content: "";
     position: absolute;
     top: 0.2rem;
@@ -911,10 +907,42 @@ footer .copyright {
     background-color: var(--primary);
 }
 
+.post-preview img {
+    border-radius: 2rem 2rem 0 0;
+}
+
 .blog article img {
     border: 1px solid #ccc;
     border-radius: 2rem;
     box-shadow: 1px 2px 4px #00000022;
+}
+
+aside #recent-articles {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+aside .recent-article {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+aside .recent-article > div {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    flex: 0 0 3rem;
+    position: relative;
+}
+
+aside .recent-article > div img {
+    height: 100%;
+    max-width: none;
+    position: absolute;
+    left: -50%;
 }
 
 /* Error page */

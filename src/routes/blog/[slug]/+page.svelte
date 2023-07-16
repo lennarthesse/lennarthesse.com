@@ -7,7 +7,7 @@
     <title>{post.metadata.title} | Lennart Hesse</title>
 </svelte:head>
 
-<div class="article-nav post-preview">
+<div class="article-nav card">
     <p><a href="/blog/">&lt; Zurück</a></p>
     <p>{new Date(post.metadata.date).toLocaleDateString("de-DE", {day: "numeric", month: "long", year: "numeric"})}</p>
 </div>
