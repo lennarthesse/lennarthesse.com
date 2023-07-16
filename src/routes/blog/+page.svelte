@@ -9,7 +9,7 @@
 
 {#each posts as post}
     <a href="/blog/{post.slug}">
-    <div class="post-preview">
+    <div class="post-preview bg-light">
             <div class="thumbnail">
                 <img src="/thumbnails/{post.slug}.jpg" alt="{post.slug}">
             </div>

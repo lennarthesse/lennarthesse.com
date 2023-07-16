@@ -1,8 +1,39 @@
-<!--<div class="bg-light-gray">-->
+<script>
+    import { page } from '$app/stores';
+    
+    $: paths = $page.url.pathname.split("/");
+
+    console.log($page);
+
+    let crumbs = [];
+    let prevUrl = "/";
+
+    $: {
+        crumbs = [];
+        prevUrl = "/";
+
+        for (let i = 0; i < paths.length; i++) {
+            if (paths[i] != "") {
+                crumbs = [...crumbs, {
+                        name: paths[i].charAt(0).toUpperCase() + paths[i].slice(1),
+                        url: prevUrl += paths[i] + "/"
+                    }
+                ];
+            }
+        }
+    }
+
+    console.log(crumbs);
+</script>
+
 <div class="breadcrumbs">
     <section>
-        <div>    
-            <p>Home / Blog</p>
+        <div class="bg-light">    
+            <p>
+                {#each crumbs as crumb}
+                    <a href={crumb.url}>{crumb.name}</a> &gt;
+                {/each}
+            </p>
         </div>
     </section>
 </div>
@@ -11,7 +42,7 @@
         <slot />
     </main>
     <aside>
-        <div class="post-preview">
+        <div class="post-preview bg-light">
             <div class="body">
                 <h1>Aside</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus praesentium unde animi iure. Nobis consectetur recusandae consequuntur tempore alias ipsam atque quas officiis esse. Quas non fugit assumenda necessitatibus dolores?</p>
@@ -22,4 +53,3 @@
         </div>
     </aside>
 </section>
-<!--</div>-->

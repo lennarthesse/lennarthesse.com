@@ -101,10 +101,12 @@ h4 {font-size: 1.25rem;}
 
 .bg-light {
     background-color: var(--light);
+    color: var(--dark);
 }
 
 .bg-light-gray {
     background-color: #eee;
+    color: var(--dark);
 }
 
 hr {
@@ -889,7 +891,9 @@ footer .copyright {
 }
 
 .blog article img {
+    border: 1px solid #ccc;
     border-radius: 2rem;
+    box-shadow: 1px 2px 4px #00000022;
 }
 
 /* Error page */
