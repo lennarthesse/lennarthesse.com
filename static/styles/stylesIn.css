@@ -693,7 +693,7 @@ footer .copyright {
 }
 
 /* Impressum, Datenschutz, Kontakt */
-#impressum, #datenschutz, #kontakt {
+#impressum, #datenschutz, #kontakt, .blog {
     padding-top: 7rem; /* INSERT NAV HEIGHT + 2rem HERE */
 }
 
@@ -836,19 +836,29 @@ footer .copyright {
 }
 
 /* Blog */
-.breadcrumbs {
-    padding-top: 7rem;
-}
-
-.breadcrumbs section {
-    padding: 0 2rem;
-}
-
-.breadcrumbs section div {
+.article-nav {
     padding: 0.5rem 1rem;
-    border: 1px solid #ccc;
-    border-radius: 2rem;
-    box-shadow: 1px 2px 4px #00000022;
+    display: flex;
+    justify-content: space-between;
+}
+
+.article-nav p {
+    color: var(--grey);
+    margin: 0;
+}
+
+.article-nav a {
+    padding: 0;
+    font-weight: normal;
+    color: var(--grey);
+}
+
+.article-nav a:hover {
+    text-decoration-color: var(--grey);
+}
+
+.article-nav a::before {
+    content: "";
 }
 
 .post-preview {

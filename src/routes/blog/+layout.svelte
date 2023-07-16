@@ -1,43 +1,4 @@
-<script>
-    import { page } from '$app/stores';
-    
-    $: paths = $page.url.pathname.split("/");
-
-    console.log($page);
-
-    let crumbs = [];
-    let prevUrl = "/";
-
-    $: {
-        crumbs = [];
-        prevUrl = "/";
-
-        for (let i = 0; i < paths.length; i++) {
-            if (paths[i] != "") {
-                crumbs = [...crumbs, {
-                        name: paths[i].charAt(0).toUpperCase() + paths[i].slice(1),
-                        url: prevUrl += paths[i] + "/"
-                    }
-                ];
-            }
-        }
-    }
-
-    console.log(crumbs);
-</script>
-
-<div class="breadcrumbs">
-    <section>
-        <div class="bg-light">    
-            <p>
-                {#each crumbs as crumb}
-                    <a href={crumb.url}>{crumb.name}</a> &gt;
-                {/each}
-            </p>
-        </div>
-    </section>
-</div>
-<section class="blog main-aside"><!--bg-light shadow-->
+<section class="blog main-aside">
     <main>
         <slot />
     </main>
