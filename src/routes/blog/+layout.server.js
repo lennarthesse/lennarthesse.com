@@ -4,14 +4,16 @@
 import { error } from "@sveltejs/kit";
 const paths = import.meta.glob('./posts/*.md', {eager: true});
 
-// Initialize array to hold posts
+// Initialize arrays to hold posts and categories
 const posts = [];
+const categories = [];
 
-// For every imported path, push the post metadata to the array
+// For every imported path, push the post metadata and categories to the arrays
 for (const path in paths) {
     const post = paths[path];
     if (post) {
         posts.push({...post.metadata});
+        categories.push(...post.metadata.categories.replace(/\s+/g, "").split(","));
     }
 }
 
@@ -24,11 +26,12 @@ const recentPosts = posts.sort((a, b) =>
             : 0
     );
 
-// Export sorted array with metadata and throw error if needed
+// Export sorted array with metadata, array of categories with only unique values and throw error if needed
 export function load() {
     if (recentPosts) {
         return {
-            recentPosts: recentPosts
+            recentPosts: recentPosts,
+            categories: categories.filter((value, index, array) => array.indexOf(value) === index)
         };
     }
     throw error(500, "Failed to load blog posts");

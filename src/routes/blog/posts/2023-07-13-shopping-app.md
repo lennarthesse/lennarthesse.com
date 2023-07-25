@@ -5,9 +5,10 @@ author: "Lennart Hesse"
 date: "2023/07/13"
 description: "beschreibung"
 keywords: "keywords"
+categories: "App-Entwicklung, JavaScript"
 ---
 
-# Eine Shopping-App programmieren
+# {title}
 
 Auf der Suche nach einem neuen Projekt habe ich daran gedacht, wie oft ich Einkaufszettel schreibe, nur um sie danach wegzuwerfen und ein paar Tage später etwas aufzuschreiben, das ich letztens erst auf meinem Zettel stehen hatte.
 

@@ -240,6 +240,7 @@ aside {
 
 p > a,
 label > a {
+    cursor: pointer;
     position: relative;
     display: inline-block;
     padding-left: 0.8rem;

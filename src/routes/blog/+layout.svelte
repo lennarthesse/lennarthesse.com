@@ -3,6 +3,7 @@
 
     export let data;
     let { recentPosts } = data;
+    let { categories } = data;
 </script>
 
 <section class="blog main-aside">
@@ -41,7 +42,9 @@
         <div class="card bg-light">
             <div class="body">
                 <h2>Kategorien</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam, alias vero. Magnam tenetur voluptatum eius nesciunt asperiores numquam, sint neque similique corporis vero? Voluptatum quam sapiente facere error exercitationem tenetur.</p>
+                {#each categories as category}
+                    <p><a href="/">{category}</a></p>
+                {/each}
             </div>
         </div>
     </aside>

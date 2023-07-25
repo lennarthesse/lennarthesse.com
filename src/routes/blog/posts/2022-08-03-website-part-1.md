@@ -5,6 +5,7 @@ author: "Lennart Hesse"
 date: "2022/08/03"
 description: "Der erste Teil"
 keywords: "html, css, javascript"
+categories: "HTML/CSS, JavaScript"
 ---
 
 # {title}

@@ -5,6 +5,7 @@ author: "Lennart Hesse"
 date: "2022/08/10"
 description: "Der zweite Teil"
 keywords: "web, server, hosting"
+categories: "Hosting, Systemadministration"
 ---
 
 # {title}
