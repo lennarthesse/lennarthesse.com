@@ -4,7 +4,7 @@ title: "Eine eigene Webseite erstellen (Teil 1/2): HTML, CSS & JavaScript"
 author: "Lennart Hesse"
 date: "2022/08/03"
 description: "Der erste Teil"
-keywords: "html, css, javascript"
+keywords: "html, css, javascript, eigene, webseite, website, programmieren, erstellen"
 categories: "HTML/CSS, JavaScript"
 ---
 

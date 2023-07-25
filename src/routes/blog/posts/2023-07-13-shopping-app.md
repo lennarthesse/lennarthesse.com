@@ -4,7 +4,7 @@ title: "Eine Shopping-App programmieren"
 author: "Lennart Hesse"
 date: "2023/07/13"
 description: "beschreibung"
-keywords: "keywords"
+keywords: "app, entwicklung, programmieren, svelte, sveltekit, javascript, todo, framework, html"
 categories: "App-Entwicklung, JavaScript"
 ---
 

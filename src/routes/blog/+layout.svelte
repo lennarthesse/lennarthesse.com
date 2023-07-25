@@ -1,9 +1,15 @@
 <script>
     import Search from "$lib/assets/icons/search.svelte";
+    import { searchterm } from "$lib/stores.js"
 
     export let data;
     let { recentPosts } = data;
     let { categories } = data;
+    let term = "";
+
+    function search() {
+        searchterm.set(term);
+    }
 </script>
 
 <section class="blog main-aside">
@@ -30,9 +36,9 @@
             </div>
         </div>
         <div class="card bg-light">
-            <form on:submit={() => {alert("hehe")}}>
+            <form action="/blog/" on:submit={search}>
                 <div id="search">
-                    <input type="search" aria-label="Suche" placeholder="Suchen...">
+                    <input bind:value={term} type="search" aria-label="Suche" placeholder="Suchen...">
                     <button type="submit">
                         <Search />
                     </button>

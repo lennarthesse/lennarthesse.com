@@ -938,6 +938,7 @@ aside #search button {
 aside #search button svg {
     width: 1.5rem;
     margin: auto;
+    margin-left: 1.1rem;
 }
 
 aside .recent-article {
