@@ -227,7 +227,6 @@ section {
 .main-aside {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
 }
 
 main {
@@ -1060,7 +1059,7 @@ aside .recent-article > div img {
 
     nav .nav-links a.button {
         padding: 0.5rem 2rem;
-        margin: 0.5rem 0 0.5rem 1rem;
+        margin: 0.5rem 1rem 0.5rem 1rem;
     }
     
     nav .nav-links a.button:hover,
@@ -1084,6 +1083,7 @@ aside .recent-article > div img {
 
     .main-aside {
         flex-direction: row;
+        gap: 2rem;
     }
 
     #leistungen .grid {
