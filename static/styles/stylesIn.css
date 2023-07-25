@@ -911,6 +911,34 @@ aside #recent-articles {
     gap: 0.8rem;
 }
 
+aside #search {
+    display: flex;
+}
+
+aside #search input {
+    width: calc(100% - 4rem);
+    padding: 1rem 2rem;
+    font-family: inherit;
+    font-size: 1rem;
+    border: none;
+    border-right: 1px solid #ccc;
+    border-radius: 2rem 0 0 2rem;
+    color: var(--dark);
+    background-color: transparent;
+}
+
+aside #search button {
+    flex: 0 0 4rem;
+    border-radius: 0 2rem 2rem 0;
+    background-image: var(--gradient-accent);
+    cursor: pointer;
+}
+
+aside #search button svg {
+    width: 1.5rem;
+    margin: auto;
+}
+
 aside .recent-article {
     display: flex;
     gap: 1rem;

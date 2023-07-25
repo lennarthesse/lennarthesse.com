@@ -1,4 +1,6 @@
 <script>
+    import Search from "$lib/assets/icons/search.svelte";
+
     export let data;
     let { recentPosts } = data;
 </script>
@@ -27,10 +29,14 @@
             </div>
         </div>
         <div class="card bg-light">
-            <div class="body">
-                <h2>Suche</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus praesentium unde animi iure. Nobis consectetur recusandae consequuntur tempore alias ipsam atque quas officiis esse. Quas non fugit assumenda necessitatibus dolores?</p>
-            </div>
+            <form on:submit={() => {alert("hehe")}}>
+                <div id="search">
+                    <input type="search" aria-label="Suche" placeholder="Suchen...">
+                    <button type="submit">
+                        <Search />
+                    </button>
+                </div>
+            </form>
         </div>
         <div class="card bg-light">
             <div class="body">
