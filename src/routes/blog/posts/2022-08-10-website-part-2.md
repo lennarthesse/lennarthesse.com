@@ -3,7 +3,7 @@ slug: "webseite-erstellen-webserver"
 title: "Eine eigene Webseite erstellen (Teil 2/2): Der Webserver"
 author: "Lennart Hesse"
 date: "2022/08/10"
-description: "Der zweite Teil"
+description: "Der zweite Teil. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam totam quo optio consectetur aliquam facilis, quasi minus voluptatem assumenda in cum amet? Eaque praesentium dolores alias, distinctio obcaecati ratione dolor?"
 keywords: "web, server, hosting, linux, administration, ionos, setup, apache"
 categories: "Hosting, Systemadministration"
 ---

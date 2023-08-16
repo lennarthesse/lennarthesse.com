@@ -3,9 +3,9 @@ slug: "shopping-app"
 title: "Eine Shopping-App programmieren"
 author: "Lennart Hesse"
 date: "2023/07/13"
-description: "beschreibung"
+description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam totam quo optio consectetur aliquam facilis, quasi minus voluptatem assumenda in cum amet? Eaque praesentium dolores alias, distinctio obcaecati ratione dolor?"
 keywords: "app, entwicklung, programmieren, svelte, sveltekit, javascript, todo, framework, html"
-categories: "App-Entwicklung, JavaScript"
+categories: "Appentwicklung, JavaScript"
 ---
 
 # {title}

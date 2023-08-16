@@ -1,6 +1,6 @@
 <script>
     import Search from "$lib/assets/icons/search.svelte";
-    import { searchterm } from "$lib/stores.js"
+    import { searchterm, filterCategory } from "$lib/stores.js"
 
     export let data;
     let { recentPosts } = data;
@@ -8,7 +8,13 @@
     let term = "";
 
     function search() {
+        filterCategory.set("");
         searchterm.set(term);
+    }
+
+    function filter(category) {
+        searchterm.set("");
+        filterCategory.set(category);
     }
 </script>
 
@@ -26,7 +32,7 @@
                         <a href="/blog/{post.slug}">
                             <div class="recent-article">
                                 <div>
-                                    <img src="/thumbnails/{post.slug}.jpg" alt="{post.slug}">
+                                    <img src="/media/thumbnails/{post.slug}.jpg" alt="{post.slug}">
                                 </div>
                                 {post.title}
                             </div>
@@ -45,12 +51,15 @@
                 </div>
             </form>
         </div>
-        <div class="card bg-light">
+        <div id="categories" class="card bg-light">
             <div class="body">
                 <h2>Kategorien</h2>
-                {#each categories as category}
-                    <p><a href="/">{category}</a></p>
-                {/each}
+                <form action="/blog/">
+                    <button type="submit" on:click={() => {filter("");}}>Alle</button>
+                    {#each categories as category}
+                        <button type="submit" on:click={() => {filter(category);}}>{category}</button>
+                    {/each}
+                </form>
             </div>
         </div>
     </aside>

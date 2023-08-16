@@ -1,4 +1,5 @@
 <script>
+    // Use page store to subscribe to changes
     import { page } from "$app/stores";
 </script>
 
@@ -12,6 +13,8 @@
 </div>
 
 <article>
-    <img src="/thumbnails/{$page.data.post.metadata.slug}.jpg" alt="{$page.data.post.metadata.slug}">
+    <header>
+        <img src="/media/thumbnails/{$page.data.post.metadata.slug}.jpg" alt="{$page.data.post.metadata.slug}">
+    </header>
     <svelte:component this={$page.data.post.default}></svelte:component>
 </article>

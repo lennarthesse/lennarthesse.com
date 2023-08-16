@@ -4,10 +4,14 @@ Repository for [https://lennarthesse.com](https://lennarthesse.com).
 
 ## Todo
 
-[ ] Article search
+[ ] Better article search expression
 
-[ ] Category search
+[x] Category search
 
-[ ] Article category pills?
+[x] Article category pills
 
-[ ] Article content, description, etc.
+[ ] Article content
+
+[ ] Article description & metadata
+
+[x] Style article images
