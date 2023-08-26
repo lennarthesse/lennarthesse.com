@@ -10,6 +10,8 @@ Repository for [https://lennarthesse.com](https://lennarthesse.com).
 
 [x] Article category pills
 
+[x] Highlight selected category
+
 [ ] Article content
 
 [ ] Article description & metadata

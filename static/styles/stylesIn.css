@@ -900,8 +900,9 @@ footer .copyright {
 .post-preview .category {
     padding: 0.3rem 0.8rem;
     margin: 0.5rem 0.5rem 0 0;
-    background-color: var(--primary);
-    color: var(--light);
+    /*background-color: var(--primary);*/
+    color: var(--primary);
+    border: 1px solid var(--primary);
     border-radius: 100rem;
 }
 
@@ -978,11 +979,22 @@ aside #categories button {
     font-size: inherit;
     cursor: pointer;
 
-    background-image: var(--gradient-accent);
-    color: var(--light);
+    /*background-image: var(--gradient-accent);*/
+    color: var(--accent);
+    outline: 1px solid var(--accent);
     border-radius: 100rem;
     margin: 0 0.5rem 0.5rem 0;
     padding: 0.3rem 0.8rem;
+}
+
+aside #categories button.active {
+    background-image: var(--gradient-accent);
+    color: var(--light);
+    outline: none;
+}
+
+aside #categories button:focus {
+    outline: auto;
 }
 
 /* Error page */

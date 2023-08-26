@@ -55,9 +55,9 @@
             <div class="body">
                 <h2>Kategorien</h2>
                 <form action="/blog/">
-                    <button type="submit" on:click={() => {filter("");}}>Alle</button>
+                    <button class={$filterCategory == "" ? "active" : ""} type="submit" on:click={() => {filter("");}}>Alle</button>
                     {#each categories as category}
-                        <button type="submit" on:click={() => {filter(category);}}>{category}</button>
+                        <button class={category == $filterCategory ? "active" : ""} type="submit" on:click={() => {filter(category);}}>{category}</button>
                     {/each}
                 </form>
             </div>

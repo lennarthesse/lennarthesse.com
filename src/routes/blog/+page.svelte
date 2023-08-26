@@ -3,16 +3,6 @@
 
     export let data;
     let { recentPosts } = data;
-
-    let search;
-    searchterm.subscribe((value) => {
-        search = value;
-    })
-
-    let category;
-    filterCategory.subscribe((value) => {
-        category = value;
-    })
 </script>
 
 <svelte:head>
@@ -21,7 +11,7 @@
 
 {#each recentPosts as post}
     <!-- !! come up with some smart expression to list relevant posts !! -->
-    {#if (search == "" && category == "") || (search == "" && post.categories.replace(/\s+/g, "").split(",").includes(category)) || (category == "" && post.keywords.replace(/\s+/g, "").toLowerCase().split(",").includes(search.toLowerCase()))}
+    {#if ($searchterm == "" && $filterCategory == "") || ($searchterm == "" && post.categories.replace(/\s+/g, "").split(",").includes($filterCategory)) || ($filterCategory == "" && post.keywords.replace(/\s+/g, "").toLowerCase().split(",").includes($searchterm.toLowerCase()))}
         <a href="/blog/{post.slug}">
             <div class="post-preview card bg-light">
                 <div class="thumbnail">
