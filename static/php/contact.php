@@ -11,6 +11,8 @@
     $nachname = secure($_POST["nachname"]);
     $email = secure($_POST["email"]);
     $telefon = secure($_POST["telefon"]);
+    $honeypot = secure($_POST["firma"]);
+    $honeypot_tripped = "";
 
     $leistungen = array();
     if(isset($_POST["logo"])) {
@@ -59,6 +61,12 @@
         $datenschutz = "Nicht in Datenschutz eingewilligt!";
     }
 
+    if ($honeypot != "") {
+        $honeypot_tripped = " (Wird gefiltert)";
+    } else {
+        $honeypot_tripped = " (Wird nicht gefiltert)";
+    }
+
     $message = "Vor- und Nachname: " . $vorname . " " . $nachname . "\n" .
                 "E-Mail: " . $email . "\n" .
                 "Telefon: " . $telefon . "\n" .
@@ -69,7 +77,9 @@
                 "Bemerkungen: " . "\n" .
                 $bemerkungen . "\n" .
                 "\n" .
-                $datenschutz . "\n";
+                $datenschutz . "\n" .
+                "\n" .
+                "Honeypot: " . $honeypot . $honeypot_tripped;
 
     try {
         $mail = new PHPMailer(true);
@@ -77,7 +87,7 @@
         $mail->SMTPAuth = true;
         $mail->Host = "smtp.ionos.de";
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        $mail->Port = 587;
+        $mail->Port = "587";
         $mail->Username = $auth["username"];
         $mail->Password = $auth["password"];
         $mail->setFrom($email, $vorname . " " . $nachname);

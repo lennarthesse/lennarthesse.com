@@ -115,6 +115,10 @@
                     </div>
                 </fieldset>
 
+                <div class="input-labeled-text" style="height:0px; overflow:hidden">
+                    <input type="text" name="firma" id="firma" placeholder=" " tabindex="-1">
+                    <label for="firma">Firma</label>
+                </div>
                 
                 <div class="input-checkbox">
                     <input type="checkbox" name="privacy" id="privacy" required>

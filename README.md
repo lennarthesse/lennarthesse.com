@@ -4,7 +4,9 @@ Repository for [https://lennarthesse.com](https://lennarthesse.com).
 
 ## Todo
 
-[ ] Better article search expression
+[ ] Better article search expression + Article keywords
+
+[ ] Proof reading
 
 [x] Category search
 
@@ -12,8 +14,8 @@ Repository for [https://lennarthesse.com](https://lennarthesse.com).
 
 [x] Highlight selected category
 
-[ ] Article content
+[x] Website Part 1
 
-[ ] Article description & metadata
+[x] Article description & metadata
 
 [x] Style article images
