@@ -20,13 +20,13 @@ Für dieses Projekt werde ich Apache auf einem Ubunturechner benutzen.
 
 ## Apache installieren
 
-Für die Installation können wir Ubuntus Packetmanager benutzen. Im Terminal geben wir folgenden Befehl ein.
+Für die Installation können wir Ubuntus Packagemanager benutzen. Im Terminal geben wir folgenden Befehl ein.
 
 ```
 sudo apt install apache2
 ```
 
-Mit dem Befehl `systemctl status apache2.service` können wir prüfen, ob der Server erfolgreich installiert wurde und läuft. Die Ausgabe sollte etwa so aussehen, wobei `Actice: active (running)` angibt, dass der Server funktioniert.
+Mit dem Befehl `systemctl status apache2.service` können wir prüfen, ob der Server erfolgreich installiert wurde und läuft. Die Ausgabe sollte etwa so aussehen, wobei `Actice: active (running)` angibt, dass der Server läuft.
 
 ```
 apache2.service - The Apache HTTP Server
@@ -43,7 +43,7 @@ apache2.service - The Apache HTTP Server
             └─12016 /usr/sbin/apache2 -k start
 ```
 
-Sollte dort `inactive` oder `failed` stehen, kann der Server mit `systemctl restart apache2.service` neugestartet werden.
+Sollte dort `inactive` oder `failed` stehen, kann der Server mit `systemctl restart apache2.service` neu gestartet werden.
 
 ## Die Webseite hochladen
 
@@ -78,9 +78,9 @@ Nun wird die Seite aus dem neuen Verzeichnis angezeigt.
 
 ## In die Öffentlichkeit
 
-Bis jetzt konnten die Schritte auch gut auf einem persönlichen Rechner ausgeführt werden, um die Webseite im lokalen Netzwerk zugänglich zu machen. Wenn die aber nicht nur für die Familie oder Mitbewohner gedacht ist, muss dafür gesorgt werden, dass man zuverlässig darauf zugreifen kann.
+Bis jetzt konnten die Schritte auch gut auf einem persönlichen Rechner ausgeführt werden, um die Webseite im lokalen Netzwerk zugänglich zu machen. Wenn sie aber nicht nur für die Familie oder Mitbewohner gedacht ist, muss dafür gesorgt werden, dass man zuverlässig darauf zugreifen kann.
 
-Dazu könnte man den eigenen Router so einrichten, dass er Verbindungen von Außerhalb zulässt und den Internetanbieter bitten, dem Router eine statische IP-Adresse zuzuweisen.
+Dazu könnte man den eigenen Router so einrichten, dass er Verbindungen von außerhalb zulässt und den Internetanbieter bitten, dem Router eine statische IP-Adresse zuzuweisen.
 
 Stattdessen kann man aber auch sogenannte Root Server mieten, die sehr günstig sind und außerdem im gleichen Schritt das Mieten einer Domain und dazugehörigen E-Mail-Adresse ermöglichen.
 
@@ -142,4 +142,4 @@ Und damit ist der Server samt SSL eingerichtet!
 
 Von dieser Basis aus können wir weitere Funktionen einbauen, zum Beispiel Formulare oder Datenbanken mit PHP. Oder man vertieft seine Kenntnisse von JavaScript und baut eine Web-App.
 
-In jedem Fall ist die Webseite, die wir in diesen beiden Artikeln gebaut haben ein guter Startpunkt, um die eigenen Fähigkeiten und Online-Präsenz auszubauen.
+In jedem Fall ist die Webseite, die wir in diesen beiden Artikeln gebaut, haben ein guter Startpunkt, um die eigenen Fähigkeiten und Online-Präsenz auszubauen.

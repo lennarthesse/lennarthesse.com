@@ -10,7 +10,7 @@ categories: "HTML/CSS, JavaScript"
 
 # {title}
 
-Eine eigene Webseite zu programmieren und online zu hosten ist relativ simpel. In dieser kleinen Serie möchte ich die Schritte zeigen, die für mich nötig waren, eine einfache Webseite zu entwickeln und anschließend im Internet zugänglich zu machen.
+Eine eigene Webseite zu programmieren und online zu hosten, ist relativ simpel. In dieser kleinen Serie möchte ich die Schritte zeigen, die für mich nötig waren, eine einfache Webseite zu entwickeln und anschließend im Internet zugänglich zu machen.
 
 ## Was wird benötigt?
 
@@ -20,7 +20,7 @@ Eine einfache Webseite besteht aus HTML, CSS und JavaScript. Um diese anschließ
 
 HTML ist wie das Skelett der Webseite. Es strukturiert die einzelnen Abschnitte und ermöglicht es, CSS und JavaScript bestimmte Teile zu manipulieren.
 
-Für diese Webseite wollte ich, dass ein Banner den Bildschirm füllt, wenn man sie aufruft. Desweiteren wollte ich zwei Abschnitte, einen für den eigentlichen Inhalt und einen für zusätzliche Informationen, welche in Karten organisiert sind.
+Für diese Webseite wollte ich, dass ein Banner den Bildschirm füllt, wenn man sie aufruft. Des Weiteren wollte ich zwei Abschnitte, einen für den eigentlichen Inhalt und einen für zusätzliche Informationen, welche in Karten organisiert sind.
 
 In HTML übersetzt ergibt das folgende Struktur:
 
@@ -42,7 +42,7 @@ In HTML übersetzt ergibt das folgende Struktur:
 </html>
 ```
 
-Als nächstes müssen die einzelnen Elemente vorbereitet werden, um mit CSS gestyled zu werden. Das Banner und die Karten bestehen nur aus Überschriften und Text. Die eigentlichen Artikel sind jedoch etwas komplexer. Ich habe als erstes ein Bild eingefügt. Darunter sollten Titel und Datum in einem gesonderten Abschnitt `article-head`, gefolgt von dem Inhalt sein.
+Als Nächstes müssen die einzelnen Elemente vorbereitet werden, um mit CSS gestyled zu werden. Das Banner und die Karten bestehen nur aus Überschriften und Text. Die eigentlichen Artikel sind jedoch etwas komplexer. Ich habe als Erstes ein Bild eingefügt. Darunter sollten Titel und Datum in einem gesonderten Abschnitt `article-head`, gefolgt von dem Inhalt sein.
 
 ```html
 <article>
@@ -67,7 +67,7 @@ Wenn man sich die Webseite zu diesem Zeitpunkt anschaut, ist man wahrscheinlich 
 
 Das Banner sollte den gesamten Bildschirm füllen, also bekommt es eine `height` von `100vh`. Das heißt, dass die Höhe des Elements 100 Prozent der Viewporthöhe entspricht. Der Viewport ist der Teil des Browsers, der tatsächlich die Webseite anzeigt, also ohne die Adressleiste usw.
 
-Dann habe ich noch Hintergrund- und Textfarbe sowie Textgröße festgelegt. Um den Text vertikal zu zentrieren habe ich die `position` und `transform` Attribute benutzt.
+Dann habe ich noch Hintergrund- und Textfarbe sowie Textgröße festgelegt. Um den Text vertikal zu zentrieren, habe ich die `position` und `transform` Attribute benutzt.
 
 ```css
 header {
@@ -87,11 +87,11 @@ header h1 {
 }
 ```
 
-Für die restlichen Elemente habe bin ich ähnlich vorgegangen. Um das Seitenelement neben den Artikeln anzuzeigen, kann das das `float`-Attribut genutzt werden. Nachdem die Hintergrundfarben, Abstände und Textformatierungen eingestellt sind, ist die Arbeit schon fast getan.
+Für die restlichen Elemente habe bin ich ähnlich vorgegangen. Um das Seitenelement neben den Artikeln anzuzeigen, kann das `float`-Attribut genutzt werden. Nachdem die Hintergrundfarben, Abstände und Textformatierungen eingestellt sind, ist die Arbeit schon fast getan.
 
 ## JavaScript -- Funktionalität und Animationen
 
-Bis jetzt zeigt die Webseite genau das an, was wir programmiert haben. Um Funktionen auf Knopfdruck einzubauen brauchen wir JavaScript.
+Bis jetzt zeigt die Webseite genau das an, was wir programmiert haben. Um Funktionen auf Knopfdruck einzubauen, brauchen wir JavaScript.
 
 Für die Artikel wollte ich einen "Read More"-Button einbauen, der den Rest des Artikels anzeigt. Dafür habe ich zuerst ein `<button>`-Element eingebaut.
 

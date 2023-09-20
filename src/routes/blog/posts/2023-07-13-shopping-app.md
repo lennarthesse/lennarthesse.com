@@ -125,9 +125,10 @@ Nun kamen endlich JavaScript und die Funktionen von Svelte zum Einsatz. Ich habe
         </ul>
     </div>
 </section>
+...
 ```
 
-Wie man sieht habe ich die `<input>`-Elemente in die `<label>`-Elemente verschoben, um mir deren Verbindung mit IDs zu sparen. Außerdem habe ich den Buttons bereits Event Listener hinzugefügt, die später die entsprechenden Funktionen aufrufen.
+Wie man sieht, habe ich die `<input>`-Elemente in die `<label>`-Elemente verschoben, um mir deren Verbindung mit IDs zu sparen. Außerdem habe ich den Buttons bereits Event-Listeners hinzugefügt, die später die entsprechenden Funktionen aufrufen.
 
 ## Pop-Ups und Objekte
 
@@ -175,7 +176,7 @@ function closeModal() {
 }
 ```
 
-Als nächstes wird aus der Eingabe ein JavaScript-Objekt mit verschiedenen Attributen erstellt. Im Falle dieses Beispiels besteht es aus dem Namen des Produkts sowie der Marke. Um es später einer Kategorie zuzuordnen, bekommt es dann außerdem ein `category`-Attribut.
+Als Nächstes wird aus der Eingabe ein JavaScript-Objekt mit verschiedenen Attributen erstellt. Im Falle dieses Beispiels besteht es aus dem Namen des Produkts sowie der Marke. Um es später einer Kategorie zuzuordnen, bekommt es dann außerdem ein `category`-Attribut.
 
 Die Eingabewerte werden in der `addProduct`-Funktion etwas länglich eingelesen:
 
@@ -186,7 +187,7 @@ function addProduct() {
 }
 ```
 
-Anschließend wird daraus ein Objekt erstellt, das zu der Liste von Produkten hinzugefügt wird. Dabei wird die sogenannte Spread Syntax mit drei Punkten verwendet, da ansonsten die Benutzeroberfläche nicht aktualisiert wird.
+Anschließend wird daraus ein Objekt erstellt, das zu der Liste von Produkten hinzugefügt wird. Dabei wird die sogenannte Spread-Syntax mit drei Punkten verwendet, da ansonsten die Benutzeroberfläche nicht aktualisiert wird.
 
 ```javascript
     let product = {
@@ -290,7 +291,7 @@ onMount(() => {
 }
 ```
 
-Das einzige, was dann noch fehlt ist, beim Hinzufügen, Bearbeiten und Löschen eines Produktes auch den lokalen Speicher zu aktualisieren.
+Das einzige, was dann noch fehlt, ist, beim Hinzufügen, Bearbeiten und Löschen eines Produktes auch den lokalen Speicher zu aktualisieren.
 
 ```javascript
 localStorage.setItem("products", JSON.stringify(products));
