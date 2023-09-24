@@ -6,7 +6,7 @@ Repository for [https://lennarthesse.com](https://lennarthesse.com).
 
 [ ] Better article search expression + Article keywords
 
-[ ] Proof reading
+[x] Proof reading
 
 [x] Category search
 
