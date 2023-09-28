@@ -12,7 +12,6 @@
     $email = secure($_POST["email"]);
     $telefon = secure($_POST["telefon"]);
     $honeypot = secure($_POST["firma"]);
-    $honeypot_tripped = "";
 
     $leistungen = array();
     if(isset($_POST["logo"])) {
@@ -61,12 +60,6 @@
         $datenschutz = "Nicht in Datenschutz eingewilligt!";
     }
 
-    if ($honeypot != "") {
-        $honeypot_tripped = " (Wird gefiltert)";
-    } else {
-        $honeypot_tripped = " (Wird nicht gefiltert)";
-    }
-
     $message = "Vor- und Nachname: " . $vorname . " " . $nachname . "\n" .
                 "E-Mail: " . $email . "\n" .
                 "Telefon: " . $telefon . "\n" .
@@ -77,24 +70,24 @@
                 "Bemerkungen: " . "\n" .
                 $bemerkungen . "\n" .
                 "\n" .
-                $datenschutz . "\n" .
-                "\n" .
-                "Honeypot: " . $honeypot . $honeypot_tripped;
+                $datenschutz;
 
     try {
-        $mail = new PHPMailer(true);
-        $mail->isSMTP();
-        $mail->SMTPAuth = true;
-        $mail->Host = "smtp.ionos.de";
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        $mail->Port = "587";
-        $mail->Username = $auth["username"];
-        $mail->Password = $auth["password"];
-        $mail->setFrom($email, $vorname . " " . $nachname);
-        $mail->addAddress("info@lennarthesse.com");
-        $mail->Subject = "Kontaktanfrage";
-        $mail->Body = $message;
-        $mail->send();
+        if ($honeypot == "") {
+            $mail = new PHPMailer(true);
+            $mail->isSMTP();
+            $mail->SMTPAuth = true;
+            $mail->Host = "smtp.ionos.de";
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+            $mail->Port = "587";
+            $mail->Username = $auth["username"];
+            $mail->Password = $auth["password"];
+            $mail->setFrom($email, $vorname . " " . $nachname);
+            $mail->addAddress("info@lennarthesse.com");
+            $mail->Subject = "Kontaktanfrage";
+            $mail->Body = $message;
+            $mail->send();
+        }
         header("Location: ../kontakt/?success");
     } catch (Exception $e) {
         header("Location: ../kontakt/?failure");
