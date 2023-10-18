@@ -188,6 +188,9 @@
                 <button class="arrow-left" on:click={decrementSlide}>❮</button>
                 <ul id="js-thumbnails" class="slide">
                     <li class="slide-item active">
+                        <img src="/media/oetken.png" alt="Gebäudeservice Oetken">
+                    </li>
+                    <li class="slide-item">
                         <img src="/media/bunbau.jpg" alt="BUN Bau Briefpapier">
                     </li>
                     <li class="slide-item">
@@ -199,6 +202,14 @@
             <div class="slide-body">
                 <ul id="js-descriptions" class="slide">
                     <li class="slide-item active">
+                        <h2>Gebäudeservice Oetken</h2>
+                        <p>Junges Unternehmen in der Gebäudereinigung mit Spezialisierung auf Fensterreinigung.</p>
+                        <ul>
+                            <li>Gestaltung des Firmenlogos</li>
+                            <li>Auswahl der Schriftart</li>
+                        </ul>
+                    </li>
+                    <li class="slide-item">
                         <h2>BUN Bau und Projekt&shy;entwicklung</h2>
                         <p>Ingenieurdienstleistungen wie Bauwerkerrichtung, &#8209;sanierung und mehr. </p>
                         <ul>

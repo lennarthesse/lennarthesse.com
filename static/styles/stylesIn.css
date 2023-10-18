@@ -529,6 +529,7 @@ fieldset {
 #portfolio .slide-thumbnail [class*=arrow-] {
     position: absolute;
     top: 50%;
+    height: 100%;
     font-size: 1.5rem;
     color: var(--light);
 
