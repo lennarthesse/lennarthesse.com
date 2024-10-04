@@ -82,7 +82,7 @@
             $mail->Port = "587";
             $mail->Username = $auth["username"];
             $mail->Password = $auth["password"];
-            $mail->setFrom($email, $vorname . " " . $nachname);
+            $mail->setFrom("noreply@lennarthesse.com", $vorname . " " . $nachname);
             $mail->addAddress("info@lennarthesse.com");
             $mail->Subject = "Kontaktanfrage";
             $mail->Body = $message;
