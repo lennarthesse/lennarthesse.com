@@ -1,3 +1,5 @@
+![Lennart Hesse Design and Development Logo](./lh-design-development.png)
+
 # lennarthesse.com
 
 Repository for [https://lennarthesse.com](https://lennarthesse.com).
