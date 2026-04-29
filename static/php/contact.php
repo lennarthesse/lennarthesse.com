@@ -73,7 +73,7 @@
                 $datenschutz;
 
     try {
-        if ($honeypot == "") {
+        if ($honeypot == "" && isset($_POST["privacy"])) {
             $mail = new PHPMailer(true);
             $mail->isSMTP();
             $mail->SMTPAuth = true;
@@ -87,8 +87,10 @@
             $mail->Subject = "Kontaktanfrage";
             $mail->Body = $message;
             $mail->send();
+            header("Location: ../kontakt/?success");
+        } else {
+            header("Location: ../kontakt/?failure");
         }
-        header("Location: ../kontakt/?success");
     } catch (Exception $e) {
         header("Location: ../kontakt/?failure");
     }
